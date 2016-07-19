@@ -1,0 +1,45 @@
+[25-Mar-2016 21:24:18 Asia/Shanghai] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:25:59 Asia/Shanghai] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:26:00 Asia/Shanghai] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:26:43 Asia/Shanghai] PHP Warning:  mysql_connect(): Can't create a new thread (errno 22 "Invalid argument"); if you are not out of available memory, you can consult the manual for a possible OS-dependent bug in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:27:33 Asia/Shanghai] PHP Warning:  mysql_connect(): Can't create a new thread (errno 22 "Invalid argument"); if you are not out of available memory, you can consult the manual for a possible OS-dependent bug in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:27:43 Asia/Shanghai] PHP Warning:  mysql_connect(): Can't create a new thread (errno 22 "Invalid argument"); if you are not out of available memory, you can consult the manual for a possible OS-dependent bug in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:28:03 Asia/Shanghai] PHP Warning:  mysql_connect(): Can't create a new thread (errno 22 "Invalid argument"); if you are not out of available memory, you can consult the manual for a possible OS-dependent bug in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:28:08 Asia/Shanghai] PHP Warning:  mysql_connect(): Can't create a new thread (errno 22 "Invalid argument"); if you are not out of available memory, you can consult the manual for a possible OS-dependent bug in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 21:39:56 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 21:44:48 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 21:52:58 Asia/Shanghai] PHP Warning:  file_put_contents(): open_basedir restriction in effect. File(D:/test.txt) is not within the allowed path(s): (C:\UPUPW_AP5.4\xuancuodi.com\;C:\UPUPW_AP5.4\memcached\;C:\UPUPW_AP5.4\phpmyadmin\;C:\UPUPW_AP5.4\temp\;C:\WINDOWS\Temp") in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\mobile\shopajax.action.php on line 242
+[25-Mar-2016 21:52:58 Asia/Shanghai] PHP Warning:  file_put_contents(D:/test.txt): failed to open stream: Operation not permitted in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\mobile\shopajax.action.php on line 242
+[25-Mar-2016 22:13:54 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 22:56:14 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:01:12 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:03:49 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:12:31 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:13:41 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:19:12 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:21:51 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:22:18 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:23:33 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:25:02 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:27:22 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:28:02 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:29:21 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:31:30 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:32:20 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:34:14 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\modules\admin\index.action.php on line 83
+[25-Mar-2016 23:50:31 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 23:53:33 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 23:53:33 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 23:53:33 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 23:53:33 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 23:53:33 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 23:53:33 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60
+[25-Mar-2016 23:53:33 Asia/Shanghai] PHP Warning:  mysql_connect(): 由于目标机器积极拒绝，无法连接。
+ in C:\UPUPW_AP5.4\xuancuodi.com\eyuan\system\libs\db_mysql.class.php on line 60

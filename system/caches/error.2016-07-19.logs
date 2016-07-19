@@ -1,0 +1,9 @@
+[19-Jul-2016 09:37:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 84
+[19-Jul-2016 09:37:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 55
+[19-Jul-2016 09:40:28 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 84
+[19-Jul-2016 09:40:28 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 55
+[19-Jul-2016 09:40:36 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 84
+[19-Jul-2016 09:40:36 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 55
+[19-Jul-2016 10:03:00 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\yungou\system\modules\admin\index.action.php on line 83
+[19-Jul-2016 16:38:52 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\yungou\system\modules\admin\index.action.php on line 83
+[19-Jul-2016 18:32:06 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\yungou\system\modules\admin\index.action.php on line 83

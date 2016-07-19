@@ -1,0 +1,281 @@
+{wc:templates "index","header"}
+<div class="main-content clearfix">
+{wc:templates "member","left"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/layout-recharge.css"/>
+<script>
+$(function(){
+	var je=$("#ulMoneyList li");
+	var dx=/\D/;
+	je.click(function(){
+		je.removeClass("selected");
+		je.find("input").removeAttr("checked");
+		var radio=je.index(this);
+			je.eq(radio).find("input").attr('checked','checked');
+			je.eq(radio).addClass("selected");
+		var valx=je.eq(radio).find("input").val();
+		$("#Money").text(valx);
+		$("#hidMoney").val(valx);
+	});
+	var tel=$("#txtOtherMoney").val();
+	$("#txtOtherMoney").keyup(function(){
+		if(dx.test($("#txtOtherMoney").val())){
+			$("#txtOtherMoney").val(tel);
+		}else{
+			tel=$("#txtOtherMoney").val();
+		}
+		$("#Money").text(tel);
+		$("#hidMoney").val(tel);
+	});
+})
+</script>
+<form id="toPayForm" name="toPayForm" action="{WEB_PATH}/member/cart/addmoney" method="post" target="_blank">
+<div class="R-content">
+	<div class="member-t"><h2>账户充值</h2></div>
+	<div class="select">
+		<b class="gray01">请您选择充值金额</b>
+		<ul id="ulMoneyList">
+			<li class="selected" style="margin-left:0;"><input  type="radio" id="rd10" name="money" value="10" checked="checked"> <label for="rd10">充值 <strong>￥</strong><b>10</b></label></li>
+			<li><input type="radio" name="money" value="50" id="rd50"> <label for="rd50">充值 <strong>￥</strong><b>50</b></label></li>
+			<li><input type="radio" name="money" value="100" id="rd100"> <label for="rd100">充值 <strong>￥</strong><b>100</b></label></li>
+			<li><input type="radio" name="money" value="200" id="rd200"> <label for="rd200">充值 <strong>￥</strong><b>200</b></label></li>
+			<li class="custom"><input type="radio" value="0" name="money" id="rdOther"> <label for="rdOther">其它金额</label><input value="" id="txtOtherMoney" type="text" class="enter" maxlength="7" /></li>
+		</ul>
+	</div>
+	<div class="charge_money_list">
+	<p class="title gray01">请选择支付方式</p>
+	{wc:php:start}
+        	$bank1 = $this->db->GetOne("select * from `@#_caches` where `key` = 'pay_bank_type'");
+            $bank2 = $this->db->GetOne("select * from `@#_pay` where `pay_class` = '$bank1[value]'");
+            if($bank1 && $bank2['pay_start'] ==1){
+	{wc:php:end}
+
+
+	{wc:if $bank1['value'] == 'chinabank'}
+		<style>
+			.charge_money_list p.title {font-weight: bold;padding-bottom: 15px;}
+			.charge_money_list ul.payment {clear: both;width: 750px;padding: 20px 10px 0;float: left;border-bottom: 2px solid #e6e6e6;}
+			.tab_btn{height:37px;line-height:37px;background:#f2f2f2;font-size:16px;border-top:2px solid #e6e6e6;border-bottom:1px solid #e6e6e6;_border-bottom:0;}
+			.tab_btn a{display:block;width:146px;float:left;color:#333;text-align:center;}
+			.tab_btn a.tab_btn_hover{color:#f60;background:#fff;border-top:2px solid #f60;border-bottom:1px solid #fff;margin-top:-2px;}
+			.tab_btn a:hover{color:#f60;}
+			.tab_btn{text-align:start;font-size:16px;font-family:微软雅黑, Arial;color:rgb(0, 0, 0);}
+		</style>
+		<script>
+		$(function(){
+			$('#btnCXK').click(function(){
+				$('#btnCXK').addClass('tab_btn_hover');
+				$('#btnXYK').removeClass('tab_btn_hover');
+				$('#ulXYK').hide();
+				$('#ulCXK').show();
+			});
+			$('#btnXYK').click(function(){
+				$('#btnXYK').addClass('tab_btn_hover');
+				$('#btnCXK').removeClass('tab_btn_hover');
+				$('#ulCXK').hide();
+				$('#ulXYK').show();
+			});
+		});
+		</script>
+		<div class="tab_btn">
+			<a id="btnCXK" class="tab_btn_hover" href="javascript:;">储蓄卡支付</a>
+			<a id="btnXYK" href="javascript:;">信用卡支付</a>
+		</div>
+		<div class="tab_btn_cz">
+			<input type="hidden" name="pay_bank" value="chinabank" />
+			<ul id="ulCXK" class="payment payment2">
+				<!-- 1. 招商、工商、建行、农行 -->
+				<li class="top">
+					<input type="radio" value="cb_3080" name="account" id="bankType3080" checked="checked" /><label for="bankType3080"><span class="zh_bank"></span></label>
+					<input type="radio" value="cb_1025" name="account" id="bankType1025" /><label for="bankType1025"><span class="gh_bank"></span></label>
+					<input type="radio" value="cb_105" name="account" id="bankType105" /><label for="bankType105"><span class="jh_bank"></span></label>
+					<input type="radio" value="cb_103" name="account" id="bankType103" /><label for="bankType103"><span class="nh_bank"></span></label>
+				</li>
+
+				<!-- 2. 中行、交通、华夏、兴业 -->
+				<li class="top">
+					<input type="radio" value="cb_104" name="account" id="bankType104" /><label for="bankType104"><span class="zg_bank"></span></label>
+					<input type="radio" value="cb_301" name="account" id="bankType301" /><label for="bankType301"><span class="jt_bank"></span></label>
+					<input type="radio" value="cb_311" name="account" id="bankType311" /><label for="bankType311"><span class="hx_bank"></span></label>
+					<input type="radio" value="cb_309" name="account" id="bankType309" /><label for="bankType309"><span class="xy_bank"></span></label>
+				</li>
+
+				<!-- 3. 上海、民生、广发、平安 -->
+				<li class="top">
+					<input type="radio" value="cb_326" name="account" id="bankType326" /><label for="bankType326"><span class="sh_bank"></span></label>
+					<input type="radio" value="cb_305" name="account" id="bankType305" /><label for="bankType305"><span class="ms_bank"></span></label>
+					<input type="radio" value="cb_3061" name="account" id="bankType3061" /><label for="bankType3061"><span class="gf_bank"></span></label>
+					<input type="radio" value="cb_307" name="account" id="bankType307" /><label for="bankType307"><span class="pa_bank"></span></label>
+				</li>
+
+				<!-- 4. 浦发、中信、光大、南京  -->
+				<li class="top">
+					<input type="radio" value="cb_314" name="account" id="bankType314" /><label for="bankType314"><span class="pf_bank"></span></label>
+					<input type="radio" value="cb_313" name="account" id="bankType313" /><label for="bankType313"><span class="zx_bank"></span></label>
+					<input type="radio" value="cb_312" name="account" id="bankType312" /><label for="bankType312"><span class="gd_bank"></span></label>
+					<input type="radio" value="cb_316" name="account" id="bankType316" /><label for="bankType316"><span class="nj_bank"></span></label>
+				</li>
+
+				<!-- 5. 邮政、杭州、宁波、北京  -->
+				<li class="top">
+					<input type="radio" value="cb_3230" name="account" id="bankType3230" /><label for="bankType3230"><span class="yz_bank"></span></label>
+					<input type="radio" value="cb_324" name="account" id="bankType324" /><label for="bankType324"><span class="hz_bank"></span></label>
+					<input type="radio" value="cb_302" name="account" id="bankType302" /><label for="bankType302"><span class="lb_bank"></span></label>
+					<input type="radio" value="cb_310" name="account" id="bankType310" /><label for="bankType310"><span class="bj_bank"></span></label>
+				</li>
+
+				<!-- 6. 重庆农商、北京农商、青岛、成都  -->
+				<li class="top">
+					<input type="radio" value="cb_342" name="account" id="bankType342" /><label for="bankType342"><span class="cqls_bank"></span></label>
+					<input type="radio" value="cb_335" name="account" id="bankType335" /><label for="bankType335"><span class="bj2_bank"></span></label>
+					<input type="radio" value="cb_3341" name="account" id="bankType3341" /><label for="bankType3341"><span class="qd_bank"></span></label>
+					<input type="radio" value="cb_336" name="account" id="bankType336" /><label for="bankType336"><span class="cd_bank"></span></label>
+				</li>
+			</ul>
+			<ul id="ulXYK" class="payment payment2" style="display: none;">
+				<!-- 1. 招商、工商、建行、中行 -->
+				<li class="top">
+					<input type="radio" value="cb_308" name="account" id="bankType308" /><label for="bankType308"><span class="zh_bank"></span></label>
+					<input type="radio" value="cb_1027" name="account" id="bankType1027" /><label for="bankType1027"><span class="gh_bank"></span></label>
+					<input type="radio" value="cb_1054" name="account" id="bankType1054" /><label for="bankType1054"><span class="jh_bank"></span></label>
+					<input type="radio" value="cb_106" name="account" id="bankType106" /><label for="bankType106"><span class="zg_bank"></span></label>
+				</li>
+				<!-- 2. 华夏、民生、光大、邮政 -->
+				<li class="top">
+					<input type="radio" value="cb_3112" name="account" id="bankType3112" /><label for="bankType3112"><span class="hx_bank"></span></label>
+					<input type="radio" value="cb_3051" name="account" id="bankType3051" /><label for="bankType3051"><span class="ms_bank"></span></label>
+					<input type="radio" value="cb_3121" name="account" id="bankType3121" /><label for="bankType3121"><span class="gd_bank"></span></label>
+					<input type="radio" value="cb_3231" name="account" id="bankType3231" /><label for="bankType3231"><span class="yz_bank"></span></label>
+				</li>
+				<!-- 3. 杭州、宁波、上海、兴业 -->
+				<li class="top">
+					<input type="radio" value="cb_3241" name="account" id="bankType3241" /><label for="bankType3241"><span class="hz_bank"></span></label>
+					<input type="radio" value="cb_303" name="account" id="bankType303" /><label for="bankType303"><span class="lb_bank"></span></label>
+					<input type="radio" value="cb_3261" name="account" id="bankType3261" /><label for="bankType3261"><span class="sh_bank"></span></label>
+					<input type="radio" value="cb_3091" name="account" id="bankType3091" /><label for="bankType3091"><span class="xy_bank"></span></label>
+				</li>
+				<!-- 4. 广发、平安、浦发、青岛 -->
+				<li class="top">
+					<input type="radio" value="cb_306" name="account" id="bankType306" /><label for="bankType306"><span class="gf_bank"></span></label>
+					<input type="radio" value="cb_3071" name="account" id="bankType3071" /><label for="bankType3071"><span class="pa_bank"></span></label>
+					<input type="radio" value="cb_3141" name="account" id="bankType3141" /><label for="bankType3141"><span class="pf_bank"></span></label>
+					<input type="radio" value="cb_334" name="account" id="bankType334" /><label for="bankType334"><span class="qd_bank"></span></label>
+				</li>
+			</ul>
+		</div>
+	{wc:if:end}
+
+
+	{wc:if $bank1['value'] == 'tenpay'}
+ 			<p class="leix">银行支付：</p>
+                <ul class="payment" style="border-bottom:1px dashed #e6e7e8;">
+					<input type="hidden" name="pay_bank" value="tenpay"  />
+                    <li class="top">
+                        <input type="radio" value="CMB" name="account" id="bankType1001" checked="checked"/><label for="bankType1001"><span class="zh_bank"></span></label>
+                        <input type="radio" value="ICBC" name="account" id="bankType1002"/><label for="bankType1002"><span class="gh_bank"></span></label>
+                        <input type="radio" value="CCB" name="account" id="bankType1003"/><label for="bankType1003"><span class="jh_bank"></span></label>
+                        <input type="radio" value="ABC" name="account" id="bankType1005"/><label for="bankType1005"><span class="nh_bank"></span></label>
+                    </li>
+
+                    <li class="top">
+                        <input type="radio" value="SPDB" name="account" id="bankType1004"/><label for="bankType1004"><span class="pf_bank"></span></label>
+                        <input type="radio" value="SDB" name="account" id="bankType1008"/><label for="bankType1008"><span class="sf_bank"></span></label>
+                        <input type="radio" value="CIB" name="account" id="bankType1009"/><label for="bankType1009"><span class="xy_bank"></span></label>
+                        <input type="radio" value="BOB" name="account" id="bankType1032"/><label for="bankType1032"><span class="bj_bank"></span></label>
+                    </li>
+
+                    <li class="top">
+                        <input type="radio" value="CEB" name="account" id="bankType1022"/><label for="bankType1022"><span class="gd_bank"></span></label>
+                        <input type="radio" value="CMBC" name="account" id="bankType1006"/><label for="bankType1006"><span class="ms_bank"></span></label>
+                        <input type="radio" value="CITIC" name="account" id="bankType1021"/><label for="bankType1021"><span class="zx_bank"></span></label>
+                        <input type="radio" value="GDB" name="account" id="bankType1027"/><label for="bankType1027"><span class="gf_bank"></span></label>
+                    </li>
+
+                    <li class="top">
+                        <input type="radio" value="PAB" name="account" id="bankType1010"/><label for="bankType1010"><span class="pa_bank"></span></label>
+                        <input type="radio" value="BOC" name="account" id="bankType1052"/><label for="bankType1052"><span class="zg_bank"></span></label>
+                        <input type="radio" value="COMM" name="account" id="bankType1020"/><label for="bankType1020"><span class="jt_bank"></span></label>
+                    </li>
+                </ul>
+			{wc:if:end}
+            {wc:if $bank1['value'] == 'yeepay'}
+			<p class="leix">银行支付：</p>
+           <style>
+				.yeepay_bank img{ border:1px solid #eee; padding:2px; width:130px; height:35px; float:left; margin-right:20px;}
+				.yeepay_bank input{ float:left;}
+			</style>
+			<ul class="payment yeepay_click" style="border-bottom:1px dashed #e6e7e8;">
+				<input type="hidden" name="pay_bank" value="yeepay"  />
+				<li class="top yeepay_bank">
+					<input type="radio" value="ICBC-NET-B2C" name="account" checked="checked" /><img src="{G_TEMPLATES_STYLE}/images/bank/ICBC.png">
+					<input type="radio" value="CCB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CCB.png">
+					<input type="radio" value="ABC-NET-B2C" name="account"  /><img src="{G_TEMPLATES_STYLE}/images/bank/ABC.png">
+					<input type="radio" value="CMBCHINA-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CMBCHINA.png">
+				</li>
+				<li class="top yeepay_bank">
+					<input type="radio" value="BOC-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/BOC.png">
+					<input type="radio" value="BOCO-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/JIAOTONG.png">
+					<input type="radio" value="CEB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CEB.png">
+					<input type="radio" value="GDB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/GDB.png">
+				</li>
+				<li class="top yeepay_bank">
+					<input type="radio" value="POST-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/PSBC.png">
+					<input type="radio" value="CMBC-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CMBC.png">
+					<input type="radio" value="PINGANBANK-NET" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/SZPA.png">
+					<input type="radio" value="BCCB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/BCCB.png">
+				</li>
+            </ul>
+            {wc:if:end}
+			{wc:php:start}
+				}
+			{wc:php:end}
+		<p class="leix">支付平台支付：</p>
+		<ul class="payment yeepay_click">
+          {wc:loop $paylist  $pay}
+			<li>
+				<input checked="checked" type="radio" value="{wc:$pay['pay_id']}" name="account">
+                <img style="border:1px solid #eee; padding:1px; margin-right:20px;" height="35px" width="100px" src="{G_UPLOAD_PATH}/{wc:$pay['pay_thumb']}">
+
+            </li>
+           {wc:loop:end}
+		</ul>
+		<p class="much">应付金额：<span class="yf"><strong>￥</strong><span id="Money">10</span></span></p>
+		<h6>
+				<input type="hidden" id="hidPayName" name="payName" value="">
+				<input type="hidden" id="hidPayBank" name="payBank" value="0">
+				<input type="hidden" id="hidMoney" name="money" value="10">
+				<input id="submit_ok" class="bluebut imm" type="submit" name="submit" value="立即充值" title="立即充值">
+			</form>
+		</h6>
+		<div id="payAltBox" style="display:none;">
+			<div class="prompt_box">
+				<p class="pic"><em></em>请您在新开的页面上完成支付！</p>
+				<p class="ts">付款完成之前，请不要关闭本窗口！<br>完成付款后跟据您的个人情况完成此操作！</p>
+				<ul>
+					<li><a href="{WEB_PATH}/member/home/userbalance" class="look" title="查看充值记录">查看充值记录 </a></li>
+					<li><a href="javascript:gotoClick();" class="look" id="btnReSelect" title="重选支付方式">重选支付方式</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script>
+$(function(){
+
+	$("#submit_ok").click(function(){
+		if(!this.cc){
+			this.cc = 1;
+			return true;
+		}else{
+			return false;
+		}
+		return false;
+	});
+
+	$(".yeepay_click li>img").click(function(){
+			$(this).prev().attr("checked",'checked');
+	});
+
+});
+</script>
+{wc:templates "index","footer"}
