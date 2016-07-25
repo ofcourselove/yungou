@@ -17,7 +17,7 @@
 	<script id="pageJS" data="<?php echo G_TEMPLATES_JS; ?>/mobile/Index.js" language="javascript" type="text/javascript"></script>
 </head>
 <body>
-<div class="h5-1yyg-v1" id="loadingPicBlock">    
+<div class="h5-1yyg-v1" id="loadingPicBlock">
 
 <?php include templates("mobile/index","header");?>
 
@@ -46,9 +46,9 @@
 		                </a>
 		                <span>恭喜<a href="<?php echo WEB_PATH; ?>/mobile/mobile/userindex/<?php echo $qishu['q_uid']; ?>" class="blue z-user"><?php echo get_user_name($qishu['q_uid']); ?></a>获得</span>
 			        </li>
-		        
-			   <?php  endforeach; $ln++; unset($ln); ?>     
-		        
+
+			   <?php  endforeach; $ln++; unset($ln); ?>
+
 		    </ul>
 	    </article>
     </section>
@@ -63,10 +63,10 @@
 	    </div>
 	    <article id="autoLotteryBox" class="clearfix h5-1yyg-w310 m-round overflow">
 	        <ul id="divTimerItems" class="slides">
-			
+
 			 <?php 
 			   $count=count($jinri_shoplist);
-			  ?>    
+			  ?>
 			  <?php if($count>1): ?>
 			   <div class="loading"><b></b>正在加载</div>
 			  <?php  else: ?>
@@ -75,15 +75,15 @@
 		      </div>
 				<?php endif; ?>
 			  <?php endif; ?>
-			  
+
 			 <?php $ln=1;if(is_array($jinri_shoplist)) foreach($jinri_shoplist AS $shop): ?>
-			 
+
             <?php 
             	$shop['time_H'] = abs(date("H",$shop['xsjx_time']));
 				$sysj=$shop['xsjx_time']-time();
-             ?>         
-            <?php if(time() > $shop['xsjx_time'] ): ?> 
-			
+             ?>
+            <?php if(time() > $shop['xsjx_time'] ): ?>
+
 			<li class="m-xs-li" txt="<?php echo $shop['time_H']; ?>点" codeid="<?php echo $shop['id']; ?>" uweb="<?php echo idjia($shop['q_uid']); ?>">
 				<article class="clearfix m-xs-ct m-xs-End">
 					<div class="u-xs-pic">
@@ -116,7 +116,7 @@
 			      <div class="u-xs-pic">
 				       <div class="z-xs-pic">
 			             <a href="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $shop['id']; ?>"><img src="<?php echo G_TEMPLATES_IMAGE; ?>/loading.gif" src2="<?php echo G_UPLOAD_PATH; ?>/<?php echo $shop['thumb']; ?>" border=0 /></a>
-			          </div>			         				 
+			          </div>
 					  <div name="timerItem" class="z-xs-time" time="<?php echo $sysj; ?>"><em>00</em>时<em>00</em>分<em>00</em>秒<s class="z-aw-tblr"></s>
 				      </div>
 				  </div>
@@ -135,10 +135,10 @@
 			</li>
 			<?php endif; ?>
             <?php  endforeach; $ln++; unset($ln); ?>
-			
-			
+
+
 		 </ul>
-	        
+
 	    </article>
     </section>
     <!-- 热门推荐 -->
@@ -178,14 +178,14 @@
 		    </ul>
 	    </article>
     </section>
-    
+
 
 <?php include templates("mobile/index","footer");?>
 <script language="javascript" type="text/javascript">
   var Path = new Object();
-  Path.Skin="<?php echo G_TEMPLATES_STYLE; ?>";  
+  Path.Skin="<?php echo G_TEMPLATES_STYLE; ?>";
   Path.Webpath = "<?php echo WEB_PATH; ?>";
-  
+
     var Base = {
         head: document.getElementsByTagName("head")[0] || document.documentElement,
         Myload: function(B, A) {

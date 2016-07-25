@@ -16,10 +16,10 @@
 <!--banner and Recommend 开始-->
 <div class="banner_recommend">
 	<div class="banner-box">
-		
+
 		<?php $slides=$this->DB()->GetList("select * from `@#_slide` where 1",array("type"=>1,"key"=>'',"cache"=>0)); ?>
-		<div style="margin-left:239px;" class="demo">					
-			<ul>		
+		<div style="margin-left:239px;" class="demo">
+			<ul>
             	<?php $ln=1;if(is_array($slides)) foreach($slides AS $slide): ?>
                 <?php if($ln == 1): ?>
             	<li style="display:list-item;"><a href="<?php echo $slide['link']; ?>" target="_blank"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $slide['img']; ?>"></a></li>
@@ -29,7 +29,7 @@
                 <?php  endforeach; $ln++; unset($ln); ?>
             </ul>
 			 <div class="num">
-			<?php 					
+			<?php 
 				for($i=1;$i<=count($slides);$i++){
 				echo '<a class="">'.$i.'</a>' ;
 				}
@@ -54,18 +54,18 @@
 				</ul>
 			</div>
 		</div>
-		<div class="new_publish">		      
+		<div class="new_publish">
             	<a href="javascript:;"><div class="arrows arrows2" arae="left"></div></a>
 			  <div class="prin_pp" id="prin_pp">
 			    <?php 
-				$shopqishub=$this->db->GetList("select qishu,id,sid,thumb,title,q_uid,q_user,q_user_code,zongrenshu  from `@#_shoplist` where `q_end_time` is not null and `q_showtime` = 'N' ORDER BY `q_end_time` DESC LIMIT 6");   
+				$shopqishub=$this->db->GetList("select qishu,id,sid,thumb,title,q_uid,q_user,q_user_code,zongrenshu  from `@#_shoplist` where `q_end_time` is not null and `q_showtime` = 'N' ORDER BY `q_end_time` DESC LIMIT 6");
 				 ?>
 				<?php $ln=1;if(is_array($shopqishub)) foreach($shopqishub AS $qishu): ?>
 				<?php 
-				$qishu['q_user'] = unserialize($qishu['q_user']);	
+				$qishu['q_user'] = unserialize($qishu['q_user']);
 				$user_shop_number = $this->db->GetOne("select sum(gonumber) as gonumber from `@#_member_go_record` where `uid`= '$qishu[q_uid]' and `shopid` = '$qishu[id]' and `shopqishu` = '$qishu[qishu]'");
 				$user_shop_number = $user_shop_number['gonumber'];
-				 ?>				
+				 ?>
             	<div class='print'>
                     <div class="new_publish1" style="border-right:solid 1px #ebebeb">
 						<i class="ico_label_newReveal" title="最新揭晓"></i>
@@ -75,17 +75,17 @@
 						<div class="w_goods_record">
 							<P>获奖者：<a href="<?php echo WEB_PATH; ?>/uname/<?php echo idjia($qishu['q_uid']); ?>"><?php echo get_user_name($qishu['q_user']); ?></a></P>
 							<p>本期参与：<?php echo $user_shop_number; ?>人次</p>
-							<p>本期幸运号码：<?php echo $qishu['q_user_code']; ?></p>							
+							<p>本期幸运号码：<?php echo $qishu['q_user_code']; ?></p>
 						</div>
-					</div>	
-				</div>			
-				<?php  endforeach; $ln++; unset($ln); ?>				
+					</div>
+				</div>
+				<?php  endforeach; $ln++; unset($ln); ?>
             <!------>
             	<script type="text/javascript" src="<?php echo G_TEMPLATES_JS; ?>/GLotteryFun.js"></script>
                 <script type="text/javascript">
-					$(document).ready(function(){gg_show_time_init("prin_pp",'<?php echo WEB_PATH; ?>',0);});					
-			    </script>  
-            <!------>	
+					$(document).ready(function(){gg_show_time_init("prin_pp",'<?php echo WEB_PATH; ?>',0);});
+			    </script>
+            <!------>
 			</div>
                 <a href="javascript:;"><div class="arrows arrows1" arae="right"></div></a>
 			<div class="controller-nav">
@@ -94,7 +94,7 @@
 				<a class="" id="cur_k3" qarae="lcc" href="javascript:;"></a>
 		    </div>
 			</div>
-		</div>			
+		</div>
 	<script type="text/javascript">
 $(function(){
 	var sw = 0;
@@ -128,8 +128,8 @@ $(function(){
 </script>
     <!-- 首页右边推荐商品一个 start-->
     <?php if($new_shop): ?>
-	<div class="recommend">    
-		<ul class="Pro">			
+	<div class="recommend">
+		<ul class="Pro">
 			<li>
 				<div class="pic">
 				<a href="<?php echo WEB_PATH; ?>/goods/<?php echo $new_shop['id']; ?>" target="_blank" title="<?php echo $new_shop['title']; ?>">
@@ -140,7 +140,8 @@ $(function(){
 				</div>
 				<p class="name">
 					<strong><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $new_shop['id']; ?>" target="_blank" title="<?php echo $new_shop['title']; ?> ">
-                    <?php echo $new_shop['title']; ?></strong></a>
+                    <?php echo $new_shop['title']; ?>
+									</strong></a>
 				</p>
 				<p class="money">价值：<span class="rmb"><?php echo $new_shop['money']; ?></span></p>
 				<div class="Progress-bar" style="">
@@ -154,10 +155,10 @@ $(function(){
 				<p>
 					<a href="<?php echo WEB_PATH; ?>/goods/<?php echo $new_shop['id']; ?>" target="_blank" class="go_buy"></a>
 				</p>
-			</li>				
+			</li>
 		</ul>
 	</div>
-	<?php endif; ?>   
+	<?php endif; ?>
 	 <!-- 首页右边推荐商品多个 start-->
 	<div class="recommend rect_rem" style="height:225px;">
 	    <a href="javascript:;"><div class="arr_row arrows_arr" arae1="left1"></div></a>
@@ -171,7 +172,7 @@ $(function(){
 		 $num++;
 		 ?>
 			<li id="pre_0<?php echo $num; ?>">
-				<div class="pic">				
+				<div class="pic">
 				<a href="<?php echo WEB_PATH; ?>/goods/<?php echo $new_shop_mun['id']; ?>" target="_blank" title="<?php echo $new_shop_mun['title']; ?>">
 				<img alt="<?php echo $new_shop_mun['title']; ?>" src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $new_shop_mun['thumb']; ?>">
 				</a>
@@ -182,7 +183,7 @@ $(function(){
                     <?php echo $new_shop_mun['title']; ?></strong></a>
 				</p>
 			</li>
-		<?php  endforeach; $ln++; unset($ln); ?>		
+		<?php  endforeach; $ln++; unset($ln); ?>
 		</ul>
 		<a href="javascript:;"><div class="arr_row arrows_are" arae1="right1"></div></a>
 	</div>
@@ -194,8 +195,8 @@ $(function(){
 <!--product 开始-->
 <div class="goods_hot">
 	<div class="goods_left">
-    
-		               
+
+
 		<div class="hot" style="">
 			<h3><span>最热人气商品</span><a rel="nofollow" href="<?php echo WEB_PATH; ?>/goods_list/0_0_2">更多商品，点击查看&gt;&gt;</a></h3>
 			<ul id="hostGoodsItems" class="hot-list">
@@ -204,13 +205,13 @@ $(function(){
 				 ?>
 				<?php $ln=1;if(is_array($shoplistrenqib)) foreach($shoplistrenqib AS $renqi): ?>
 				<li class="list-block">
-					<div class="pic"><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $renqi['id']; ?>" target="_blank" title="<?php echo $renqi['title']; ?>">					
-                    	<!--补丁3.1.5_b.0.1-->                    	 
-                    	<?php $i_googd_bj = null; ?>        
-						<?php if($renqi['renqi']=='1' && !isset($i_googd_bj)): ?>						
-                                <?php $i_googd_bj = '<i class="goods_rq"></i>'; ?>				
-						<?php endif; ?>					
-                        <?php echo $i_googd_bj; ?>    
+					<div class="pic"><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $renqi['id']; ?>" target="_blank" title="<?php echo $renqi['title']; ?>">
+                    	<!--补丁3.1.5_b.0.1-->
+                    	<?php $i_googd_bj = null; ?>
+						<?php if($renqi['renqi']=='1' && !isset($i_googd_bj)): ?>
+                                <?php $i_googd_bj = '<i class="goods_rq"></i>'; ?>
+						<?php endif; ?>
+                        <?php echo $i_googd_bj; ?>
 					<img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $renqi['thumb']; ?>" alt="<?php echo $renqi['title']; ?>"></a></div>
 					<p class="name"><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $renqi['id']; ?>" target="_blank" title="<?php echo $renqi['title']; ?>"><?php echo $renqi['title']; ?></a></p>
 					<p class="money">价值：<span class="rmb"><?php echo $renqi['money']; ?></span></p>
@@ -229,11 +230,11 @@ $(function(){
 		</div>
 	</div>
 	<div class="goods_right">
-	
+
 		<?php if(defined('G_IN_ADMIN')) {echo '<div style="padding:8px;background-color:#F93; color:#fff;border:1px solid #f60;text-align:center"><b>This Tag</b></div>';}?>
 		<div class="share">
 			<h3>最新揭晓记录</h3>
-			<div class="buyList">		
+			<div class="buyList">
                 <ul id="buyList" style="margin-top: 0px;">
 				    <?php 
 					 $shopgxb=$this->db->GetList("select qishu,id,sid,thumb,title,q_uid,q_user,q_user_code,zongrenshu  from `@#_shoplist` where `q_end_time` is not null and `q_showtime` = 'N' ORDER BY `q_end_time` DESC LIMIT 8");
@@ -247,7 +248,7 @@ $(function(){
                         <img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $shopgx['thumb']; ?>" style="width:58px"/></a>
 						<span class="who"><p style="display: inline;"><a class="blue" href="<?php echo WEB_PATH; ?>/uname/<?php echo idjia($shopgx['q_uid']); ?>"><?php echo get_user_name($shopgx['q_user']); ?></a></p>刚刚获得了</span>
 						<span><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $shopgx['id']; ?>" class="name" target="_blank"><?php echo $shopgx['title']; ?></a></span>
-						
+
 					</li>
 					<?php  endforeach; $ln++; unset($ln); ?>
 				</ul>
@@ -262,14 +263,14 @@ $(function(){
 <!--即将揭晓 开始-->
 <div class="goods_hot">
 	<div class="goods_left">
-    
-		               
+
+
 		<div class="hot" style="">
 			<h3><span>即将揭晓</span><a rel="nofollow" href="<?php echo WEB_PATH; ?>/goods_list/0_0_1">更多即将揭晓，点击查看&gt;&gt;</a></h3>
-			<ul id="hostGoodsItems" class="hot-list">	
+			<ul id="hostGoodsItems" class="hot-list">
 				<?php 
 				$shoplist=$this->db->GetList("select * from `@#_shoplist` where `q_uid` is null ORDER BY `shenyurenshu` ASC LIMIT 8");
-				 ?>			
+				 ?>
 				<?php $ln=1;if(is_array($shoplist)) foreach($shoplist AS $shop): ?>
 				<li class="list-block">
 					<div class="pic"><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $shop['id']; ?>" target="_blank" title="<?php echo $shop['title']; ?>"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $shop['thumb']; ?>" alt="<?php echo $shop['title']; ?>"></a></div>
@@ -290,15 +291,15 @@ $(function(){
 		</div>
 	</div>
 	<div class="goods_right">
-	
+
 		<?php if(defined('G_IN_ADMIN')) {echo '<div style="padding:8px;background-color:#F93; color:#fff;border:1px solid #f60;text-align:center"><b>This Tag</b></div>';}?>
 		<div class="share">
 			<h3>最新参与记录</h3>
-			<div class="buyList">		
+			<div class="buyList">
                 <ul id="buyList" style="margin-top: 0px;">
-                
-				<?php 		
-				$go_recordb=$this->db->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,`@#_member_go_record`.shopname,`@#_member_go_record`.shopid from `@#_member_go_record`,`@#_member` where `@#_member`.uid = `@#_member_go_record`.uid and `@#_member_go_record`.`status` LIKE '%已付款%'  ORDER BY `@#_member_go_record`.time DESC LIMIT 0,8");	   
+
+				<?php 
+				$go_recordb=$this->db->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,`@#_member_go_record`.shopname,`@#_member_go_record`.shopid from `@#_member_go_record`,`@#_member` where `@#_member`.uid = `@#_member_go_record`.uid and `@#_member_go_record`.`status` LIKE '%已付款%'  ORDER BY `@#_member_go_record`.time DESC LIMIT 0,8");
 				 ?>
 					<?php $ln=1;if(is_array($go_recordb)) foreach($go_recordb AS $gorecord): ?>
 					<li>
@@ -321,17 +322,17 @@ $(function(){
 <div class="get_ready">
 	<h3><span style="color:#000">最新上架</span><a rel="nofollow" href="<?php echo WEB_PATH; ?>/goods_list">更多新品，点击查看&gt;&gt;</a></h3>
 	<ul id="readyLotteryItems" class="hot-list">
-		<?php $shoplistnew=$this->DB()->GetList("select * from `@#_shoplist` where `q_end_time` is  null and `q_showtime` = 'N' and `shenyurenshu`!='0'  and `sid`=`id`  LIMIT 0,10",array("type"=>1,"key"=>'',"cache"=>0)); ?>	
+		<?php $shoplistnew=$this->DB()->GetList("select * from `@#_shoplist` where `q_end_time` is  null and `q_showtime` = 'N' and `shenyurenshu`!='0'  and `sid`=`id`  LIMIT 0,10",array("type"=>1,"key"=>'',"cache"=>0)); ?>
 		<?php $ln=1;if(is_array($shoplistnew)) foreach($shoplistnew AS $shop): ?>
 		<li class="list-block">
 			<div class="pic"><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $shop['id']; ?>" target="_blank" title="<?php echo $shop['title']; ?>">
-				<!--补丁3.1.5_b.0.1-->                    	 
-				<?php $i_googd_bj = null; ?>        
-				<!--补丁3.1.5_b.0.1-->        
-				<?php if(($this_time - $shop['time']) < 86400): ?>						
-						<?php $i_googd_bj = '<i class="goods_xp"></i>'; ?>					
-				<?php endif; ?>			
-				<?php echo $i_googd_bj; ?>    
+				<!--补丁3.1.5_b.0.1-->
+				<?php $i_googd_bj = null; ?>
+				<!--补丁3.1.5_b.0.1-->
+				<?php if(($this_time - $shop['time']) < 86400): ?>
+						<?php $i_googd_bj = '<i class="goods_xp"></i>'; ?>
+				<?php endif; ?>
+				<?php echo $i_googd_bj; ?>
 			<img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $shop['thumb']; ?>" alt="<?php echo $shop['title']; ?>"></a></div>
 			<p class="name"><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $shop['id']; ?>" target="_blank" title="<?php echo $shop['title']; ?>"><?php echo $shop['title']; ?></a></p>
 			<p class="money">价值：<span class="rmb"><?php echo $shop['money']; ?></span></p>
@@ -345,7 +346,7 @@ $(function(){
 			</div>
 			<div class="shop_buttom"><a href="<?php echo WEB_PATH; ?>/goods/<?php echo $shop['id']; ?>" target="_blank" class="shop_but" title="立即购买"></a></div>
 		</li>
-		<?php  endforeach; $ln++; unset($ln); ?>			
+		<?php  endforeach; $ln++; unset($ln); ?>
 	</ul>
 </div>
 
@@ -365,19 +366,19 @@ $(function(){
 					</ul>
 				</dd>
 			</dl>
-			<?php  endforeach; $ln++; unset($ln); ?>	
-			<div class="show_list">	
+			<?php  endforeach; $ln++; unset($ln); ?>
+			<div class="show_list">
 				<?php $ln=1;if(is_array($shaidan_two)) foreach($shaidan_two AS $sd): ?>
 				<ul>
 					<li class="pic"><a rel="nofollow" href="<?php echo WEB_PATH; ?>/go/shaidan/detail/<?php echo $sd['sd_id']; ?>"><img alt="" src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sd_thumbs']; ?>"></a></li>
 					<li class="show_tit"><a href="<?php echo WEB_PATH; ?>/go/shaidan/detail/<?php echo $sd['sd_id']; ?>" target="_blank"><?php echo $sd['sd_title']; ?></a></li>
 					<li>获得者：<a rel="nofollow" class="blue" href="<?php echo WEB_PATH; ?>/uname/<?php echo $sd['sd_userid']; ?>" target="_blank"><?php echo get_user_name($sd['sd_userid']); ?></a></li>
 					<li>揭晓时间：<?php echo date("Y-m-d",$sd['sd_time']); ?></li>
-				</ul>	
-				<?php  endforeach; $ln++; unset($ln); ?>			
+				</ul>
+				<?php  endforeach; $ln++; unset($ln); ?>
 				<div class="arrow_left"></div>
 				<div class="arrow_right"></div>
-			</div>               
+			</div>
         </div>
     </div>
 </div>
@@ -417,8 +418,8 @@ $(function(){
 //右移动
   $(".arrows1").click(function(){
 	 var arae   = $(this).attr("arae");
-	 var leftpx = parseInt($("#prin_pp").css("left"));	
-	 var leftpx1 = $("#prin_pp").css("left");	
+	 var leftpx = parseInt($("#prin_pp").css("left"));
+	 var leftpx1 = $("#prin_pp").css("left");
 	 var time = 500;
 	 if(arae == 'left'){
 		leftpx += 730;
@@ -427,17 +428,17 @@ $(function(){
 		//$(this).parents(".new_publish").find(".controller-nav").find(".cur").css("background","#000");
 	 }else{
 		leftpx -= 730;
-	 }	 
+	 }
 	 if((leftpx < (-730 * 2))){
-		leftpx = 0;	
+		leftpx = 0;
 		time = 250;
 	 }
-	 
-	 if(leftpx > 0){		
+
+	 if(leftpx > 0){
 		leftpx = (-730*2);
 		time = 250;
-	 }	 
- 
+	 }
+
 	 if(leftpx1 == "0px"){
 	   $("#cur_k2").css("background","#db3652");
 	   $("#cur_k1").css("background","#b7b7b7");
@@ -453,29 +454,29 @@ $(function(){
 	   $("#cur_k2").css("background","#b7b7b7");
 	   $("#cur_k3").css("background","#b7b7b7");
 	 }
-	 	 $("#prin_pp").animate({left:leftpx+"px"});	
+	 	 $("#prin_pp").animate({left:leftpx+"px"});
   });
 //左移动
   $(".arrows2").click(function(){
 	 var arae   = $(this).attr("arae");
-	 var leftpx = parseInt($("#prin_pp").css("left"));	
-	 var leftpx1 = $("#prin_pp").css("left");	 
+	 var leftpx = parseInt($("#prin_pp").css("left"));
+	 var leftpx1 = $("#prin_pp").css("left");
 	 var time = 500;
 	 if(arae == 'left'){
 		leftpx += 730;
 	 }else{
 		leftpx -= 730;
-	 }	 
+	 }
 	 if((leftpx < (-730 * 2))){
-		leftpx = 0;	
+		leftpx = 0;
 		time = 250;
 	 }
-	 
-	 if(leftpx > 0){		
+
+	 if(leftpx > 0){
 		leftpx = (-730*2);
 		time = 250;
-	 }	 
- 
+	 }
+
 	 if(leftpx1 == "0px"){
 	   $("#cur_k3").css("background","#db3652");
 	   $("#cur_k1").css("background","#b7b7b7");
@@ -491,8 +492,8 @@ $(function(){
 	   $("#cur_k2").css("background","#b7b7b7");
 	   $("#cur_k3").css("background","#b7b7b7");
 	 }
-	 	 $("#prin_pp").animate({left:leftpx+"px"});	
-  });  
+	 	 $("#prin_pp").animate({left:leftpx+"px"});
+  });
 </script>
 
 <script>
@@ -505,19 +506,19 @@ $(function(){
 //banner 右侧左右移动
   $(".arr_row").click(function(){
 	 var arae1   = $(this).attr("arae1");
-	 var leftpx1 = parseInt($("#prpr_po").css("left"));	
+	 var leftpx1 = parseInt($("#prpr_po").css("left"));
 	 if(arae1 == 'left1'){
 		leftpx1 += 230;
 	 }else{
 		leftpx1 -= 230;
-	 }	 
-	 if((leftpx1 < (-230 * 2))){
-		leftpx1 = 0;	
 	 }
-	 
-	 if(leftpx1 > 0){		
+	 if((leftpx1 < (-230 * 2))){
+		leftpx1 = 0;
+	 }
+
+	 if(leftpx1 > 0){
 		leftpx1 = (-230*2);
-	 }	 
+	 }
 	 $("#prpr_po").animate({left:leftpx1+"px"});
 
   });
@@ -525,44 +526,42 @@ $(function(){
 <script>
   $("#cur_k1").click(function(){
      var qarae   = $(this).attr("qarae");
-	 var leftpx = parseInt($("#prin_pp").css("left"));	
+	 var leftpx = parseInt($("#prin_pp").css("left"));
 	 if(qarae == 'lee'){
 		leftpx =0;
 	 }else{
 		leftpx = leftpx-730;
-	 }	 
-	  $("#prin_pp").animate({left:leftpx+"px"});	 
+	 }
+	  $("#prin_pp").animate({left:leftpx+"px"});
        $(this).css("background","#db3652");
 	   $("#cur_k2").css("background","#b7b7b7");
 	   $("#cur_k3").css("background","#b7b7b7");
   });
   $("#cur_k2").click(function(){
      var warae   = $(this).attr("qarae");
-	 var leftpx = parseInt($("#prin_pp").css("left"));	
+	 var leftpx = parseInt($("#prin_pp").css("left"));
 	  if(warae == 'lel'){
 		leftpx = -730;
 	 }else{
 		leftpx =leftpx+730;
-	 }	 
-	  $("#prin_pp").animate({left:leftpx+"px"});	
+	 }
+	  $("#prin_pp").animate({left:leftpx+"px"});
        $(this).css("background","#db3652");
        $("#cur_k1").css("background","#b7b7b7");
 	   $("#cur_k3").css("background","#b7b7b7");
   });
   $("#cur_k3").click(function(){
      var earae   = $(this).attr("qarae");
-	 var leftpx = parseInt($("#prin_pp").css("left"));	
+	 var leftpx = parseInt($("#prin_pp").css("left"));
 	  if(earae == 'lcc'){
 		leftpx = -1460;
 	 }else{
 		leftpx =leftpx+730;
-	 }	 
-	  $("#prin_pp").animate({left:leftpx+"px"});	
+	 }
+	  $("#prin_pp").animate({left:leftpx+"px"});
        $(this).css("background","#db3652");
 	   $("#cur_k1").css("background","#b7b7b7");
 	   $("#cur_k2").css("background","#b7b7b7");
-	    
+
   });
 </script>
-
-

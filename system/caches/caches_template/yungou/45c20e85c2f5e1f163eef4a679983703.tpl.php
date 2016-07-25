@@ -12,13 +12,14 @@
 <link href="<?php echo G_TEMPLATES_CSS; ?>/mobile/goods.css" rel="stylesheet" type="text/css" />
 <script src="<?php echo G_TEMPLATES_JS; ?>/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+<link rel="stylesheet"  href="<?php echo G_TEMPLATES_CSS; ?>/mobile/mui.css">
+<link rel="stylesheet"  href="<?php echo G_TEMPLATES_CSS; ?>/mobile/app.css">
 </head>
 <body>
     <div class="h5-1yyg-v1" id="loadingPicBlock">
-    
+
 <!-- 栏目页面顶部 -->
 
-<?php include templates("mobile/index","header");?>
 <script src="<?php echo G_TEMPLATES_JS; ?>/mobile/ajax.js"></script>
 
 <!-- 内页顶部 -->
@@ -27,9 +28,9 @@
 	    <!-- 导航 -->
 	    <div class="goodsNav">
             <ul id="divGoodsNav">
-       	 	    <li order="10" class="current"><a href="javascript:;">即将揭晓<b></b></a></li>
-                <li order="20"><a href="javascript:;">人气<b></b></a></li>
-                <li order="40"><a href="javascript:;">最新<b></b></a></li>
+       	 	      <li order="10" class="current"><a href="javascript:;">即将揭晓<b></b></a></li>
+                <li order="40"><a href="javascript:;">正在进行<b></b></a></li>
+                <li order="20"><a href="javascript:;">往期夺宝<b></b></a></li>
                 <li order="50" type="price"><a href="javascript:;">价格<em></em><s></s><b></b></a></li>
                 <li order="">
                     <a href="javascript:;">商品分类<s class="arrowUp"></s></a>
@@ -52,10 +53,10 @@
             <a id="btnLoadMore3" class="loading"  style="display:none;">已经到底了</a>
         </div>
     </section>
-	
+
     <input id="urladdress" value="" type="hidden" />
     <input id="pagenum" value="" type="hidden" />
-<?php include templates("mobile/index","footer");?>
+
 <script type="text/javascript">
 
 //打开页面加载数据
@@ -67,34 +68,34 @@ window.onload=function(){
 			$("#btnCart").append('<em>'+data.num+'</em>');
 		}
 	});
-	
+
 }
 //获取数据
 function glist_json(parm){
 	$("#urladdress").val('');
 	$("#pagenum").val('');
 	$.getJSON('<?php echo WEB_PATH; ?>/mobile/mobile/glistajax/'+parm,function(data){
-		$("#divGoodsLoading").css('display','none');		
+		$("#divGoodsLoading").css('display','none');
 		if(data[0].sum){
 			var fg=parm.split("/");
 			$("#urladdress").val(fg[0]+'/'+fg[1]);
 			$("#pagenum").val(data[0].page);
-			for(var i=0;i<data.length;i++){			
+			for(var i=0;i<data.length;i++){
 			var ul='<ul><li>';
 				ul+='<span id="'+data[i].id+'" class="z-Limg"><img src="<?php echo G_UPLOAD_PATH; ?>/'+data[i].thumb+'"></span>';
 				ul+='<div class="goodsListR">';
 				ul+='<h2 id="'+data[i].id+'">'+data[i].title+'</h2>';
 				ul+='<div class="pRate">';
-				ul+='<div class="Progress-bar" id="'+data[i].id+'">';				
+				ul+='<div class="Progress-bar" id="'+data[i].id+'">';
 				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
 				ul+='<ul class="Pro-bar-li">';
 				ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>已参与</li>';
 				ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>总需人次</li>';
 				ul+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>剩余</li>';
 				ul+='</ul></div>';
-				ul+='<a class="add " codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
+				// ul+='<a class="add " codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
 				ul+='</div></div></li></ul>';
-				$("#divGoodsLoading").before(ul);			
+				$("#divGoodsLoading").before(ul);
 			}
 			if(data[0].page<=data[0].sum){
 				$("#btnLoadMore").css('display','block');
@@ -107,13 +108,13 @@ function glist_json(parm){
 			}
 		}else{
 			$("#btnLoadMore").css('display','none');
-			$("#btnLoadMore2").css('display','block');	
-			$("#btnLoadMore3").css('display','none');			
+			$("#btnLoadMore2").css('display','block');
+			$("#btnLoadMore3").css('display','none');
 		}
 	});
 }
 $(document).ready(function(){
-	//即将揭晓,人气,最新,价格	
+	//即将揭晓,人气,最新,价格
 	$("#divGoodsNav li:not(:last)").click(function(){
 		var l=$(this).index();
 		$("#divGoodsNav li").removeClass().eq(l).addClass('current');
@@ -122,16 +123,16 @@ $(document).ready(function(){
 		$(".goodsList ul").remove();
 		var glist=glist_json("list/"+parm);
 	});
-	
+
 	//商品分类
 	var dl=$("#divGoodsNav dl"),
 		last=$("#divGoodsNav li:last"),
 		first=$("#divGoodsNav dd:first");
-	$("#divGoodsNav li:last a:first").click(function(){		
+	$("#divGoodsNav li:last a:first").click(function(){
 		if(dl.css("display")=='none'){
 			dl.show();
 			last.addClass("gSort");
-			first.addClass("sOrange");			
+			first.addClass("sOrange");
 		}else{
 			dl.hide();
 			last.removeClass("gSort");
@@ -145,24 +146,24 @@ $(document).ready(function(){
 		$("#divGoodsNav .gSort a:first").html(t+'<s class="arrowUp"></s>');
 		var l=$("#divGoodsNav .current").index(),
 			parm=$("#divGoodsNav li").eq(l).attr('order');
-		if(id){			
+		if(id){
 			$("#divGoodsLoading").css('display','block');
 			$(".goodsList ul").remove();
 			glist_json(id+'/'+parm);
 		}else{
 			glist_json("list/"+parm);
 			$(".goodsList ul").remove();
-		}	
+		}
 		dl.hide();
 		last.removeClass("gSort");
 		first.removeClass("sOrange");
 	});
 	//加载更多
-	$("#btnLoadMore").click(function(){		
+	$("#btnLoadMore").click(function(){
 		var url=$("#urladdress").val(),
 			page=$("#pagenum").val();
 		glist_json(url+'/'+page);
-	});	
+	});
 	//返回顶部
 	$(window).scroll(function(){
 		if($(window).scrollTop()>50){
@@ -175,16 +176,16 @@ $(document).ready(function(){
 		$("body").animate({scrollTop:0},10);
 	});
 	//添加到购物车
-	$(document).on("click",'.add',function(){
-		var codeid=$(this).attr('codeid');
-		$.getJSON('<?php echo WEB_PATH; ?>/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
-			if(data.code==1){
-				addsuccess('添加失败');
-			}else if(data.code==0){
-				addsuccess('添加成功');				
-			}return false;
-		});
-	});
+	// $(document).on("click",'.add',function(){
+	// 	var codeid=$(this).attr('codeid');
+	// 	$.getJSON('<?php echo WEB_PATH; ?>/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
+	// 		if(data.code==1){
+	// 			addsuccess('添加失败');
+	// 		}else if(data.code==0){
+	// 			addsuccess('添加成功');
+	// 		}return false;
+	// 	});
+	// });
 	function addsuccess(dat){
 		$("#pageDialogBG .Prompt").text("");
 		var w=($(window).width()-255)/2,
@@ -204,7 +205,7 @@ $(document).ready(function(){
 		var id=$(this).attr('id');
 		if(id){
 			window.location.href="<?php echo WEB_PATH; ?>/mobile/mobile/item/"+id;
-		}			
+		}
 	});
 
 });

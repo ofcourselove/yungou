@@ -1,0 +1,296 @@
+/*
+ *这是单独为您准备的个性化css，可以覆盖标准mui的css定义;*
+ *By mbw;* 
+*/
+html{
+	font-weight: 300;
+}
+.mui-bar{
+	background-color: #343434;
+}
+.mui-bar .mui-icon{
+	padding-top: 3px;
+	padding-bottom: 0;
+}
+.mui-title{
+	line-height: 50px;
+	color: #FFF;
+	text-align: left;
+	padding-left: 10px;
+}
+.indexListName h4{
+	border-left: 3px solid #ff9a15;
+	font-size: 16px;
+	float: left;
+	font-weight: 300;
+	padding-left: 5px;
+}
+.indexListName span{
+	float: right;
+	margin-top: 0;
+	display: block;
+	height: 16px;
+	margin-top: 2px;
+	color: #999;
+	font-size: 20px;
+}
+.mui-table-view-chevron .mui-table-view-cell {
+    padding-right: 10px;
+}
+.index_imgBox{
+	width: 100%;
+	overflow: hidden;
+}
+.index_imgBox img{
+	width: 100%;
+}
+.progressBox{
+	width: 100%;
+}
+.progressBox h5{
+	float: left;
+	width: 25%;
+	text-align: left;
+}
+.progressBox div{
+	float: left;
+	width: 75%;
+	background-color: #eee;
+	height: 5px;
+	border-radius: 999px;
+	margin-top: 10px;
+	overflow: hidden;
+	
+}
+.progressBox div span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #ff9a15;
+}
+.index_imgBoxBottom{
+	width: 100%;
+	overflow: hidden;
+}
+.index_imgBoxBottom h4{
+	font-weight: 300;
+	font-size: 14px;
+	float: left;
+	margin: 0;
+}
+.mui-bar-nav ~ .mui-content{
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+.listBox{
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+	height: 130px;
+}
+.list_imgBox{
+	float: left;
+	width: 40%;
+	height: 110px;
+	position: relative;
+}
+.list_imgBox span{
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #000;
+	opacity: .7;
+	text-align: center;
+	color: #FFF;
+	position: absolute;
+	bottom: 0;
+	font-size: 12px;
+}
+.list_imgBox img{
+	width: 100%;
+	height: 100%;
+}
+.list_rightBox{
+	float: left;
+	width: 60%;
+	height: 80px;
+	padding-left: 10px;
+}
+.details_passage{
+	margin-top: 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee;
+	font-size: 16px;
+}
+.details_content{
+	border-bottom: 1px solid #eee;
+	height: 50px;
+	margin-top: 5px;
+}
+.details_contentImg{
+	height: 50px;
+	width: 50px;
+	border-radius: 999px;
+	overflow: hidden;
+	float: left;
+}
+.details_contentImg img{
+	width: 100%;
+}
+.details_contentLeft{
+	float: left ;
+	margin-left: 5px;
+	height: 50px;
+}
+.details_contentLeft p{
+	line-height: 25px;
+	font-size: 14px;
+	color: #000;
+}
+.details_contentLeft span{
+	padding:0 10px;
+	background: url(../images/girl_09.png) no-repeat center center;
+	background-size: calc(12px);
+}
+.details_contentLeft h5{
+	line-height: 20px;
+	font-size: 14px;
+	color: #476f92;
+	margin: 0;
+}
+.details_contentRight{
+	float: right;
+	line-height: 50px;
+	font-size: 14px;
+	color: #476f92;
+}
+.bottom_left{
+	float: left;
+}
+.mui-numbox{
+	border: none 0;
+	border-radius: 0;
+	background-color: #FFF;
+	width: 140px;
+}
+.mui-numbox .mui-numbox-btn-minus, .mui-numbox .mui-btn-numbox-minus{
+	border: 1px solid #eee;
+	background-color: #FFF;
+	border-radius: 5px;
+}
+.mui-numbox .mui-numbox-btn-minus, .mui-numbox .mui-btn-numbox-plus{
+	border: 1px solid #eee;
+	background-color: #FFF;
+	border-radius: 5px;
+}
+.mui-numbox .mui-numbox-input, .mui-numbox .mui-input-numbox{
+	border: 1px solid #eee !important; 
+	background-color: #FFF !important;
+	border-radius: 5px !important;
+	margin: 0 5px;
+	width: 50px !important;
+}
+
+
+
+
+
+
+
+
+
+.mui-bar-tab{
+	background-color: #434343;
+	    height: 70px;
+}
+.mui-tab-label{
+	color: #FFF;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+}
+.mui-bar-tab .mui-tab-item .mui-icon ~ .mui-tab-label{
+	margin-top: 0px;
+	font-size: 14px;
+}
+.mui-bar-tab .mui-tab-item .logo01{
+	width: 30px;
+	height: 30px;
+	background: url(../images/footer_07.png) no-repeat center 0;
+	background-size: contain;
+	margin-bottom: 0;
+}
+.mui-bar-tab .mui-tab-item .logo02{
+	width: 30px;
+	height: 30px;
+	background: url(../images/footer_11.png) no-repeat center 0;
+	background-size: contain;
+	margin-bottom: 0;
+}
+.mui-bar-tab .mui-tab-item .logo03{
+	width: 30px;
+	height: 30px;
+	background: url(../images/footer_15.png) no-repeat center 0;
+	background-size: contain;
+	margin-bottom: 0;
+}
+.mui-bar-tab .mui-tab-item .logo04{
+	width: 30px;
+	height: 30px;
+	background: url(../images/footer_19.png) no-repeat center 0;
+	background-size: contain;
+	margin-bottom: 0;
+}
+.mui-bar-tab .mui-tab-item.mui-active .mui-tab-label{
+	color: #ff9a15;
+}
+.mui-bar-tab .mui-tab-item.mui-active span.logo01{
+	background: url(../images/footer_09.png) no-repeat center 0;
+	background-size: contain;
+}
+.mui-bar-tab .mui-tab-item.mui-active span.logo02{
+	background: url(../images/footer_13.png) no-repeat center 0;
+	background-size: contain;
+}
+.mui-bar-tab .mui-tab-item.mui-active span.logo03{
+	background: url(../images/footer_17.png) no-repeat center 0;
+	background-size: contain;
+}
+.mui-bar-tab .mui-tab-item.mui-active span.logo04{
+	background: url(../images/footer_21.png) no-repeat center 0;
+	background-size: contain;
+}
+.update_box{
+	display: block;
+	width: 150px;
+	height: 150px;
+	border:2px dashed #333;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left:-75px ;
+	margin-top:-150px ;
+	text-align: center;
+	line-height: 150px;
+	color: #666666;
+	font-size: 20px;
+	padding: 0;
+	background: url(../images/update_plus_03.png) no-repeat center center;
+	background-size: calc(60px);
+}
+.update_boxTitle{
+	display: block;
+	width: 150px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left:-75px ;
+	margin-top:10px ;
+	text-align: center;
+	color: #333;
+}
+.fund_details_anno{
+	color: #666666;
+	font-size: 16px;
+	line-height: 30px;
+}

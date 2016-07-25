@@ -17,9 +17,11 @@
 	<script id="pageJS" data="{G_TEMPLATES_JS}/mobile/Index.js" language="javascript" type="text/javascript"></script>
 </head>
 <body>
-<div class="h5-1yyg-v1" id="loadingPicBlock">    
+<div class="h5-1yyg-v1" id="loadingPicBlock">
+<div class="11">
+  {wc:templates "mobile/index","header"}
 
-{wc:templates "mobile/index","header"}
+</div>
 
 <!-- 内页顶部 -->
 
@@ -46,9 +48,9 @@
 		                </a>
 		                <span>恭喜<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$qishu['q_uid']}" class="blue z-user">{wc:fun:get_user_name($qishu['q_uid'])}</a>获得</span>
 			        </li>
-		        
-			   {wc:loop:end}     
-		        
+
+			   {wc:loop:end}
+
 		    </ul>
 	    </article>
     </section>
@@ -63,10 +65,10 @@
 	    </div>
 	    <article id="autoLotteryBox" class="clearfix h5-1yyg-w310 m-round overflow">
 	        <ul id="divTimerItems" class="slides">
-			
+
 			 {wc:php:start}
 			   $count=count($jinri_shoplist);
-			 {wc:php:end}    
+			 {wc:php:end}
 			  {wc:if $count>1}
 			   <div class="loading"><b></b>正在加载</div>
 			  {wc:else}
@@ -75,15 +77,15 @@
 		      </div>
 				{wc:if:end}
 			  {wc:if:end}
-			  
+
 			 {wc:loop $jinri_shoplist $shop}
-			 
+
             {wc:php:start}
             	$shop['time_H'] = abs(date("H",$shop['xsjx_time']));
 				$sysj=$shop['xsjx_time']-time();
-            {wc:php:end}         
-            {wc:if time() > $shop['xsjx_time'] } 
-			
+            {wc:php:end}
+            {wc:if time() > $shop['xsjx_time'] }
+
 			<li class="m-xs-li" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" uweb="{wc:fun:idjia($shop['q_uid'])}">
 				<article class="clearfix m-xs-ct m-xs-End">
 					<div class="u-xs-pic">
@@ -116,7 +118,7 @@
 			      <div class="u-xs-pic">
 				       <div class="z-xs-pic">
 			             <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
-			          </div>			         				 
+			          </div>
 					  <div name="timerItem" class="z-xs-time" time="{wc:$sysj}"><em>00</em>时<em>00</em>分<em>00</em>秒<s class="z-aw-tblr"></s>
 				      </div>
 				  </div>
@@ -135,10 +137,10 @@
 			</li>
 			{wc:if:end}
             {wc:loop:end}
-			
-			
+
+
 		 </ul>
-	        
+
 	    </article>
     </section>
     <!-- 热门推荐 -->
@@ -178,14 +180,14 @@
 		    </ul>
 	    </article>
     </section>
-    
+
 
 {wc:templates "mobile/index","footer"}
 <script language="javascript" type="text/javascript">
   var Path = new Object();
-  Path.Skin="{G_TEMPLATES_STYLE}";  
+  Path.Skin="{G_TEMPLATES_STYLE}";
   Path.Webpath = "{WEB_PATH}";
-  
+
     var Base = {
         head: document.getElementsByTagName("head")[0] || document.documentElement,
         Myload: function(B, A) {

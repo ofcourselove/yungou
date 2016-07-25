@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 return array (
-  'v1m.m-xiang.com' => 
+  'mywechat777.ittun.com' =>
   array (
     'm' => 'mobile',
     'c' => 'mobile',

@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="h5-1yyg-v11">
-    
+
 <!-- 栏目页面顶部 -->
 
 
@@ -54,18 +54,18 @@
 		    </ul>
 	    </div>
     </section>
-    
+
 <?php include templates("mobile/index","footer");?>
 <script language="javascript" type="text/javascript">
   var Path = new Object();
-  Path.Skin="<?php echo G_WEB_PATH; ?>/statics/templates/yungou";  
+  Path.Skin="<?php echo G_WEB_PATH; ?>/statics/templates/yungou";
   Path.Webpath = "<?php echo WEB_PATH; ?>";
-  
+
 var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
 function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
 Base.getScript('<?php echo G_TEMPLATES_JS; ?>/mobile/Bottom.js');
 </script>
- 
+
 </div>
 </body>
 </html>

@@ -28,7 +28,9 @@ class mobile extends base {
 
 	//首页
 	public function init(){
-			$webname=$this->_cfg['web_name'];
+			// $webname=$this->_cfg['web_name'];
+
+			$webname='只需一元就可夺宝';
 
 		//最新商品
 		$new_shop=$this->db->GetOne("select * from `@#_shoplist` where `pos` = '1' and `q_end_time` is null ORDER BY `id` DESC LIMIT 1");
@@ -102,15 +104,39 @@ class mobile extends base {
 		//print_r($jinri_shoplist);
 
          $key="首页";
-		include templates("mobile/index","index");
+		// include templates("mobile/index","indexo");
+		include templates("mobile/index","inner");
 	}
+	//首页內嵌
+	public function index_inner(){
+		//即将揭晓
+		$shoplist=$this->db->GetList("select * from `@#_shoplist` where `q_end_time` is null ORDER BY `shenyurenshu` ASC LIMIT 8");
+		//人气商品
+		$shoplistrenqi=$this->db->GetList("select * from `@#_shoplist` where `renqi`='1' and `q_end_time` is null ORDER BY id DESC LIMIT 6");
+		//最新揭晓
+		$shopqishu=$this->db->GetList("select * from `@#_shoplist` where `q_end_time` !='' ORDER BY `q_end_time` DESC LIMIT 4");
+
+  //  print_r($shoplist);die;
+		include templates("mobile/index","inner");
+	}
+
 
 	//商品列表
 	public function glist(){
         $webname=$this->_cfg['web_name'];
 		$title="商品列表_"._cfg("web_name");
 		$key="所有商品";
-		include templates("mobile/index","glist");
+		//正在进行
+		$shoplist_ing=$this->db->GetList("select * from `@#_shoplist` where `q_end_time` is null ORDER BY `shenyurenshu` DESC ");
+		// print_r($shoplist_ing);die;
+		//即将揭晓
+		// $shoplist_new=$this->db->GetList("select * from '@#_shoplist'  where 'shenyurenshu'>'0'  ORDER BY  'shenyurenshu'   ASC");
+		$shoplist_new=$this->db->GetList("select * from `@#_shoplist` where `q_uid` is null ORDER BY `shenyurenshu` ASC  ");
+    // print_r($shoplist_new);die;
+	  //往期夺宝
+		$shoplist_lottery=$this->db->GetList("select * from `@#_shoplist` where `q_end_time`  is not null ORDER BY `q_end_time` ");
+    //  print_r($shoplist_lottery);die;
+		include templates("mobile/index","list");
 	}
 	//ajax获取商品列表信息
 	public function glistajax(){
@@ -147,7 +173,7 @@ class mobile extends base {
 			$select_w = 'order by `shenyurenshu` ASC';
 		}
 		if($select == 20){
-			$select_w = "and `renqi` = '1'";
+			$select_w = "and `q_showtime` = 'N'";
 		}
 		if($select == 30){
 			$select_w = 'order by `shenyurenshu` ASC';
@@ -210,13 +236,13 @@ class mobile extends base {
 		$key="商品详情";
 		$mysql_model=System::load_sys_class('model');
 		$itemid=safe_replace($this->segment(4));
-
 		$item=$mysql_model->GetOne("select * from `@#_shoplist` where `id`='".$itemid."' LIMIT 1");
 		if(!$item)_messagemobile("商品不存在！");
 		if($item['q_end_time']){
 			header("location: ".WEB_PATH."/mobile/mobile/dataserver/".$item['id']);
 			exit;
 		}
+		$cords=$this->db->GetList("select * from `@#_member_go_record` where `shopid`='$item[id]'");
 		$sid=$item['sid'];
 		$sid_code=$mysql_model->GetOne("select * from `@#_shoplist` where `sid`='$sid' order by `id` DESC LIMIT 1,1");
 		$sid_go_record=$mysql_model->GetOne("select * from `@#_member_go_record` where `shopid`='$sid_code[sid]' and `uid`='$sid_code[q_uid]' order by `id` DESC LIMIT 1");
@@ -286,7 +312,7 @@ class mobile extends base {
 			$sum=0;
 		}
 
-		include templates("mobile/index","item");
+		include templates("mobile/index","itemm");
 	}
 
 	//往期商品查看

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="<?php echo G_GLOBAL_STYLE; ?>/global/css/global.css" type="text/css">
 <link rel="stylesheet" href="<?php echo G_GLOBAL_STYLE; ?>/global/css/style.css" type="text/css">
 <script type="text/javascript" src="<?php echo G_GLOBAL_STYLE; ?>/global/js/jquery-1.8.3.min.js"></script>
-<script src="<?php echo G_PLUGIN_PATH; ?>/uploadify/api-uploadify.js" type="text/javascript"></script> 
+<script src="<?php echo G_PLUGIN_PATH; ?>/uploadify/api-uploadify.js" type="text/javascript"></script>
 <style>
 table th{ border-bottom:1px solid #eee; font-size:12px; font-weight:100; text-align:right; width:200px;}
 table td{ padding-left:10px;}
@@ -35,7 +35,7 @@ input.button{ display:inline-block}
 			<td width="120" align="right">幻灯链接:</td>
 			<td>
 				<input type="text" name="link" value="<?php echo $wapone['link'];?>" class="input-text wid300"/>
-				 地址前,系统会默认添加 <?php echo WEB_PATH; ?>/   
+				 地址前,系统会默认添加 <?php echo WEB_PATH; ?>/
 			</td>
 		</tr>
 		<tr>
@@ -49,18 +49,17 @@ input.button{ display:inline-block}
 		</tr>
 		   <tr>
         	<td width="120" align="right">图asdff片:</td>
-            <td>	
+            <td>
             <img height="50px" src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $wapone['img']; ?>"/>
             <input type="text" name="image" id="imagetext" value="<?php echo $wapone['img'];?>" id="imagetext" class="input-text wid300">
 			<input type="button" class="button"
-             onClick="GetUploadify('<?php echo WEB_PATH; ?>','uploadify','缩略图上传','image','banner',1,500000,'imagetext')" 
+             onClick="GetUploadify('<?php echo WEB_PATH; ?>','uploadify','缩略图上传','image','banner',1,500000,'imagetext')"
              value="上传图片"/>
             </td>
         </tr>
-
 		<tr>
         	<td width="120" align="right"></td>
-            <td>		
+            <td>
             <input type="submit" class="button" name="submit" value="提交" >
             </td>
 		</tr>
@@ -80,7 +79,7 @@ function set_title_color(color) {
 }
 function set_title_bold(){
 	if($('#title_style_bold').val()=='bold'){
-		$('#title_style_bold').val('');	
+		$('#title_style_bold').val('');
 		$('#title2').css('font-weight','');
 	}else{
 		$('#title2').css('font-weight','bold');
@@ -92,4 +91,4 @@ function set_title_bold(){
 //window.parent.api_off_on_open('open');
 </script>
 </body>
-</html> 
+</html>

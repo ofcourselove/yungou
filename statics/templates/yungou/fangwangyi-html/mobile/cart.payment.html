@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="h5-1yyg-v1">
-    
+
 <!-- 栏目页面顶部 -->
 
 
@@ -26,7 +26,7 @@
         </div>
         <h2>结算支付</h2>
         <div class="head-r">
-	        
+
         </div>
     </header>
 
@@ -38,7 +38,7 @@
     <section class="clearfix g-pay-lst">
 		<ul>
 		 {wc:loop $shoplist $key $val}
-		  
+
 			<li>
 			    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}  ({wc:$val['title2']})</a>
 			    <span>
@@ -46,7 +46,7 @@
 			    </span>
 			</li>
 		 {wc:loop:end}
-		
+
 		</ul>
 		<p class="g-pay-Total gray9">合计：<span class="orange arial Fb F16">{wc:$MoenyCount}</span> 元</p>
 		<p class="g-pay-bline"></p>
@@ -64,9 +64,9 @@
 				<span>您的福分不足（您的福分：{wc:$member['score']}）</span>
 				</li>
 			{wc:if:end}
-			
-			{wc:if $Money >= $MoenyCount}			
-				<li class="gray9 z-pay-ye z-pay-grayC"> 
+
+			{wc:if $Money >= $MoenyCount}
+				<li class="gray9 z-pay-ye z-pay-grayC">
 				<i id="spBalance" class="z-pay-ment" sel="0"></i>
 				<span>您可以使用余额付款（账户余额：{wc:$Money} 元）</span>
 				</li>
@@ -74,7 +74,7 @@
 			    <li class="gray6 z-pay-ye z-pay-grayC">
 				<a href="{WEB_PATH}/mobile/home/userrecharge" class="z-pay-Recharge">去充值</a>
 				<span>您的余额不足（账户余额：{wc:$Money} 元）</span>
-				</li> 
+				</li>
 			{wc:if:end}
 		    </ul>
 	    </article>
@@ -87,17 +87,17 @@
 		    </ul>
 	    </article>
 	    <div class="g-Total-bt">
-		    <a id="btnPay" href="javascript:;" class="orgBtn">确认支付1</a>
+		    <a id="btnPay" href="javascript:;" class="orgBtn">确认支付</a>
 	    </div>
     </section>
-    
+
 {wc:templates "mobile/index","footer"}
 <script language="javascript" type="text/javascript">
   var Path = new Object();
-  Path.Skin="{G_TEMPLATES_STYLE}";  
+  Path.Skin="{G_TEMPLATES_STYLE}";
   Path.Webpath = "{WEB_PATH}";
   Path.submitcode = '{wc:$submitcode}';
-  
+
 var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
 function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
 Base.getScript('{G_TEMPLATES_JS}/mobile/Bottom.js?v='+GetVerNum());
