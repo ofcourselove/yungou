@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 defined('G_IN_SYSTEM')or exit('no');
 System::load_app_fun('global',G_ADMIN_DIR);
@@ -8,25 +8,27 @@ System::load_app_class("base","member","no");
 System::load_sys_fun('user');
 class shaidan extends base {
 	public $db;
-	public function __construct(){	
+	public function __construct(){
 		parent::__construct();
-		$this->db=System::load_sys_class('model');		
-		
+		$this->db=System::load_sys_class('model');
+
 	}
-	
+
 	//晒单分享
-	public function init(){		
+	public function init(){
 	    $webname=$this->_cfg['web_name'];
 		$key="晒单";
-		include templates("mobile/index","shaidan");
+		$shaidan=$this->db->GetList("select * from `@#_shaidan` order by `sd_time` DESC ");
+    
+		include templates("mobile/index","show_all");
 	}
 	public function shaidanajax(){
 		$parm=htmlspecialchars($this->segment(4));
 		$p=htmlspecialchars($this->segment(5)) ? htmlspecialchars($this->segment(5)) :1;
-		//分页		
+		//分页
 		$end=10;
 		$star=($p-1)*$end;
-		
+
 		if($parm=='new'){
 			$sel='`sd_time`';
 		}else if($parm=='renqi'){
@@ -34,9 +36,9 @@ class shaidan extends base {
 		}else if($parm=='pinglun'){
 			$sel='`sd_ping`';
 		}
-		$count=$this->db->GetList("select * from `@#_shaidan` order by $sel DESC");		
-		$shaidan=$this->db->GetList("select * from `@#_shaidan` order by $sel DESC limit $star,$end");		
-	
+		$count=$this->db->GetList("select * from `@#_shaidan` order by $sel DESC");
+		$shaidan=$this->db->GetList("select * from `@#_shaidan` order by $sel DESC limit $star,$end");
+
 		foreach($shaidan as $sd){
 			$user[]=get_user_name($sd['sd_userid']);
 			$time[]=date("Y-m-d H:i",$sd['sd_time']);
@@ -59,16 +61,16 @@ class shaidan extends base {
 		}
 		echo json_encode($shaidan);
 	}
-	
+
 	public function detail(){
 	    $webname=$this->_cfg['web_name'];
-		$key="晒单分享";			
-		$member=$this->userinfo;	
+		$key="晒单分享";
+		$member=$this->userinfo;
 		$sd_id=intval($this->segment(4));
 		$shaidan=$this->db->GetOne("select * from `@#_shaidan` where `sd_id`='$sd_id'");
 		$goods = $this->db->GetOne("select * from `@#_shoplist` where `sid` = '$shaidan[sd_shopid]' order by `qishu` DESC");
-		
-					
+
+
 		$shaidannew=$this->db->GetList("select * from `@#_shaidan` order by `sd_id` DESC limit 5");
 		$shaidan_hueifu=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_id`='$sd_id'");
 		if(!$shaidan){
@@ -77,7 +79,7 @@ class shaidan extends base {
 		}
 		$substr=substr($shaidan['sd_photolist'],0,-1);
 		$sd_photolist=explode(";",$substr);
-		
+
 		include templates("mobile/index","detail");
 	}
 	public function plajax(){
@@ -98,7 +100,7 @@ class shaidan extends base {
 		('$sdhf_id','$sdhf_userid','$sdhf_content','$sdhf_time')");
 		$sd_ping=$shaidan['sd_ping']+1;
 		$this->db->Query("UPDATE `@#_shaidan` SET sd_ping='$sd_ping' where sd_id='$shaidan[sd_id]'");
-		echo "1";	
+		echo "1";
 	}
 	//羡慕嫉妒恨
 	public function xianmu(){

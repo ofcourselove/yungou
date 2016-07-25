@@ -11,7 +11,13 @@ class cart extends base {
 
 	}
 
+  public function mypay(){
+		//  $title = $_GET['title'];
+		//  $num = $_GET['num'];
+		// print_r($title);die;
+		include templates("mobile/cart","mypay");
 
+	}
 	//购物车商品列表
 	public function cartlist(){
         $webname=$this->_cfg['web_name'];
@@ -103,7 +109,7 @@ class cart extends base {
 						$shoplist[$key]['cart_gorenci']=$val['num'] ? $val['num'] : 1;
 						$MoenyCount+=$shoplist[$key]['yunjiage']*$shoplist[$key]['cart_gorenci'];
 						$shoplist[$key]['cart_xiaoji']=substr(sprintf("%.3f",$shoplist[$key]['yunjiage']*$val['num']),0,-1);
-						$shoplist[$key]['cart_shenyu']=$shoplist[$key]['zongrenshu']-$shoplist[$key]['canyurenshu'];					
+						$shoplist[$key]['cart_shenyu']=$shoplist[$key]['zongrenshu']-$shoplist[$key]['canyurenshu'];
 					}
 			}
 			$shopnum=0;  //表示有商品
@@ -177,7 +183,7 @@ class cart extends base {
 		 //if(!$zhifutype){
 		//	_messagemobile("手机支付只支持易宝,请联系站长开通！");
 		// }
-		 
+
 
 		 $pay_checkbox=false;
 		 $pay_type_bank=false;

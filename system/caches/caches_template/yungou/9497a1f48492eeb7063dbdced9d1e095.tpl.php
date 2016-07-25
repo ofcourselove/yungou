@@ -109,9 +109,12 @@
             $qishu['q_user'] = unserialize($qishu['q_user']);
              ?>
 			            <li class="mui-table-view-cell mui-media mui-col-xs-6">
-			            	<a href="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $qishu['id']; ?>">
 			            		<div class="index_imgBox">
-                        <img  src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $qishu['thumb']; ?>">
+												<div class="mui-bottom-part">
+													<a id="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $qishu['id']; ?>">
+														<img  src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $qishu['thumb']; ?>">
+													</a>
+												</div>
                         <ins class="u-promo">价值:￥<?php echo $qishu['money']; ?></ins>
                       </div>
                           <div class="mui-media-body" style="text-align: left;"><?php echo $qishu['title']; ?></div>
@@ -123,7 +126,6 @@
 			                    	<h4>共<?php echo $qishu['zongrenshu']; ?>份</h4>
 			                    	<h4 style="float: right;">剩余<?php echo $renqi['zongrenshu']-$qishu['canyurenshu']; ?>份</h4>
 			                    </div> -->
-			            	</a>
 			            </li>
                   <?php  endforeach; $ln++; unset($ln); ?>
 			            <!-- <li class="mui-table-view-cell mui-media mui-col-xs-6">
@@ -148,8 +150,13 @@
 						<a href="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $shoplistrenqi['id']; ?>">详情</a>
               <?php $ln=1;if(is_array($shoplistrenqi)) foreach($shoplistrenqi AS $renqi): ?>
 			            <li class="mui-table-view-cell mui-media mui-col-xs-6">
-			            	<a href="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $renqi['id']; ?>">
-			            		<div class="index_imgBox"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $renqi['thumb']; ?>"></div>
+			            		<div class="index_imgBox">
+												<div class="mui-bottom-part">
+													<a id="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $renqi['id']; ?>">
+														<img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $renqi['thumb']; ?>">
+													</a>
+												</div>
+											</div>
 			                    <!-- <div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div> -->
 			                    <div class="progressBox">
 			                    	<h5><?php echo $renqi['canyurenshu']; ?>份</h5>
@@ -159,14 +166,31 @@
 			                    	<h4>共<?php echo $renqi['zongrenshu']; ?>份</h4>
 			                    	<h4 style="float: right;">剩余<?php echo $renqi['zongrenshu']-$renqi['canyurenshu']; ?>份</h4>
 			                    </div>
-			            	</a>
 			            </li>
 			          <?php  endforeach; $ln++; unset($ln); ?>
 			        </ul>
 				</ul>
 			</div>
 		</div>
-    <?php include templates("mobile/index","foot");?>
+		<!-- <nav class="mui-bar mui-bar-tab mui-bottom-part">
+					<a class="mui-tab-item mui-active" id="<?php echo WEB_PATH; ?>/mobile/mobile/init" >
+						<span class="mui-icon logo01"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item" id="<?php echo WEB_PATH; ?>/mobile/mobile/glist">
+						<span class="mui-icon logo02"></span>
+						<span class="mui-tab-label">全部商品</span>
+					</a>
+					<a class="mui-tab-item" id="show_all">
+						<span class="mui-icon logo03"></span>
+						<span class="mui-tab-label">晒单</span>
+					</a>
+					<a class="mui-tab-item" id="account">
+						<span class="mui-icon logo04"></span>
+						<span class="mui-tab-label">我的</span>
+					</a>
+				</nav> -->
+				<?php include templates("mobile/index","foot");?>
 
 		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.js"></script>
 		<script>
@@ -213,6 +237,15 @@
 					}
 				}, 1500);
 			}
+			mui('.mui-bottom-part').on('tap', 'a', function() {
+					//打开关于页面
+						var _url = this.getAttribute("id");
+						mui.openWindow({
+							url: _url ,
+							id:_url
+						});
+				});
+
 //			if (mui.os.plus) {
 //				mui.plusReady(function() {
 //					setTimeout(function() {

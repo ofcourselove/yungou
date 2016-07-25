@@ -8,7 +8,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no" />
-
+<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo G_TEMPLATES_CSS; ?>/mobile/mui.css">
     <link rel="stylesheet" href="<?php echo G_TEMPLATES_CSS; ?>/mobile/app.css">
 		<style>
@@ -68,9 +68,9 @@
 					<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
 				</div>
 			</div>
-			<button type="button" class="mui-btn mui-btn-warning" style="background-color: #ff9a15; border: none 0; margin-top: 3px; float: right; margin-right: 15px;">
+			<button id="button" type="button" class="mui-btn mui-btn-warning" style="background-color: #ff9a15; border: none 0; margin-top: 3px; float: right; margin-right: 15px;">
 					立即夺宝
-				</button>
+			</button>
 		</nav>
 		<div class="mui-content">
 			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 50px; padding-bottom:70px;">
@@ -128,7 +128,23 @@
 		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.js"></script>
 		<script>
 
-		mui('.mui-scroll-wrapper').scroll();
+	  	mui('.mui-scroll-wrapper').scroll();
+		  $("#button").click(function(){
+         var num = $("#test").val();
+				//  alert(num);
+				 url="<?php echo WEB_PATH; ?>/mobile/cart/mypay";
+				//  $.ajax(function(){
+				// 	type:"POST",
+				// 	dataType:"json",
+				// 	url:"<?php echo WEB_PATH; ?>/mobile/cart/mypay",//请求页面
+				// 	data:"{"title":<?php echo $item['title']; ?>,"num":num}",
+				// 	complete:function(){location.href ="<?php echo WEB_PATH; ?>/mobile/cart/mypay"}//跳转页面
+				// 	})
+
+				//  url="<?php echo WEB_PATH; ?>/mobile/cart/mypay";
+				  window.location.href=url;
+
+		  });
 
 //			document.body.addEventListener('touchmove', function (event) {
 //		    event.preventDefault();

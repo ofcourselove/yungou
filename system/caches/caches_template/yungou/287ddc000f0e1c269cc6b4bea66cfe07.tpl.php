@@ -55,24 +55,8 @@
 
 	<body>
 
-		<nav class="mui-bar mui-bar-tab mui-bottom-part">
-			<a id="defaultTab" class="mui-tab-item" href="<?php echo WEB_PATH; ?>/mobile/mobile/init">
-				<span class="mui-icon logo01"></span>
-				<span class="mui-tab-label">首页</span>
-			</a>
-			<a class="mui-tab-item mui-active" id="testt" href="wallet/wallet_index.html">
-				<span class="mui-icon logo02"></span>
-				<span class="mui-tab-label">全部商品</span>
-			</a>
-			<a class="mui-tab-item" href="self_choice.html">
-				<span class="mui-icon logo03"></span>
-				<span class="mui-tab-label">晒单</span>
-			</a>
-			<a class="mui-tab-item" href="account/account_app.html">
-				<span class="mui-icon logo04"></span>
-				<span class="mui-tab-label">我的</span>
-			</a>
-		</nav>
+		<?php include templates("mobile/index","foot");?>
+
 		<div class="mui-content">
 			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 5px; padding-bottom:70px;background-color: #FFF;">
 				<div class="mui-scroll">
@@ -93,7 +77,7 @@
 							<div class="list_imgBox"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $list['thumb']; ?>"></div>
 						  </a>
 							<div class="list_rightBox">
-								<div class="mui-media-body" style="text-align: left;"><?php echo $lsit['title']; ?></div>
+								<!-- <div class="mui-media-body" style="text-align: left;"><?php echo $list['title']; ?></div> -->
 								<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：<?php echo $list['qishu']; ?></div>
 			                    <div class="progressBox">
 			                    	<h5 style="margin: 0;"><?php echo $list['canyurenshu']; ?>份</h5>
@@ -103,7 +87,11 @@
 			                    	<h4>共<?php echo $list['zongrenshu']; ?>份</h4>
 			                    	<h4 style="float: right;">剩余<?php echo $list['zongrenshu']-$list['canyurenshu']; ?>份</h4>
 			                    </div>
-			                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+													<div class="mui-bottom-part">
+														<a id="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $list['id']; ?>">
+															<button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+														</a>
+													</div>
 							</div>
 						</div>
             <?php  endforeach; $ln++; unset($ln); ?>
@@ -129,7 +117,11 @@
 					                    	<h4>共<?php echo $lnew['zongrenshu']; ?>份</h4>
 					                    	<h4 style="float: right;">剩余<?php echo $lnew['zongrenshu']-$lnew['canyurenshu']; ?>份</h4>
 					                    </div>
-					                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+																<div class="mui-bottom-part">
+															<a id="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $lnew['id']; ?>">
+														  <button type="button" class="mui-btn  mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+														  </a>
+															</div>
 									</div>
 								</div>
             <?php  endforeach; $ln++; unset($ln); ?>
@@ -157,18 +149,19 @@
 				</div>
 			</div>
 		</div>
-       <!-- <?php include templates("mobile/index","foot");?> -->
 		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.js"></script>
+		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.pullToRefresh.js"></script>
+		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.pullToRefresh.material.js"></script>
 		<script>
 
 
 		mui('.mui-scroll-wrapper').scroll();
 
-		mui('.mui-table-view-cell').on('tap', 'a', function() {
+		mui('.mui-bottom-part').on('tap', 'a', function() {
 			  //打开关于页面
 			    var _url = this.getAttribute("id");
 			    mui.openWindow({
-				    url: _url + '.html',
+				    url: _url ,
 				    id:_url
 			    });
 			});

@@ -34,6 +34,20 @@ html{
 	color: #999;
 	font-size: 20px;
 }
+.indexListName input{
+	float: left;
+	width: 80%;
+	margin-bottom: 0;
+	height: 26px;
+	padding: 0;
+	display: block;
+	border: none 0;
+}
+.indexListName h5{
+	font-size: 16px;
+	font-weight: 300;
+	padding-left: 5px;
+}
 .mui-table-view-chevron .mui-table-view-cell {
     padding-right: 10px;
 }
@@ -191,14 +205,95 @@ html{
 	margin: 0 5px;
 	width: 50px !important;
 }
-
-
-
-
-
-
-
-
+.finishBox{
+	padding: 10px 15px;
+	background-color: #FFF;
+	padding-top: 15px;
+}
+.finishBox p{
+	font-size: 16px;
+	color: #000;
+}
+.accountBox{
+	padding: 17px 15px;
+	background-color: #2f76cb;
+	overflow: hidden;
+}
+.accountLeft{
+	width: 60px;
+	height: 60px;
+	border-radius: 999px;
+	border: 2px solid #FFF;
+	background-color: #ddd;
+	overflow: hidden;
+	float: left;
+}
+.accountLeft img{
+	width: 100%;
+}
+.accountRight{
+	float: left;
+	padding-left: 10px;
+}
+.accountRight p{
+	line-height: 30px;
+	font-size: 16px;
+	color: #FFF;
+	margin: 0;
+}
+.show_h4{
+	font-size: 16px;
+	font-weight: 300;
+	color: #999;
+	margin: 10px 0;
+}
+.show_allBox{
+	height: 60px;
+}
+.show_allBoxLeft{
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+.show_allBoxLeft img{
+	width: 100%;
+	height: 100%;
+}
+.show_allBoxRight{
+	display: block;
+	float: left;
+	padding-left: 10px;
+}
+.show_allBoxRight h4{
+	font-size: 16px;
+	font-weight: 300;
+}
+.show_allBoxRight h5{
+	font-size: 16px;
+	font-weight: 300;
+	color: #999;
+}
+.addBtn{
+	position: fixed; 
+	display: block; 
+	width: 50px; 
+	height: 50px; 
+	bottom: 100px; 
+	right: 15px;
+	background-color: #FF9A15;
+	z-index: 1000;
+	border-radius: 999px;
+}
+.addBtn span{
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFF;
+}
 
 .mui-bar-tab{
 	background-color: #434343;

@@ -12,14 +12,16 @@
     <link href="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/touch-icon.png" rel="apple-touch-icon-precomposed" />
     <link href="favicon.ico" rel="shortcut icon" />
     <link href="<?php echo G_TEMPLATES_CSS; ?>/mobile/comm.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo G_TEMPLATES_CSS; ?>/mobile/index.css" rel="stylesheet" type="text/css" />
+	  <link href="<?php echo G_TEMPLATES_CSS; ?>/mobile/index.css" rel="stylesheet" type="text/css" />
 	<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
 	<script id="pageJS" data="<?php echo G_TEMPLATES_JS; ?>/mobile/Index.js" language="javascript" type="text/javascript"></script>
 </head>
 <body>
 <div class="h5-1yyg-v1" id="loadingPicBlock">
+<div class="11">
+  <?php include templates("mobile/index","header");?>
 
-<?php include templates("mobile/index","header");?>
+</div>
 
 <!-- 内页顶部 -->
 

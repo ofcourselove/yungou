@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="h5-1yyg-v1" id="loadingPicBlock">
-    
+
 <!-- 栏目页面顶部 -->
 
 
@@ -34,11 +34,11 @@
     	       <?php echo $loopqishu; ?>
             </ul>
         </div>
-		
+
 		<?php 
             $sysj=$item['xsjx_time']-time();
          ?>
-        
+
         <!-- 揭晓信息 -->
         <?php if($item['q_end_time']!=''): ?>
         <div class="pProcess pProcess2">
@@ -68,9 +68,9 @@
     	        <div id="sliderBox" class="pImg">
                     <div class="loading"><b></b>正在加载</div>
                     <ul class="slides">
-					<?php $ln=1;if(is_array($item['picarr'])) foreach($item['picarr'] AS $imgtu): ?>  
+					<?php $ln=1;if(is_array($item['picarr'])) foreach($item['picarr'] AS $imgtu): ?>
 					<li><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $imgtu; ?>" /></li>
-					<?php  endforeach; $ln++; unset($ln); ?> 
+					<?php  endforeach; $ln++; unset($ln); ?>
                     </ul>
                 </div>
             </div>
@@ -78,10 +78,10 @@
             <span id="spAutoFlag" class="z-limit-tips">限时揭晓</span>
 			 <?php endif; ?>
         </div>
-    
+
         <!-- 条码信息 -->
-		
-		 
+
+
         <div class="pDetails <?php if($item['q_end_time']!=''): ?>pDetails-end<?php endif; ?>">
                 <b>(第<?php echo $item['qishu']; ?>期)<?php echo $item['title']; ?> <span></span></b>
                 <p class="price">价值：<em class="arial gray">￥<?php echo $item['money']; ?></em></p>
@@ -108,7 +108,7 @@
 			   <?php endif; ?>
                <div class="pClosed">下手慢了！！ 被抢光啦！！</div>
 		    <?php  else: ?>
-               <?php if($item['xsjx_time']!=0): ?>			
+               <?php if($item['xsjx_time']!=0): ?>
 			  <div id="divAutoRTime" class="pSurplus" time="<?php echo $sysj; ?>" timeAlt="<?php echo date('Y-m-d-H',$item['xsjx_time']); ?>"><p><span>限时揭晓</span>剩余时间：<em>00</em>时<em>00</em>分<em>00</em>秒</p></div>
 			  <?php endif; ?>
               <div id="btnBuyBox" class="pBtn" codeid="<?php echo $item['id']; ?>">
@@ -122,9 +122,9 @@
     	    <dl>
     	        <a href="<?php echo WEB_PATH; ?>/mobile/mobile/buyrecords/<?php echo $item['id']; ?>"><b class="fr z-arrow"></b>所有<?php echo _cfg('web_name_two'); ?>记录</a>
 				<a href="<?php echo WEB_PATH; ?>/mobile/mobile/goodsdesc/<?php echo $item['id']; ?>"><b class="fr z-arrow"></b>图文详情<em>（建议WIFI下使用）</em> </a>
-				 
+
 				<a href="<?php echo WEB_PATH; ?>/mobile/mobile/goodspost/<?php echo $item['sid']; ?>"><b class="fr z-arrow"></b>已有<span class="orange arial"><?php echo count($shaidan); ?></span>个幸运者晒单<strong class="orange arial"><?php echo $sum; ?></strong>条评论</a>
-				 
+
             </dl>
             <!-- 上期获得者 -->
 			<?php if($item['q_end_time'] =='' and $item['qishu']>1): ?>
@@ -133,25 +133,25 @@
                 <li class="fr"><b class="z-arrow"></b></li>
                 <li class="getInfo">
             	    <dd>
-					<em class="blue"><?php echo get_user_name($itemlist[0]['q_uid']); ?></em>(<?php echo get_ip($gorecode['id'],'ipcity'); ?>) 
+					<em class="blue"><?php echo get_user_name($itemlist[0]['q_uid']); ?></em>(<?php echo get_ip($gorecode['id'],'ipcity'); ?>)
 					</dd>
                     <dd>总共<?php echo _cfg('web_name_two'); ?>：<em class="orange arial"><?php echo $gorecode['gonumber']; ?></em>人次</dd>
                     <dd>幸运<?php echo _cfg('web_name_two'); ?>码：<em class="orange arial"><?php echo $gorecode['huode']; ?></em></dd>
-                    <dd>揭晓时间：<?php echo microt($itemlist[0]['q_end_time']); ?></dd>								   
+                    <dd>揭晓时间：<?php echo microt($itemlist[0]['q_end_time']); ?></dd>
                     <dd><?php echo _cfg('web_name_two'); ?>时间：<?php echo microt($gorecode['time']); ?></dd>
                 </li>
             </ul>
 			<?php endif; ?>
-            
+
         </div>
     </section>
-    
+
 <?php include templates("mobile/index","footer");?>
 <script language="javascript" type="text/javascript">
   var Path = new Object();
-  Path.Skin="<?php echo G_TEMPLATES_STYLE; ?>";  
+  Path.Skin="<?php echo G_TEMPLATES_STYLE; ?>";
   Path.Webpath = "<?php echo WEB_PATH; ?>";
-  
+
 var Base = {
     head: document.getElementsByTagName("head")[0] || document.documentElement,
     Myload: function(B, A) {
@@ -203,16 +203,16 @@ Base.getScript('<?php echo G_TEMPLATES_JS; ?>/mobile/Bottom.js');
 <script>
 $(function(){
   $(".blue").click(function(){
-   
+
      url="<?php echo WEB_PATH; ?>/uname/<?php echo idjia($itemlist[0]['q_uid']); ?>";
 	 window.location.href=url;
-  
+
   });
-  
+
   $(".orange.arial").click(function(){
      url="<?php echo WEB_PATH; ?>/mobile/mobile/dataserver/<?php echo $itemlist['0']['id']; ?>";
 	 window.location.href=url;
-  
+
   });
 
 })

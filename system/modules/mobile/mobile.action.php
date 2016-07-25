@@ -104,7 +104,7 @@ class mobile extends base {
 		//print_r($jinri_shoplist);
 
          $key="首页";
-		// include templates("mobile/index","indexo");
+		// include templates("mobile/index","index");
 		include templates("mobile/index","inner");
 	}
 	//首页內嵌
@@ -123,9 +123,9 @@ class mobile extends base {
 
 	//商品列表
 	public function glist(){
-        $webname=$this->_cfg['web_name'];
+    $webname="全部商品";
 		$title="商品列表_"._cfg("web_name");
-		$key="所有商品";
+		$key="全部商品";
 		//正在进行
 		$shoplist_ing=$this->db->GetList("select * from `@#_shoplist` where `q_end_time` is null ORDER BY `shenyurenshu` DESC ");
 		// print_r($shoplist_ing);die;

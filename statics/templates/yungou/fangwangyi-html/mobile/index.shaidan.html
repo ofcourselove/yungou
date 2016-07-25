@@ -3,11 +3,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>晒单 - {wc:$webname}触屏版</title>     
-    <meta content="app-id=518966501" name="apple-itunes-app" />     
+    <title>晒单 - {wc:$webname}触屏版</title>
+    <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
-    <meta content="yes" name="apple-mobile-web-app-capable" />     
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />     
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta content="telephone=no" name="format-detection" />
     <link href="{G_TEMPLATES_CSS}/mobile/comm.css?" rel="stylesheet" type="text/css" />
 	<link href="{G_TEMPLATES_CSS}/mobile/single.css?" rel="stylesheet" type="text/css" />
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="h5-1yyg-v1">
-    
+
 <!-- 栏目页面顶部 -->
 
 {wc:templates "mobile/index","header"}
@@ -24,7 +24,7 @@
 
 <!-- 内页顶部 -->
 
-    
+
     <div id="navBox" class="g-snav m_listNav">
         <div class="g-snav-lst z-sgl-crt"><a href="javascript:;" class="gray9">最新晒单</a><b></b></div>
         <div class="g-snav-lst"><a href="javascript:;" class="gray9">人气晒单</a><b></b></div>
@@ -32,7 +32,7 @@
     </div>
 
     <!-- 晒单列表 -->
-    <section>	
+    <section>
 		<div class="cSingleCon" id="loadingPicBlock">
 		    <div id="postBox10" class="cSingleCon2"></div>
         </div>
@@ -40,7 +40,7 @@
         <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
 		<a id="btnLoadMore2" class="loading"  style="display:none;">没有数据</a>
         <a id="btnLoadMore3" class="loading"  style="display:none;">已经到底了</a>
-    </section> 
+    </section>
 	<input id="urladdress" value="" type="hidden" />
     <input id="pagenum" value="" type="hidden" />
 {wc:templates "mobile/index","footer"}
@@ -49,10 +49,10 @@
 window.onload=function(){
 	sdajax('new');
 }
-function sdajax(parm){	
+function sdajax(parm){
 	$("#urladdress").val('');
 	$("#pagenum").val('');
-	$.getJSON('{WEB_PATH}/mobile/shaidan/shaidanajax/'+parm,function(data){	
+	$.getJSON('{WEB_PATH}/mobile/shaidan/shaidanajax/'+parm,function(data){
 		$("#postLoading").hide();
 		if(data[0].sum){
 			var fg=parm.split("/");
@@ -90,8 +90,8 @@ function sdajax(parm){
 			}
 		}else{
 			$("#btnLoadMore").css('display','none');
-			$("#btnLoadMore2").css('display','block');	
-			$("#btnLoadMore3").css('display','none');			
+			$("#btnLoadMore2").css('display','block');
+			$("#btnLoadMore3").css('display','none');
 		}
 	})
 }
@@ -113,7 +113,7 @@ $(function(){
 		}
 	});
 	//加载更多
-	$("#btnLoadMore").click(function(){		
+	$("#btnLoadMore").click(function(){
 		var url=$("#urladdress").val(),
 			page=$("#pagenum").val();
 		sdajax(url+'/'+page);
@@ -135,14 +135,14 @@ $(function(){
 		var id=$(this).attr('id');
 		if(id){
 			window.location.href="{WEB_PATH}/mobile/shaidan/detail/"+id;
-		}			
+		}
 	});
 	$(document).on('click','.cSingleInfo .blue',function(){
 		var id=$(this).attr('id');
 		if(id){
 			window.location.href="{WEB_PATH}/mobile/mobile/userindex/"+id;
-		}	
-	});	
+		}
+	});
 })
 </script>
 
