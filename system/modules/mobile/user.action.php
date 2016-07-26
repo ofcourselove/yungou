@@ -11,6 +11,7 @@ class user extends memberbase {
 		$this->db = System::load_sys_class("model");
 	}
 
+
 	public function cook_end(){
 		_setcookie("uid","",time()-3600);
 		_setcookie("ushell","",time()-3600);
@@ -18,15 +19,79 @@ class user extends memberbase {
 		header("location: ".WEB_PATH."/mobile/mobile/");
 	}
 	//返回登录页面
+
 	public function login(){
 		//  $webname=$this->_cfg['web_name'];
 		// $user = $this->userinfo;
 		// if($user){
 		// 	header("Location:".WEB_PATH."/mobile/home/");exit;
 		// }
+		$appid ="wx9df2725cc2dd130f";
+		// $redirect_uri = urlencode(WEB_PATH."m=mobile&c=user&a=wechat");
+		$redirect_uri = urlencode(WEB_PATH."/mobile/user/wechat/");
+		$url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".$redirect_uri."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+		header("Location:".$url);
 
-		include templates("mobile/user","account");
+		// include templates("mobile/user","account");
 
+	}
+
+	public function wechat(){
+		 $appid = "wx9df2725cc2dd130f";
+		 $secret = "351c264296853b8b1a23f92017e9af59";
+		 $code = $this->code(4);
+			//  $code = $this->segment(4);
+			//  echo "$code";die;
+			//第一步:取得openid
+			$oauth2Url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appid&secret=$secret&code=$code&grant_type=authorization_code";
+			$oauth2 = $this->getJson($oauth2Url);
+			// print_r($oauth2);die;
+			// $file = './oauth2';
+			// file_put_contents($file, $oauth2); //保存到指定文件
+			//第二步:根据全局access_token和openid查询用户信息
+			$access_token = $oauth2['access_token'];
+			$openid = $oauth2['openid'];
+			// $refresh_token = $oauth2['refresh_token'];
+			// $refresh = "https://api.weixin.qq.com/sns/oauth2/refresh_token?appid=$appid&grant_type=refresh_token&refresh_token=$refresh_token";
+      // $data = $this->getJson($refresh);
+      // $access_token = $data['access_token'];
+			// print_r($access_token);die;
+			//  https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
+			$get_user_info_url = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
+			$userinfo =$this->getJson($get_user_info_url);
+			$time = time();
+			$nickname = $userinfo['nickname'];
+			$userid = $this->db->GetOne("select id from `@#_user` where `open_id` = '$openid'");
+       if (!$userid) {
+				$sql="INSERT INTO `@#_user`(nickname,open_id,login_time)VALUES('$nickname','$openid','$time')";
+				$user=$this->DB()->Query($sql);
+				$userid = $this->db->GetOne("select id from `@#_user` where `open_id` = '$openid'");
+       }
+			// print_r($userid);die;
+			// //打印用户信息
+			// print_r($userinfo);die;
+			// _setcookie("uid",_encrypt($member['uid']));
+			// session_start();
+			// $_SESSION['$open_id'] = $userinfo;
+      include templates("mobile/user","account");
+	}
+	function getJson($url){
+		 $ch = curl_init();
+		 curl_setopt($ch, CURLOPT_URL, $url);
+		 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+		 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+		 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		 $output = curl_exec($ch);
+		 curl_close($ch);
+		 return json_decode($output, true);
+	}
+  public function address(){
+
+		include templates("mobile/user","address");
+	}
+	public function address_add(){
+
+		include templates("mobile/user","address_add");
 	}
 	//返回注册页面
 	public function register(){

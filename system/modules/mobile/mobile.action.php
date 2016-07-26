@@ -29,7 +29,7 @@ class mobile extends base {
 	//首页
 	public function init(){
 			// $webname=$this->_cfg['web_name'];
-
+    //  echo "66666";die
 			$webname='只需一元就可夺宝';
 
 		//最新商品
@@ -123,7 +123,8 @@ class mobile extends base {
 
 	//商品列表
 	public function glist(){
-    $webname="全部商品";
+  //  echo "string";die;
+	  $webname="全部商品";
 		$title="商品列表_"._cfg("web_name");
 		$key="全部商品";
 		//正在进行

@@ -8,10 +8,10 @@ System::load_sys_fun('user');
 class home extends base {
 	public function __construct(){
 		parent::__construct();
-		if(ROUTE_A!='userphotoup' and ROUTE_A!='singphotoup'){
-			if(!$this->userinfo)_message("请登录",WEB_PATH."/mobile/user/login",3);
-		}
-		$this->db = System::load_sys_class('model');
+		// if(ROUTE_A!='userphotoup' and ROUTE_A!='singphotoup'){
+		// 	if(!$this->userinfo)_message("请登录",WEB_PATH."/mobile/user/login",3);
+		// }
+		// $this->db = System::load_sys_class('model');
 
 	}
 	public function init(){
@@ -113,6 +113,15 @@ class home extends base {
 		$title="购买记录";
 		//$record=$mysql_model->GetList("select * from `@#_member_go_record` where `uid`='$uid' ORDER BY `time` DESC");
 		include templates("mobile/user","userbuylist");
+	}
+	public function record_list(){
+	  $webname=$this->_cfg['web_name'];
+		$mysql_model=System::load_sys_class('model');
+		$uid = $this->segment(4);
+		// print_r($uid);die;
+		$record=$mysql_model->GetList("select * from `@#_member_go_record` where `uid`='$uid' ORDER BY `time` DESC");
+		// print_r($record);die;
+		include templates("mobile/user","record_list");
 	}
 	//购买记录详细
 	public function userbuydetail(){

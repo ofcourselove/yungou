@@ -18,9 +18,10 @@ class shaidan extends base {
 	public function init(){
 	    $webname=$this->_cfg['web_name'];
 		$key="晒单";
-		$shaidan=$this->db->GetList("select * from `@#_shaidan` order by `sd_time` DESC ");
-    
+		$shaidan=$this->db->GetList("select * from `@#_shaidan_hueifu` order by `sdhf_time` DESC ");
+    // print_r($shaidan);die;
 		include templates("mobile/index","show_all");
+
 	}
 	public function shaidanajax(){
 		$parm=htmlspecialchars($this->segment(4));

@@ -101,7 +101,11 @@
 					<li class="mui-table-view-cell indexListName">
 						<h4>最新揭晓</h4>
 						<span class="mui-icon mui-icon-forward"></span>
-						<h5 style="float: right;">更多</h5>
+						<div class="mui-bottom-part">
+							<a id="<?php echo WEB_PATH; ?>/mobile/mobile/glist">
+								<h5 style="float: right;">更多</h5>
+							</a>
+						</div>
 					</li>
 					<ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: #FFF;">
             <?php $ln=1;if(is_array($shopqishu)) foreach($shopqishu AS $qishu): ?>

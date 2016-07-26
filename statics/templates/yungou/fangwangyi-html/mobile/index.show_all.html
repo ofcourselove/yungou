@@ -124,79 +124,34 @@
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
+		<header class="mui-bar mui-bar-nav" >
 			<a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-left" style=" font-size: 40px;"></a>
 			<h1 class="mui-title">晒单</h1>
 		</header>
     {wc:templates "mobile/index","foot"}
 
-		<div class="mui-content">
+		<div class="mui-content" >
 			<a class="addBtn"><span class="mui-icon mui-icon-plusempty"></span></a>
 			<div id="slider" class="mui-slider mui-fullscreen" style="background-color: #FFF;">
 				<div class="mui-slider-group">
 					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active" >
-						<div id="scroll1" class="mui-scroll-wrapper">
+						<div id="scroll1" class="mui-scroll-wrapper" >
 							<div class="mui-scroll"  style="padding: 15px; padding-bottom: 100px;">
+                {wc:loop $shaidan $sd}
 								<div class="listBox" style="height: auto; padding-bottom: 15px; border-bottom: 1px solid #eee;">
 									<div class="show_allBox">
-										<div class="show_allBoxLeft"><img src="images/show_all_03.png"></div>
+										<div class="show_allBoxLeft"><img src="{G_UPLOAD_PATH}/photo/member.jpg"></div>
 										<div class="show_allBoxRight">
-											<h4>小树懒兰兰</h4>
-											<h5>3小时前</h5>
+											<h4>	{wc:$sd['sdhf_username']}</h4>
+											<h5>{wc:fun:date('Y-m-d H:i:s',$sd['sdhf_time'])}</h5>
 										</div>
 									</div>
 									<div style="overflow: hidden;">
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; height: 100px;"><img src="images/win_pic_03.png"></div>
+										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="{G_UPLOAD_PATH}/{wc:$sd['sdhf_img']}"></div>
 									</div>
-									<h4 class="show_h4" style="color: #FF9A15;">中了！！哈哈！</h4>
+									<h4 class="show_h4" style="color: #FF9A15;">{wc:$sd['sdhf_content']}</h4>
 								</div>
-								<div class="listBox" style="height: auto; padding-bottom: 15px; border-bottom: 1px solid #eee;">
-									<div class="show_allBox">
-										<div class="show_allBoxLeft"><img src="images/show_all_03.png"></div>
-										<div class="show_allBoxRight">
-											<h4>小树懒兰兰</h4>
-											<h5>3小时前</h5>
-										</div>
-									</div>
-									<div style="overflow: hidden;">
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; height: 100px;"><img src="images/win_pic_03.png"></div>
-									</div>
-									<h4 class="show_h4" style="color: #FF9A15;">中了！！哈哈！</h4>
-								</div>
-								<div class="listBox" style="height: auto; padding-bottom: 15px; border-bottom: 1px solid #eee;">
-									<div class="show_allBox">
-										<div class="show_allBoxLeft"><img src="images/show_all_03.png"></div>
-										<div class="show_allBoxRight">
-											<h4>小树懒兰兰</h4>
-											<h5>3小时前</h5>
-										</div>
-									</div>
-									<div style="overflow: hidden;">
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; height: 100px;"><img src="images/win_pic_03.png"></div>
-									</div>
-									<h4 class="show_h4" style="color: #FF9A15;">中了！！哈哈！</h4>
-								</div>
-								<div class="listBox" style="height: auto; padding-bottom: 15px; border-bottom: 1px solid #eee;">
-									<div class="show_allBox">
-										<div class="show_allBoxLeft"><img src="images/show_all_03.png"></div>
-										<div class="show_allBoxRight">
-											<h4>小树懒兰兰</h4>
-											<h5>3小时前</h5>
-										</div>
-									</div>
-									<div style="overflow: hidden;">
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="images/win_pic_03.png"></div>
-										<div class="list_imgBox" style="width: 30%; height: 100px;"><img src="images/win_pic_03.png"></div>
-									</div>
-									<h4 class="show_h4" style="color: #FF9A15;">中了！！哈哈！</h4>
-								</div>
+							  	{wc:loop:end}
 							</div>
 						</div>
 					</div>

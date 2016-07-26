@@ -59,52 +59,29 @@
 	</head>
 
 	<body>
-		<!-- <header class="mui-bar mui-bar-nav">
+		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-left" style=" font-size: 40px;"></a>
-			<h1 class="mui-title">个人中心</h1>
-		</header> -->
-    <?php include templates("mobile/index","foot");?>
+			<h1 class="mui-title">收货地址</h1>
+		</header>
 		<div class="mui-content">
-			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 1px; padding-bottom:70px;">
+			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 50px; padding-bottom:70px;">
 				<div class="mui-scroll">
 
-					<div class="accountBox">
-						<div class="accountLeft"><img src="<?php echo $userinfo['headimgurl']; ?>"></div>
-						<div class="accountRight">
-							<p>微信昵称：<span><?php echo $userinfo['nickname']; ?></span></p>
-							<p>地区：<span><?php echo $userinfo['province']; ?>   <?php echo $userinfo['city']; ?></span></p>
-							<!-- <p>会员ID：<span>1000087</span></p> -->
-						</div>
-
-					</div>
 
 					<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 15px;">
-						<li class="mui-table-view-cell indexListName" style="background: url(images/account_img_07.png) no-repeat 15px center; background-size: calc(25px); padding-left: 45px;">
-              <a href="">
-								<h4 style="border: none 0; ">夺宝记录</h4>
-								<span class="mui-icon mui-icon-forward"></span>
-							</a>
+						<li class="mui-table-view-cell indexListName" >
+							<h4 style="border: none 0; float: none;">地址1</h4>
+							<h5>北京市丰台区长辛店北里北京市丰台区长辛店北里北京市丰台区长辛店北里北京市</h5>
 						</li>
-						<li class="mui-table-view-cell indexListName" style="background: url(images/account_img_10.png) no-repeat 15px center; background-size: calc(25px); padding-left: 45px;">
-              <a href="<?php echo WEB_PATH; ?>/mobile/home/record_list/<?php echo $userid['id']; ?>">
-								<h4 style="border: none 0;">中奖记录</h4>
-								<span class="mui-icon mui-icon-forward"></span>
-							</a>
-
+						<li class="mui-table-view-cell indexListName" >
+							<h4 style="border: none 0; float: none;">地址2</h4>
+							<h5>北京市丰台区长辛店北里北京市丰台区长辛店北里北京市丰台区长辛店北里北京市</h5>
 						</li>
-						<li class="mui-table-view-cell indexListName" style="background: url(images/account_img_12.png) no-repeat 15px center; background-size: calc(25px); padding-left: 45px;">
-								<a id="<?php echo WEB_PATH; ?>/mobile/shaidan/init">
-									<h4 style="border: none 0;">我的晒单</h4>
-									<span class="mui-icon mui-icon-forward"></span>
-								</a>
-						</li>
-						<li class="mui-table-view-cell indexListName" style="background: url(images/account_img_14.png) no-repeat 15px center; background-size: calc(25px); padding-left: 45px;">
-							<!-- <div class="mui-bottom-part"> -->
-								<a href="<?php echo WEB_PATH; ?>/mobile/user/address">
-									<h4 style="border: none 0;">收货地址</h4>
-									<span class="mui-icon mui-icon-forward"></span>
-								</a>
-									<!-- </div> -->
+						<li class="mui-table-view-cell indexListName" >
+              <a href="<?php echo WEB_PATH; ?>/mobile/user/address_add">
+                <h4 style="border: none 0;">添加收货地址</h4>
+                <span class="mui-icon mui-icon-forward"></span>
+              </a>
 						</li>
 					</ul>
 
@@ -122,7 +99,7 @@
 			  //打开关于页面
 			    var _url = this.getAttribute("id");
 			    mui.openWindow({
-				    url: _url ,
+				    url: _url + '.html',
 				    id:_url
 			    });
 			});

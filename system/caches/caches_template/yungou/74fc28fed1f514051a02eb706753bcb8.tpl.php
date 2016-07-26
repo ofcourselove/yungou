@@ -9,10 +9,9 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet"  href="<?php echo G_TEMPLATES_CSS; ?>/mobile/mui.css">
-		<link rel="stylesheet"  href="<?php echo G_TEMPLATES_CSS; ?>/mobile/app.css">
-
-    <style>
+    <link rel="stylesheet" href="<?php echo G_TEMPLATES_CSS; ?>/mobile/mui.css">
+    <link rel="stylesheet" href="<?php echo G_TEMPLATES_CSS; ?>/mobile/app.css">
+		<style>
 			.mui-segmented-control .mui-control-item{
 				line-height: 36px;
 			}
@@ -124,34 +123,27 @@
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav" >
+		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-left" style=" font-size: 40px;"></a>
-			<h1 class="mui-title">晒单</h1>
+			<h1 class="mui-title">夺宝记录</h1>
 		</header>
-    <?php include templates("mobile/index","foot");?>
-
-		<div class="mui-content" >
-			<a class="addBtn"><span class="mui-icon mui-icon-plusempty"></span></a>
+		<div class="mui-content">
 			<div id="slider" class="mui-slider mui-fullscreen" style="background-color: #FFF;">
 				<div class="mui-slider-group">
 					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active" >
-						<div id="scroll1" class="mui-scroll-wrapper" >
-							<div class="mui-scroll"  style="padding: 15px; padding-bottom: 100px;">
-                <?php $ln=1;if(is_array($shaidan)) foreach($shaidan AS $sd): ?>
-								<div class="listBox" style="height: auto; padding-bottom: 15px; border-bottom: 1px solid #eee;">
-									<div class="show_allBox">
-										<div class="show_allBoxLeft"><img src="<?php echo G_UPLOAD_PATH; ?>/photo/member.jpg"></div>
-										<div class="show_allBoxRight">
-											<h4>	<?php echo $sd['sdhf_username']; ?></h4>
-											<h5><?php echo date('Y-m-d H:i:s',$sd['sdhf_time']); ?></h5>
-										</div>
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll"  style="padding: 15px;">
+                <?php $ln=1;if(is_array($record)) foreach($record AS $v): ?>
+								<div class="listBox">
+									<div class="list_imgBox"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $v['uphoto']; ?>"></div>
+									<div class="list_rightBox" style="padding-top: 10px;">
+										<div class="mui-media-body" style="text-align: left;"><?php echo $v['shopname']; ?></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;"><?php echo $v['shopqishu']; ?></span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 5px;">购买份数：<span><?php echo $v['gonumber']; ?></span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 5px;">中奖状态：<span style="color: #e73434;"><?php echo $v['status']; ?></span></div>
 									</div>
-									<div style="overflow: hidden;">
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img']; ?>"></div>
-									</div>
-									<h4 class="show_h4" style="color: #FF9A15;"><?php echo $sd['sdhf_content']; ?></h4>
 								</div>
-							  	<?php  endforeach; $ln++; unset($ln); ?>
+                <?php  endforeach; $ln++; unset($ln); ?>
 							</div>
 						</div>
 					</div>
@@ -224,7 +216,7 @@
 			  //打开关于页面
 			    var _url = this.getAttribute("id");
 			    mui.openWindow({
-				    url: _url ,
+				    url: _url + '.html',
 				    id:_url
 			    });
 			});
