@@ -131,8 +131,8 @@
     <?php include templates("mobile/index","foot");?>
 
 		<div class="mui-content" >
-			<a class="addBtn"><span class="mui-icon mui-icon-plusempty"></span></a>
 			<div id="slider" class="mui-slider mui-fullscreen" style="background-color: #FFF;">
+				<a href="<?php echo WEB_PATH; ?>/mobile/home/postsingle/<?php echo $sdhf_userid; ?>"class="addBtn"><span class="mui-icon mui-icon-plusempty"></span></a>
 				<div class="mui-slider-group">
 					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active" >
 						<div id="scroll1" class="mui-scroll-wrapper" >

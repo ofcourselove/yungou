@@ -70,16 +70,13 @@
 
 					<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 15px;">
 						<li class="mui-table-view-cell indexListName" >
-							<h4 style="border: none 0; float: none;">地址1</h4>
-							<h5>北京市丰台区长辛店北里北京市丰台区长辛店北里北京市丰台区长辛店北里北京市</h5>
-						</li>
-						<li class="mui-table-view-cell indexListName" >
-							<h4 style="border: none 0; float: none;">地址2</h4>
-							<h5>北京市丰台区长辛店北里北京市丰台区长辛店北里北京市丰台区长辛店北里北京市</h5>
+							<h4 style="border: none 0; float: none;">收货信息：</h4>
+							<h5><?php echo $dizhi['shouhuoren']; ?>   <?php echo $dizhi['mobile']; ?></h5>
+							<h5><?php echo $dizhi['sheng']; ?><?php echo $dizhi['shi']; ?><?php echo $dizhi['xian']; ?><?php echo $dizhi['jiedao']; ?></h5>
 						</li>
 						<li class="mui-table-view-cell indexListName" >
               <a href="<?php echo WEB_PATH; ?>/mobile/user/address_add">
-                <h4 style="border: none 0;">添加收货地址</h4>
+                <h4 style="border: none 0;">更新收货信息</h4>
                 <span class="mui-icon mui-icon-forward"></span>
               </a>
 						</li>

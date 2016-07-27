@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php defined('G_IN_SYSTEM')or exit('No permission resources.'); ?><!DOCTYPE html>
 <html>
 
 	<head>
@@ -9,8 +9,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/mui.css">
-    <link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/app.css">
+    <link rel="stylesheet" href="<?php echo G_TEMPLATES_CSS; ?>/mobile/mui.css">
+    <link rel="stylesheet" href="<?php echo G_TEMPLATES_CSS; ?>/mobile/app.css">
 		<style>
 			.mui-segmented-control .mui-control-item{
 				line-height: 36px;
@@ -125,7 +125,7 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-left" style=" font-size: 40px;"></a>
-			<h1 class="mui-title">夺宝记录</h1>
+			<h1 class="mui-title">中奖记录</h1>
 		</header>
 		<div class="mui-content">
 			<div id="slider" class="mui-slider mui-fullscreen" style="background-color: #FFF;">
@@ -133,42 +133,43 @@
 					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active" >
 						<div id="scroll1" class="mui-scroll-wrapper">
 							<div class="mui-scroll"  style="padding: 15px;">
-                {wc:loop $record $v}
+								<?php if($record==null): ?>
+								 <h4 style="border: none 0; ">暂无记录</h4>
+								<?php  else: ?>
+                <?php $ln=1;if(is_array($record)) foreach($record AS $v): ?>
 								<div class="listBox">
-									<a href="{WEB_PATH}/mobile/mobile/item/{wc:$v['shopid']}">
-										<div class="list_imgBox"><img src="{G_UPLOAD_PATH}/{wc:$v['uphoto']}"></div>
-									</a>
-									<div class="list_rightBox" style="padding-top: -3px;">
-										<div class="mui-media-body" style="text-align: left;">
-                     {wc:php:start}
-										    echo mb_substr($v['shopname'],0,20).'....';
-										 {wc:php:end}
-										</div>
-										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; "><span style="color: #999;">第{wc:$v['shopqishu']}期</span></div>
-										<div class="mui-media-body" style="text-align: left; font-size: 12px; padding-top: 0.5px;">购买份数：<span>{wc:$v['gonumber']}份</span></div>
-										<div class="mui-media-body" style="text-align: left; font-size: 12px; padding-top: 0.5px;">
-											中奖状态：<span style="color: #e73434;">
-												{wc:php:start}
-												 if($v['huode']>10000000){
-                           echo "已中奖";
-												 } else {
-													 echo "未中奖";
-												 }
-                        {wc:php:end}
-											</span></div>
+                  <a href="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $v['shopid']; ?>">
+                    <div class="list_imgBox"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $v['uphoto']; ?>"></div>
+                  </a>
+									<div class="list_rightBox" style="padding-top: 1px;">
+										<div class="mui-media-body " style="text-align: left;">
+                          <?php 
+                          echo mb_substr($v['shopname'],0,20).'....';
+                           ?>
+                    </div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; "><span style="color: #999;">第<?php echo $v['shopqishu']; ?>期</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 1px;">购买份数：<span><?php echo $v['gonumber']; ?>份</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 1px;">
+                      状态：<span style="color: #e73434;">
+                        <?php 
+                        $b= (strpos($v['status'],","));$c= (strpos($v['status'],","));
+                        echo substr($v['status'],$b+1,$c);
+                         ?>
+                      </span></div>
 									</div>
 								</div>
-                {wc:loop:end}
+                <?php  endforeach; $ln++; unset($ln); ?>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-     	{wc:templates "mobile/index","foot"}
-		<script src="{G_TEMPLATES_JS}/mobile/mui.js"></script>
-		<script src="{G_TEMPLATES_JS}/mobile/mui.pullToRefresh.js"></script>
-		<script src="{G_TEMPLATES_JS}/mobile/mui.pullToRefresh.material.js"></script>
+    	<?php include templates("mobile/index","foot");?>
+		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.js"></script>
+		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.pullToRefresh.js"></script>
+		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.pullToRefresh.material.js"></script>
 		<script>
 
 		mui('.mui-scroll-wrapper').scroll();
@@ -231,7 +232,7 @@
 			  //打开关于页面
 			    var _url = this.getAttribute("id");
 			    mui.openWindow({
-				    url: _url + '.html',
+				    url: _url ,
 				    id:_url
 			    });
 			});

@@ -63,6 +63,14 @@ class shaidan extends base {
 		echo json_encode($shaidan);
 	}
 
+	public function my_shaidan(){
+		$sdhf_userid=abs(intval($this->segment(4)));
+		$shaidan=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_userid`='$sdhf_userid' ");
+		// print_r($shaidan);die;
+    include templates("mobile/index","show_all");
+
+	}
+
 	public function detail(){
 	    $webname=$this->_cfg['web_name'];
 		$key="晒单分享";

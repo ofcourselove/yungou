@@ -80,20 +80,20 @@
 
 					<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 15px;">
 						<li class="mui-table-view-cell indexListName" style="background: url(images/account_img_07.png) no-repeat 15px center; background-size: calc(25px); padding-left: 45px;">
-              <a href="">
+              <a href="<?php echo WEB_PATH; ?>/mobile/home/record_list/<?php echo $userid['id']; ?>">
 								<h4 style="border: none 0; ">夺宝记录</h4>
 								<span class="mui-icon mui-icon-forward"></span>
 							</a>
 						</li>
 						<li class="mui-table-view-cell indexListName" style="background: url(images/account_img_10.png) no-repeat 15px center; background-size: calc(25px); padding-left: 45px;">
-              <a href="<?php echo WEB_PATH; ?>/mobile/home/record_list/<?php echo $userid['id']; ?>">
+              <a href="<?php echo WEB_PATH; ?>/mobile/home/orderlist/<?php echo $userid['id']; ?>">
 								<h4 style="border: none 0;">中奖记录</h4>
 								<span class="mui-icon mui-icon-forward"></span>
 							</a>
 
 						</li>
 						<li class="mui-table-view-cell indexListName" style="background: url(images/account_img_12.png) no-repeat 15px center; background-size: calc(25px); padding-left: 45px;">
-								<a id="<?php echo WEB_PATH; ?>/mobile/shaidan/init">
+								<a href="<?php echo WEB_PATH; ?>/mobile/shaidan/my_shaidan/<?php echo $userid['id']; ?>">
 									<h4 style="border: none 0;">我的晒单</h4>
 									<span class="mui-icon mui-icon-forward"></span>
 								</a>

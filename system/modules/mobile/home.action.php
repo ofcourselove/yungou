@@ -114,15 +114,6 @@ class home extends base {
 		//$record=$mysql_model->GetList("select * from `@#_member_go_record` where `uid`='$uid' ORDER BY `time` DESC");
 		include templates("mobile/user","userbuylist");
 	}
-	public function record_list(){
-	  $webname=$this->_cfg['web_name'];
-		$mysql_model=System::load_sys_class('model');
-		$uid = $this->segment(4);
-		// print_r($uid);die;
-		$record=$mysql_model->GetList("select * from `@#_member_go_record` where `uid`='$uid' ORDER BY `time` DESC");
-		// print_r($record);die;
-		include templates("mobile/user","record_list");
-	}
 	//购买记录详细
 	public function userbuydetail(){
 	    $webname=$this->_cfg['web_name'];
@@ -137,13 +128,25 @@ class home extends base {
 			echo _message("页面错误",WEB_PATH."/member/home/userbuylist",3);
 		}
 	}
-	//获得的商品
+	//购买的商品 ---------夺宝记录
+	public function record_list(){
+		$webname=$this->_cfg['web_name'];
+		$mysql_model=System::load_sys_class('model');
+		$uid = $this->segment(4);
+		// print_r($uid);die;
+		$record=$mysql_model->GetList("select * from `@#_member_go_record` where `uid`='$uid' ORDER BY `time` DESC");
+		// print_r($record);die;
+		include templates("mobile/user","record_list");
+	}
+	//获得的商品 ------中奖记录
 	public function orderlist(){
 	    $webname=$this->_cfg['web_name'];
 		$member=$this->userinfo;
 		$title="获得的商品";
-		//$record=$this->db->GetList("select * from `@#_member_go_record` where `uid`='".$member['uid']."' and `huode`>'10000000' ORDER BY id DESC");
-		include templates("mobile/user","orderlist");
+		$uid = $this->segment(4);
+		// $record=$this->db->GetList("select * from `@#_member_go_record` where `uid`='".$member['uid']."' and `huode`>'10000000' ORDER BY id DESC");
+		$record=$this->db->GetList("select * from `@#_member_go_record` where `uid`='".$uid."' and `huode`>'10000000' ORDER BY id DESC");
+		include templates("mobile/user","order_show");
 	}
 	//账户管理
 	public function userbalance(){
@@ -207,62 +210,102 @@ class home extends base {
 		}
 	}
 	*/
+	//添加地址
+	public function useraddress(){
+		$mysql_model=System::load_sys_class('model');
+		// $member=$this->userinfo;
+		$uid=_getcookie("uid");
+		if(isset($_POST)){
+			// foreach($_POST as $k=>$v){
+			// 	$_POST[$k] = _htmtocode($v);
+			// }
+			$sheng=isset($_POST['sheng']) ? $_POST['sheng'] : "";
+			$shi=isset($_POST['shi']) ? $_POST['shi'] : "";
+			$xian=isset($_POST['xian']) ? $_POST['xian'] : "";
+			$youbian=isset($_POST['youbian']) ? $_POST['youbian'] : "";
+			$shouhuoren=isset($_POST['shouhuoren']) ? $_POST['shouhuoren'] : "";
+			$mobile=isset($_POST['mobile']) ? $_POST['mobile'] : "";
+			$jiedao=isset($_POST['jiedao']) ? $_POST['jiedao'] : "";
+			$time=time();
+			if($sheng==null  or $shouhuoren==null or $mobile==null){
+				echo "带星号不能为空;";
+				exit;
+			}
+			if(!_checkmobile($mobile)){
+				echo "手机号错误;";
+				exit;
+			}
+			// print_r($sheng);die;
+			$mysql_model->Query("UPDATE `@#_member_dizhi` SET
+			`sheng`='".$sheng."',
+			`shi`='".$shi."',
+			`xian`='".$xian."',
+			`jiedao`='".$jiedao."',
+			`youbian`='".$youbian."',
+			`shouhuoren`='".$shouhuoren."',
+			`mobile`='".$mobile."' where `uid`='".$uid."'");
+			_message("更新地址成功",WEB_PATH."/mobile/user/address",2);
+			}
+	}
+
+
 	//晒单
 	public function singlelist(){
 		 $webname=$this->_cfg['web_name'];
 		include templates("mobile/user","singlelist");
 	}
-/*
-	//添加晒单
+
+	//添加晒单---------------解除封印
 	public function postsingle(){
-		$member=$this->userinfo;
-		$uid=_getcookie('uid');
-		$ushell=_getcookie('ushell');
-		$title="添加晒单";
-		if(isset($_POST['submit'])){
-
-			if($_POST['title']==null)_message("标题不能为空");
-			if($_POST['content']==null)_message("内容不能为空");
-			if(!isset($_POST['fileurl_tmp'])){
-				_message("图片不能为空");
-			}
-			System::load_sys_class('upload','sys','no');
-			$img=$_POST['fileurl_tmp'];
-			$num=count($img);
-			$pic="";
-			for($i=0;$i<$num;$i++){
-				$pic.=trim($img[$i]).";";
-			}
-
-			$src=trim($img[0]);
-			$size=getimagesize(G_UPLOAD_PATH."/".$src);
-			$width=220;
-			$height=$size[1]*($width/$size[0]);
-
-			$thumbs=tubimg($src,$width,$height);
-			$uid=$this->userinfo;
-			$sd_userid=$uid['uid'];
-			$sd_shopid=$_POST['shopid'];
-			$sd_title=$_POST['title'];
-			$sd_thumbs="shaidan/".$thumbs;
-			$sd_content=$_POST['content'];
-			$sd_photolist=$pic;
-			$sd_time=time();
-			$this->db->Query("INSERT INTO `@#_shaidan`(`sd_userid`,`sd_shopid`,`sd_title`,`sd_thumbs`,`sd_content`,`sd_photolist`,`sd_time`)VALUES
-			('$sd_userid','$sd_shopid','$sd_title','$sd_thumbs','$sd_content','$sd_photolist','$sd_time')");
-			_message("晒单分享成功",WEB_PATH."/member/home/singlelist");
-		}
-		$recordid=intval($this->segment(4));
+		// $member=$this->userinfo;
+		// $uid=_getcookie('uid');
+		// $ushell=_getcookie('ushell');
+		// $title="添加晒单";
+		// if(isset($_POST['submit'])){
+		//
+		// 	if($_POST['title']==null)_message("标题不能为空");
+		// 	if($_POST['content']==null)_message("内容不能为空");
+		// 	if(!isset($_POST['fileurl_tmp'])){
+		// 		_message("图片不能为空");
+		// 	}
+		// 	System::load_sys_class('upload','sys','no');
+		// 	$img=$_POST['fileurl_tmp'];
+		// 	$num=count($img);
+		// 	$pic="";
+		// 	for($i=0;$i<$num;$i++){
+		// 		$pic.=trim($img[$i]).";";
+		// 	}
+		//
+		// 	$src=trim($img[0]);
+		// 	$size=getimagesize(G_UPLOAD_PATH."/".$src);
+		// 	$width=220;
+		// 	$height=$size[1]*($width/$size[0]);
+		//
+		// 	$thumbs=tubimg($src,$width,$height);
+		// 	$uid=$this->userinfo;
+		// 	$sd_userid=$uid['uid'];
+		// 	$sd_shopid=$_POST['shopid'];
+		// 	$sd_title=$_POST['title'];
+		// 	$sd_thumbs="shaidan/".$thumbs;
+		// 	$sd_content=$_POST['content'];
+		// 	$sd_photolist=$pic;
+		// 	$sd_time=time();
+		// 	$this->db->Query("INSERT INTO `@#_shaidan`(`sd_userid`,`sd_shopid`,`sd_title`,`sd_thumbs`,`sd_content`,`sd_photolist`,`sd_time`)VALUES
+		// 	('$sd_userid','$sd_shopid','$sd_title','$sd_thumbs','$sd_content','$sd_photolist','$sd_time')");
+		// 	_message("晒单分享成功",WEB_PATH."/member/home/singlelist");
+		// }
+		$recordid=$this->segment(4);
+		// print_r($recordid);die;
 		if($recordid>0){
 			$shaidan=$this->db->GetOne("select * from `@#_member_go_record` where `id`='$recordid'");
 			$shopid=$shaidan['shopid'];
-			include templates("member","singleinsert");
+			include templates("mobile/user","shaidan_insert");
 		}else{
 			_message("页面错误");
 		}
 	}
 	//编辑
-	public function PostSingleEdit(){
+/*	public function PostSingleEdit(){
 		_message("不可编辑!");
 		if(isset($_POST['submit'])){
 			System::load_sys_class('upload','sys','no');

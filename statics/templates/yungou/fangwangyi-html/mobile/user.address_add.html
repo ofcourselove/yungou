@@ -65,40 +65,40 @@
 		</header>
 		<div class="mui-content">
 			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 50px; padding-bottom:70px;">
+				<form class="registerform" method="post" action="{wc:WEB_PATH}/mobile/home/useraddress">
 				<div class="mui-scroll">
-
-
-					<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 15px;">
+					<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 5px;">
 						<li class="mui-table-view-cell indexListName" >
 							<h4 style="border: none 0; width: 20%;">姓名：</h4>
-							<input type="text" placeholder="请输入姓名">
+							<input type="text" name="shouhuoren" placeholder="请输入姓名">
 						</li>
 						<li class="mui-table-view-cell indexListName" >
 							<h4 style="border: none 0; width: 20%;">手机号：</h4>
-							<input type="text" placeholder="请输入手机号">
+							<input type="text" name="mobile" placeholder="请输入手机号">
 						</li>
 						<li class="mui-table-view-cell indexListName" >
 							<h4 style="border: none 0; width: 20%;">省份：</h4>
-							<input type="text" placeholder="请输入省份">
+							<input type="text" name="sheng" placeholder="请输入省份">
 						</li>
 						<li class="mui-table-view-cell indexListName" >
 							<h4 style="border: none 0; width: 20%;">城市：</h4>
-							<input type="text" placeholder="请输入城市">
+							<input type="text" name="shi" placeholder="请输入城市">
 						</li>
 						<li class="mui-table-view-cell indexListName" >
 							<h4 style="border: none 0; width: 20%;">区县：</h4>
-							<input type="text" placeholder="请输入区县">
+							<input type="text" name="xian" placeholder="请输入区县">
 						</li>
 						<li class="mui-table-view-cell indexListName" >
 							<h4 style="border: none 0; width: 20%;">邮编：</h4>
-							<input type="text" placeholder="请输入邮编">
+							<input type="text" name="youbian" placeholder="请输入邮编">
 						</li>
 						<li class="mui-table-view-cell indexListName" >
-							<textarea placeholder="请输入详细地址" style="margin: 0; padding: 0; height: 80px; border: none 0;"></textarea>
+							<textarea placeholder="请输入详细地址" name="jiedao" style="margin: 0; padding: 0; height: 80px; border: none 0;"></textarea>
 						</li>
 					</ul>
-					<button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding: 10px 0; width: 90%; margin: 0 auto; margin-top: 15px; background-color: #FF9A15; border: none 0;">确认添加</button>
+					<button type="submit" class="mui-btn mui-btn-warning mui-btn-block" style="padding: 10px 0; width: 90%; margin: 0 auto; margin-top: 10px; background-color: #FF9A15; border: none 0;">确认添加</button>
 				</div>
+					</form>
 			</div>
 		</div>
 

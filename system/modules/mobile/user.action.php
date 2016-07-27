@@ -27,12 +27,10 @@ class user extends memberbase {
 		// 	header("Location:".WEB_PATH."/mobile/home/");exit;
 		// }
 		$appid ="wx9df2725cc2dd130f";
-		// $redirect_uri = urlencode(WEB_PATH."m=mobile&c=user&a=wechat");
 		$redirect_uri = urlencode(WEB_PATH."/mobile/user/wechat/");
 		$url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".$redirect_uri."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
 		header("Location:".$url);
 
-		// include templates("mobile/user","account");
 
 	}
 
@@ -40,12 +38,18 @@ class user extends memberbase {
 		 $appid = "wx9df2725cc2dd130f";
 		 $secret = "351c264296853b8b1a23f92017e9af59";
 		 $code = $this->code(4);
+		 if (isset($_COOKIE['uid'])) {
+		 	  $userid =_getcookie("uid");
+				// print_r($userid);die;
+				$userinfo = $this->db->GetOne("select * from `@#_user` where `id` = '$userid'");
+		} else {
+      // var_dump($_COOKIE['uid']);die;
 			//  $code = $this->segment(4);
 			//  echo "$code";die;
 			//第一步:取得openid
 			$oauth2Url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appid&secret=$secret&code=$code&grant_type=authorization_code";
-			$oauth2 = $this->getJson($oauth2Url);
 			// print_r($oauth2);die;
+			$oauth2 = $this->getJson($oauth2Url);
 			// $file = './oauth2';
 			// file_put_contents($file, $oauth2); //保存到指定文件
 			//第二步:根据全局access_token和openid查询用户信息
@@ -63,16 +67,17 @@ class user extends memberbase {
 			$nickname = $userinfo['nickname'];
 			$userid = $this->db->GetOne("select id from `@#_user` where `open_id` = '$openid'");
        if (!$userid) {
-				$sql="INSERT INTO `@#_user`(nickname,open_id,login_time)VALUES('$nickname','$openid','$time')";
+				$sql="INSERT INTO `@#_user`(nickname,open_id,login_time,city,province,headimgurl)VALUES('$nickname','$openid','$time','$userinfo[city]','$userinfo[province]','$userinfo[headimgurl]')";
 				$user=$this->DB()->Query($sql);
 				$userid = $this->db->GetOne("select id from `@#_user` where `open_id` = '$openid'");
        }
-			// print_r($userid);die;
+			//  print_r($userid);
+			 _setcookie("uid","$userid[id]",60*60*24*1);
 			// //打印用户信息
 			// print_r($userinfo);die;
-			// _setcookie("uid",_encrypt($member['uid']));
 			// session_start();
 			// $_SESSION['$open_id'] = $userinfo;
+		}
       include templates("mobile/user","account");
 	}
 	function getJson($url){
@@ -86,7 +91,10 @@ class user extends memberbase {
 		 return json_decode($output, true);
 	}
   public function address(){
-
+		$mysql_model=System::load_sys_class('model');
+		$uid=_getcookie("uid");
+		$dizhi=$mysql_model->Getone("select * from `@#_member_dizhi` where `uid`='$uid' ");
+		// print_r($dizhi);die;
 		include templates("mobile/user","address");
 	}
 	public function address_add(){

@@ -18,7 +18,7 @@
 		<div class="tips-con"><i></i>暂无记录！</div>
 		{wc:else}
 		{wc:loop $shaidan $sd}
-		<ul class="listCon">			
+		<ul class="listCon">
 			<li class="w100" style="text-align:center;"><a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank" class="blue"><img width="50" src="{G_UPLOAD_PATH}/{wc:$sd['sd_thumbs']}"/></a></li>
 			<li class="w400"><a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank" class="gray01">{wc:$sd['sd_title']}</a></li>
 			<li class="w85 fr">
@@ -46,7 +46,7 @@
 		{wc:loop:end}
 		{wc:if:end}
 	</div>
-	
+
 </div>
 
 <style>
@@ -162,7 +162,7 @@ function FixedConfirm(content,minwidth){
 		div+='<a class="orangebut" id="btnMsgOK" href="javascript:;">确认</a>&nbsp;&nbsp;';
 		div+='<a class="cancelBtn" id="btnMsgCancel" href="javascript:;">取消</a>';
 		div+='</div></div></div>';
-		div+='</div>';	
+		div+='</div>';
 	$("body").append(div);
 	Fixed(minwidth);
 	FixedClose();
@@ -174,10 +174,10 @@ $(function(){
 })
 //关闭弹窗
 function FixedClose(){
-	$("#foucs_close,#page_close,#btnMsgCancel").click(function(){		
+	$("#foucs_close,#page_close,#btnMsgCancel").click(function(){
 		$("#foucs_big,#foucs_min,#w3foucs").fadeOut(200,function(){
 			$("#foucs_big,#foucs_min,#w3foucs").remove();
-		});		
+		});
 	})
 };
 function FixedStar(){
@@ -189,7 +189,7 @@ function FixedStar(){
 function Fixed(w,h){
 	var bigheight=document.body.clientHeight,
 	    bigwidth=document.body.clientWidth;
-	var big=$("#foucs_big"),	
+	var big=$("#foucs_big"),
 	    min=$("#foucs_min");
 	var w3foucs=$("#w3foucs");
 	if(w==null){
@@ -198,17 +198,17 @@ function Fixed(w,h){
 		}else{
 			w = 200;
 		}
-	}	
+	}
 	if(h==null){
 		var h = w3foucs.height();
-	}   
-	big.height(bigheight);	
-    big.width(bigwidth); 
+	}
+	big.height(bigheight);
+    big.width(bigwidth);
     big.fadeTo(500,0.5);
-	min.width(w+14); 
-    min.height(h+14); 
+	min.width(w+14);
+    min.height(h+14);
     min.fadeTo(500,0.5);
-	
+
 	w3foucs.css("height",h);
 	w3foucs.width(w);
     var t = ($(window).height()/2) - (h/2);
@@ -216,7 +216,7 @@ function Fixed(w,h){
     $("#w3foucs,#foucs_min").css({display:"block",position:"fixed"});
 	$("#foucs_close").css({display:"block"});
     var l = ($(window).width()/2) - (w/2);
-    if(l < 0) l = 0;   
+    if(l < 0) l = 0;
     $("#foucs_min").css({left: l-5+'px', top: t-5+'px'});
     w3foucs.css({left: l+'px', top: t+'px'});
 }

@@ -135,12 +135,27 @@
 							<div class="mui-scroll"  style="padding: 15px;">
                 <?php $ln=1;if(is_array($record)) foreach($record AS $v): ?>
 								<div class="listBox">
-									<div class="list_imgBox"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $v['uphoto']; ?>"></div>
-									<div class="list_rightBox" style="padding-top: 10px;">
-										<div class="mui-media-body" style="text-align: left;"><?php echo $v['shopname']; ?></div>
-										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;"><?php echo $v['shopqishu']; ?></span></div>
-										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 5px;">购买份数：<span><?php echo $v['gonumber']; ?></span></div>
-										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 5px;">中奖状态：<span style="color: #e73434;"><?php echo $v['status']; ?></span></div>
+									<a href="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $v['shopid']; ?>">
+										<div class="list_imgBox"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $v['uphoto']; ?>"></div>
+									</a>
+									<div class="list_rightBox" style="padding-top: -3px;">
+										<div class="mui-media-body" style="text-align: left;">
+                     <?php 
+										    echo mb_substr($v['shopname'],0,20).'....';
+										  ?>
+										</div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; "><span style="color: #999;">第<?php echo $v['shopqishu']; ?>期</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; padding-top: 0.5px;">购买份数：<span><?php echo $v['gonumber']; ?>份</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; padding-top: 0.5px;">
+											中奖状态：<span style="color: #e73434;">
+												<?php 
+												 if($v['huode']>10000000){
+                           echo "已中奖";
+												 } else {
+													 echo "未中奖";
+												 }
+                         ?>
+											</span></div>
 									</div>
 								</div>
                 <?php  endforeach; $ln++; unset($ln); ?>
@@ -150,7 +165,7 @@
 				</div>
 			</div>
 		</div>
-
+     	<?php include templates("mobile/index","foot");?>
 		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.js"></script>
 		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.pullToRefresh.js"></script>
 		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.pullToRefresh.material.js"></script>

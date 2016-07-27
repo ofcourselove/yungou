@@ -1,16 +1,16 @@
-<div class="main-content clearfix">
-<script type="text/javascript" charset="utf-8" src="{G_PLUGIN_PATH}/uploadify/jquery.uploadify-3.1.min.js"></script>
-<link rel="stylesheet" href="{G_PLUGIN_PATH}/uploadify/uploadify.css" type="text/css">
+<?php defined('G_IN_SYSTEM')or exit('No permission resources.'); ?><div class="main-content clearfix">
+<script type="text/javascript" charset="utf-8" src="<?php echo G_PLUGIN_PATH; ?>/uploadify/jquery.uploadify-3.1.min.js"></script>
+<link rel="stylesheet" href="<?php echo G_PLUGIN_PATH; ?>/uploadify/uploadify.css" type="text/css">
 
 <!--a-->
 <script type="text/javascript">
 var editurl=Array();
-editurl['editurl']="{G_PLUGIN_PATH}/ueditor/";
-editurl['imageupurl']="{WEB_PATH}/{G_ADMIN_DIR}/ueditor/upimage/";
-editurl['imageManager']="{WEB_PATH}/{G_ADMIN_DIR}/ueditor/imagemanager";
+editurl['editurl']="<?php echo G_PLUGIN_PATH; ?>/ueditor/";
+editurl['imageupurl']="<?php echo WEB_PATH; ?>/<?php echo G_ADMIN_DIR; ?>/ueditor/upimage/";
+editurl['imageManager']="<?php echo WEB_PATH; ?>/<?php echo G_ADMIN_DIR; ?>/ueditor/imagemanager";
 </script>
-<script type="text/javascript" charset="utf-8" src="{G_PLUGIN_PATH}/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="{G_PLUGIN_PATH}/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo G_PLUGIN_PATH; ?>/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo G_PLUGIN_PATH; ?>/ueditor/ueditor.all.min.js"></script>
 
 <script>
 //上传文件
@@ -18,11 +18,11 @@ $(function(){
     $('#sd_file').uploadify({
     	'auto'     : false,
     	'removeTimeout' : 1,
-        'swf'      : '{G_PLUGIN_PATH}/uploadify/uploadify.swf',
-        'uploader' : '{WEB_PATH}/member/home/singphotoup',
+        'swf'      : '<?php echo G_PLUGIN_PATH; ?>/uploadify/uploadify.swf',
+        'uploader' : '<?php echo WEB_PATH; ?>/member/home/singphotoup',
         'method'   : 'post',
 		'buttonText' : '选择图片',
-		'buttonImage': '{G_PLUGIN_PATH}/uploadify/select.png',
+		'buttonImage': '<?php echo G_PLUGIN_PATH; ?>/uploadify/select.png',
 		'width': 120,
 		'height': 30,
         'multi'    : true,
@@ -33,8 +33,8 @@ $(function(){
         'fileSizeLimit' : '500KB',
 
 		'formData'        : {
-			'uid': '{wc:$uid}',
-			'ushell':'{wc:$ushell}'
+			'uid': '<?php echo $uid; ?>',
+			'ushell':'<?php echo $ushell; ?>'
 		},
 		'onUploadSuccess' : function(file, data, response){
 			$(".fileWarp ul").append(SetImgContent(data));
@@ -50,7 +50,7 @@ function sdUpload(){
 function SetImgContent(data){
 	var sLi = "";
 		sLi += '<li>';
-		sLi += '<img src="{G_UPLOAD_PATH}/' + data + '" width="100" height="100" />';
+		sLi += '<img src="<?php echo G_UPLOAD_PATH; ?>/' + data + '" width="100" height="100" />';
 		sLi += '<input type="hidden" name="fileurl_tmp[]" value="' + data + '">';
 		sLi += '<a href="javascript:;">删除</a>';
 		sLi += '</li>';
@@ -66,7 +66,7 @@ function SetUploadFile(){
 		$(this).attr("rel", "li_" + a_i);
 	}).click(function(){
 		$.get(
-			'{WEB_PATH}/member/home/singdel',
+			'<?php echo WEB_PATH; ?>/member/home/singdel',
 			{action:"del", filename:$(this).prev().val()},
 			function(){}
 		);
@@ -91,7 +91,7 @@ function SetUploadFile(){
 <div class="R-content">
 	<div class="subMenux" style="height:50px;line-height:50px;">
 		<span>添加晒单</span>
-		<a style="float:right;" href="{WEB_PATH}/member/home/singlelist" class="blue">返回晒单</a>
+		<a style="float:right;" href="<?php echo WEB_PATH; ?>/member/home/singlelist" class="blue">返回晒单</a>
 	</div>
 	<form  action="#" method="post">
 		<div class="sd_lilie">
@@ -101,7 +101,7 @@ function SetUploadFile(){
 		<div class="sd_lilie">
 			<span class="sd_span">内容：</span>
 			<!--textarea id="sd_textarea" name="content" ></textarea-->
-			<div style="float: left;">
+			<!-- <div style="float: left;">
 				<script name="content" id="myeditor" type="text/plain"></script>
             	<style>
 				.content_attr {
@@ -122,7 +122,7 @@ function SetUploadFile(){
 					this.focus()
 				});
 				</script>
-			</div>
+			</div> -->
 		</div>
 		<div class="sd_lilie">
 			<span class="sd_span">晒图：</span>
