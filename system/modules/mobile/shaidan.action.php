@@ -64,7 +64,8 @@ class shaidan extends base {
 	}
 
 	public function my_shaidan(){
-		$sdhf_userid=abs(intval($this->segment(4)));
+		// $sdhf_userid=abs(intval($this->segment(4)));
+		$sdhf_userid=_getcookie("uid");
 		$shaidan=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_userid`='$sdhf_userid' ");
 		// print_r($shaidan);die;
     include templates("mobile/index","show_all");

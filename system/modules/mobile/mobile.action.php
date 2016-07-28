@@ -418,7 +418,7 @@ class mobile extends base {
 		  $itemxq=1;
 		}
 
-		include templates("mobile/index","item");
+		include templates("mobile/index","item_data");
 	}
 
 

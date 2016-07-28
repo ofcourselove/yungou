@@ -93,13 +93,14 @@ function SetUploadFile(){
 		<span>添加晒单</span>
 		<a style="float:right;" href="<?php echo WEB_PATH; ?>/member/home/singlelist" class="blue">返回晒单</a>
 	</div>
-	<form  action="#" method="post">
+	<form  action="<?php echo WEB_PATH; ?>/mobile/home/postsingle" method="post">
 		<div class="sd_lilie">
 			<span class="sd_span">标题：</span>
 			<input id="sd_text" type="text" name="title" />
 		</div>
 		<div class="sd_lilie">
 			<span class="sd_span">内容：</span>
+      	<textarea id="sd_text" name="content" rows="8" cols="40"></textarea>
 			<!--textarea id="sd_textarea" name="content" ></textarea-->
 			<!-- <div style="float: left;">
 				<script name="content" id="myeditor" type="text/plain"></script>
@@ -123,14 +124,18 @@ function SetUploadFile(){
 				});
 				</script>
 			</div> -->
+      <!-- <form enctype='multipart/form-data' id='aa' name='aaa' method='post' action='xxx.php'>
+      <input type='hidden' name='MAX_FILE_SIZE' value='2621114' />
+      <input name='upload_file' type='file' />
+      </form>  -->
 		</div>
 		<div class="sd_lilie">
 			<span class="sd_span">晒图：</span>
 			<div style="float:left; width:400px;">
-				<input id="sd_file" type="file" name="upimg"/>
+				<input id="sd_file" type="file" name="fileurl_tmp"/>
 				<div style="width:710px; float:left;"></div>
-				<input type="hidden" name="imglist" id="id_file" />
-				<input type="button"  class="button" onClick="sdUpload()" value="上传图片" />
+				<!-- <input type="hidden" name="fileurl_tmp" id="id_file" /> -->
+				<!-- <input type="button"  class="button" onClick="sdUpload()" value="上传图片" /> -->
 				<div class="fileWarp"><div id="fileQueue"></div><ul></ul></div>
 			</div>
 		</div>

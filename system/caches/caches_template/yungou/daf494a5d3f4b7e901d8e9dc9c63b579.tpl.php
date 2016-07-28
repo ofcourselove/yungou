@@ -137,6 +137,9 @@
 					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active" >
 						<div id="scroll1" class="mui-scroll-wrapper" >
 							<div class="mui-scroll"  style="padding: 15px; padding-bottom: 100px;">
+								<?php if($shaidan==null): ?>
+								 <h4 style="border: none 0; ">暂无记录</h4>
+								<?php  else: ?>
                 <?php $ln=1;if(is_array($shaidan)) foreach($shaidan AS $sd): ?>
 								<div class="listBox" style="height: auto; padding-bottom: 15px; border-bottom: 1px solid #eee;">
 									<div class="show_allBox">
@@ -147,11 +150,23 @@
 										</div>
 									</div>
 									<div style="overflow: hidden;">
+										<?php if($sd['sdhf_img'] !=null): ?>
 										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img']; ?>"></div>
+										<?php endif; ?>
+
+										<?php if($sd['sdhf_img2'] !=null): ?>
+										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img2']; ?>"></div>
+										<?php endif; ?>
+
+										<?php if($sd['sdhf_img3'] !=null): ?>
+										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="<?php echo G_UPLOAD_PATH; ?>/{wc:$sd['sdhf_img3
+											']}"></div>
+										<?php endif; ?>
 									</div>
 									<h4 class="show_h4" style="color: #FF9A15;"><?php echo $sd['sdhf_content']; ?></h4>
 								</div>
 							  	<?php  endforeach; $ln++; unset($ln); ?>
+									<?php endif; ?>
 							</div>
 						</div>
 					</div>

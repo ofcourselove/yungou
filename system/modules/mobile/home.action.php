@@ -257,51 +257,141 @@ class home extends base {
 
 	//添加晒单---------------解除封印
 	public function postsingle(){
-		// $member=$this->userinfo;
-		// $uid=_getcookie('uid');
+		$member=$this->userinfo;
+		$uid=_getcookie("uid");
 		// $ushell=_getcookie('ushell');
-		// $title="添加晒单";
-		// if(isset($_POST['submit'])){
-		//
-		// 	if($_POST['title']==null)_message("标题不能为空");
-		// 	if($_POST['content']==null)_message("内容不能为空");
-		// 	if(!isset($_POST['fileurl_tmp'])){
-		// 		_message("图片不能为空");
-		// 	}
-		// 	System::load_sys_class('upload','sys','no');
-		// 	$img=$_POST['fileurl_tmp'];
-		// 	$num=count($img);
-		// 	$pic="";
-		// 	for($i=0;$i<$num;$i++){
-		// 		$pic.=trim($img[$i]).";";
-		// 	}
-		//
-		// 	$src=trim($img[0]);
-		// 	$size=getimagesize(G_UPLOAD_PATH."/".$src);
-		// 	$width=220;
-		// 	$height=$size[1]*($width/$size[0]);
-		//
-		// 	$thumbs=tubimg($src,$width,$height);
-		// 	$uid=$this->userinfo;
-		// 	$sd_userid=$uid['uid'];
-		// 	$sd_shopid=$_POST['shopid'];
-		// 	$sd_title=$_POST['title'];
-		// 	$sd_thumbs="shaidan/".$thumbs;
-		// 	$sd_content=$_POST['content'];
-		// 	$sd_photolist=$pic;
-		// 	$sd_time=time();
-		// 	$this->db->Query("INSERT INTO `@#_shaidan`(`sd_userid`,`sd_shopid`,`sd_title`,`sd_thumbs`,`sd_content`,`sd_photolist`,`sd_time`)VALUES
-		// 	('$sd_userid','$sd_shopid','$sd_title','$sd_thumbs','$sd_content','$sd_photolist','$sd_time')");
-		// 	_message("晒单分享成功",WEB_PATH."/member/home/singlelist");
-		// }
-		$recordid=$this->segment(4);
+		$title="添加晒单";
+		if(isset($_POST['submit'])){
+			// if($_POST['title']==null)_message("标题不能为空");
+			if($_POST['content']==null)_message("内容不能为空");
+			// if(!isset($_POST['fileurl_tmp'])){
+			// 	_message("图片不能为空");
+			// }
+			// print_r($data);die;
+			System::load_sys_class('upload','sys','no');
+			$width=220;
+      // var_dump($_FILES);die;
+			if ($_FILES['fileurl_tmp']['name'] != '') {
+				$img=$_POST['fileurl_tmp'] ;
+				$src=trim($img[0]);
+				$size=getimagesize(G_UPLOAD_PATH."/".$src);
+				$height=$size[1]*($width/$size[0]);
+				$thumbs=tubimg($src,$width,$height);
+				$sd_thumbs="shaidan".$thumbs;
+			} else {
+				$thumbs = '';
+				$sd_thumbs='';
+
+			}
+			if ($_FILES['fileurl_tmp2']['name'] != '') {
+				$img=$_POST['fileurl_tmp2'] ;
+				$src=trim($img[0]);
+				$size=getimagesize(G_UPLOAD_PATH."/".$src);
+				$height=$size[1]*($width/$size[0]);
+				$thumbs2=tubimg($src,$width,$height);
+				$sd_thumbs2="shaidan".$thumbs2;
+			} else {
+				$thumbs2 = '';
+				$sd_thumbs2='';
+			}
+			if ($_FILES['fileurl_tmp3']['name'] != '') {
+				$img=$_POST['fileurl_tmp3'] ;
+				$src=trim($img[0]);
+				$size=getimagesize(G_UPLOAD_PATH."/".$src);
+				$height=$size[1]*($width/$size[0]);
+				$thumbs3=tubimg($src,$width,$height);
+				$sd_thumbs3="shaidan".$thumbs3;
+			} else {
+				$thumbs3 = '';
+				$sd_thumbs3='';
+			}
+			$num=count($img);
+			$pic="";
+			for($i=0;$i<$num;$i++){
+				$pic.=trim($img[$i]).";";
+			}
+
+
+			// var_dump($thumbs);
+			// var_dump($thumbs2);
+			// var_dump($thumbs3);die;
+			$sd_userid=$uid;
+			$sd_shopid=$_POST['shopid'];
+			$sd_title=$_POST['title'];
+			$sd_content=$_POST['content'];
+			$sd_photolist=$pic;
+			$sd_time=time();
+			$data =	$this->singphotoup($thumbs,$thumbs2,$thumbs3);
+			$this->db->Query("INSERT INTO `@#_shaidan_hueifu`(`sdhf_userid`,`sdhf_id`,`sdhf_img`,`sdhf_img2`,`sdhf_img3`,`sdhf_content`,`sdhf_time`)VALUES
+			('$sd_userid','$sd_shopid','$sd_thumbs','$sd_thumbs2','$sd_thumbs3','$sd_content','$sd_time')");
+			echo '<script>alert(\'分享成功，嘿嘿嘿\');</script>';
+			$url = WEB_PATH."/mobile/shaidan/my_shaidan/".$uid;
+			// print_r($uid);die;
+			header("Location:".$url);
+			// _message("晒单分享成功",WEB_PATH."/member/home/singlelist");
+		}
+			include templates("mobile/user","singleinsert");
+		// $recordid=$this->segment(4);
 		// print_r($recordid);die;
-		if($recordid>0){
-			$shaidan=$this->db->GetOne("select * from `@#_member_go_record` where `id`='$recordid'");
-			$shopid=$shaidan['shopid'];
-			include templates("mobile/user","shaidan_insert");
-		}else{
-			_message("页面错误");
+		// if($recordid>0){
+		// 	$shaidan=$this->db->GetOne("select * from `@#_member_go_record` where `id`='$recordid'");
+		// 	$shopid=$shaidan['shopid'];
+		// 	include templates("mobile/user","singleinsert");
+		// }else{
+		// 	_message("页面错误");
+		// }
+	}
+	public function singphotoup($thumbs,$thumbs2,$thumbs3){
+
+		// var_dump($_FILES["fileurl_tmp"]["tmp_name"]);die;
+		if(!empty($_FILES)){
+			/*
+				更新时间：2014-04-28
+				xu
+			*/
+			/*
+			$uid=isset($_POST['uid']) ? $_POST['uid'] : NULL;
+			$ushell=isset($_POST['ushell']) ? $_POST['ushell'] : NULL;
+			$login=$this->checkuser($uid,$ushell);
+			if(!$login){echo "上传失败";exit;}
+
+			*/
+			// var_dump($thumbs);
+			// var_dump($thumbs2);
+			// var_dump($thumbs3);
+			// die;
+			$upload_url = strstr(__FILE__,'system',true).'statics\uploads\shaidan';
+			if ($thumbs != '') {
+				if(!move_uploaded_file($_FILES["fileurl_tmp"]["tmp_name"],$upload_url."/".$thumbs)){
+					echo '<script>alert(\'上传失败了\');</script>';
+				}
+			}
+			if ($thumbs2 != '') {
+				if(!move_uploaded_file($_FILES["fileurl_tmp2"]["tmp_name"],$upload_url."/".$thumbs2)){
+					echo '<script>alert(\'上传失败了\');</script>';
+				}
+			}
+			if ($thumbs3 != '') {
+				if(!move_uploaded_file($_FILES["fileurl_tmp3"]["tmp_name"],$upload_url."/".$thumbs3)){
+					echo '<script>alert(\'上传失败了\');</script>';
+				}
+			}
+			// System::load_sys_class('upload','sys','no');
+			// upload::upload_config(array('png','jpg','jpeg','gif'),1000000,'shaidan');
+			// upload::go_upload($_FILES['Filedata']);
+			// if(!upload::$ok){
+			// 	echo _message(upload::$error,null,3);
+			// }else{
+			// 	$img=upload::$filedir."/".upload::$filename;
+			// 	$size=getimagesize(G_UPLOAD_PATH."/shaidan/".$img);
+			// 	$max=700;$w=$size[0];$h=$size[1];
+			// 	if($w>700){
+			// 		$w2=$max;
+			// 		$h2=$h*($max/$w);
+			// 		upload::thumbs($w2,$h2,1);
+			// 	}
+			// 	echo trim("shaidan/".$img);
+			// }
 		}
 	}
 	//编辑

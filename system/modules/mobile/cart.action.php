@@ -12,9 +12,8 @@ class cart extends base {
 	}
 
   public function mypay(){
-		//  $title = $_GET['title'];
-		//  $num = $_GET['num'];
-		// print_r($title);die;
+		$num = $this->segment(4);
+		// print_r($num);die;
 		include templates("mobile/cart","mypay");
 
 	}

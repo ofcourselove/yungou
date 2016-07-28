@@ -132,15 +132,7 @@
 		  $("#button").click(function(){
          var num = $("#test").val();
 				//  alert(num);
-				 url="{WEB_PATH}/mobile/cart/mypay";
-				//  $.ajax(function(){
-				// 	type:"POST",
-				// 	dataType:"json",
-				// 	url:"{WEB_PATH}/mobile/cart/mypay",//请求页面
-				// 	data:"{"title":{wc:$item['title']},"num":num}",
-				// 	complete:function(){location.href ="{WEB_PATH}/mobile/cart/mypay"}//跳转页面
-				// 	})
-
+				 url="{WEB_PATH}/mobile/cart/mypay/"+num;
 				//  url="{WEB_PATH}/mobile/cart/mypay";
 				  window.location.href=url;
 

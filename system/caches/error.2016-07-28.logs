@@ -1,0 +1,702 @@
+[28-Jul-2016 08:52:15 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 08:52:15 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 08:52:15 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 08:52:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 08:52:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 08:52:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 08:52:39 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 08:52:39 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 08:52:39 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 08:53:59 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 08:53:59 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 08:53:59 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 10:18:35 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 10:18:35 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 10:18:35 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 10:20:32 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 10:20:32 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 10:20:32 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 10:58:50 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 10:58:51 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 10:58:51 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 10:58:51 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 10:58:51 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 10:58:51 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:00:09 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:00:10 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:00:10 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:00:10 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:00:10 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:00:10 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:01:16 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:01:16 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:01:16 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:01:16 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:01:16 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:01:16 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:02:39 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 11:02:39 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 11:02:39 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 11:18:19 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:18:19 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:18:19 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:18:20 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:18:20 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:18:20 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:18:20 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:29:20 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/3): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:29:20 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:29:21 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/3): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:29:21 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/3): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:29:21 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:29:21 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:29:21 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:30:10 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 11:30:10 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 11:30:10 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 11:30:37 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:30:37 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:30:37 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:30:37 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:30:37 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:30:37 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:30:37 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:30:48 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:30:48 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:30:49 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:30:49 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:30:49 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:30:49 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:30:49 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:39:11 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:39:11 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:39:11 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:39:11 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:39:11 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:39:11 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:39:11 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:40:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 11:40:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 11:40:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 11:40:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 11:40:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 11:40:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 11:46:40 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:46:40 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:46:40 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:46:40 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:46:40 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:46:40 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:46:40 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:48:52 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 11:48:52 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 11:48:52 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 11:55:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 11:55:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 11:55:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 11:55:27 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:55:27 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:55:28 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:55:28 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:55:28 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:55:28 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:55:28 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:55:53 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 280
+[28-Jul-2016 11:55:53 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 11:55:53 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:55:54 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:55:54 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:55:54 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:55:54 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:56:40 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:56:40 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:56:40 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:56:40 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:56:40 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:56:40 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:56:40 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:56:51 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 11:56:51 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 11:56:51 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 11:57:10 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:57:10 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:57:10 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:57:10 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:57:10 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:57:10 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:57:10 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:58:43 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:58:43 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:58:43 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:58:43 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:58:43 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:58:43 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:58:43 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:58:48 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:58:48 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:58:48 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:58:48 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:58:48 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:58:48 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:58:48 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:59:16 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:59:16 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:59:16 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:59:17 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:59:17 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:59:17 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:59:17 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:59:22 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:59:22 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:59:32 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:59:32 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:59:32 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:59:32 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:59:32 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:59:32 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:59:32 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:59:36 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:59:36 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:59:36 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:59:37 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:59:37 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:59:37 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:59:37 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:59:40 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:59:40 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:59:40 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:59:41 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:59:41 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:59:41 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:59:41 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 11:59:44 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 11:59:44 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 11:59:44 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 11:59:44 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 11:59:44 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 11:59:44 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 11:59:44 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 12:00:03 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 12:00:03 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 12:00:03 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 12:00:04 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 12:00:04 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 12:00:04 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 12:00:04 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 12:00:09 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i):  in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 12:00:09 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 12:00:22 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i):  in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 12:00:22 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 12:00:22 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 12:00:22 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 12:00:22 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 12:00:22 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 12:00:22 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 12:00:29 Asia/Shanghai] PHP Warning:  Illegal string offset 'uid' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 286
+[28-Jul-2016 12:00:30 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i):  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 12:00:30 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 12:00:30 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 12:00:30 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 12:00:30 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 12:00:42 Asia/Shanghai] PHP Warning:  Illegal string offset 'uid' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 286
+[28-Jul-2016 12:02:40 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 12:02:40 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 12:02:41 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 12:02:41 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 12:02:41 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 12:02:41 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 12:02:41 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 12:02:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'uid' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 286
+[28-Jul-2016 12:03:09 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:03:09 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:03:09 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:04:09 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:04:09 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:04:09 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:37:28 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:37:28 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:37:28 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:37:43 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:37:43 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:37:43 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:37:46 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:37:46 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:37:46 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:37:53 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:37:53 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:37:53 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:37:55 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:37:55 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:37:55 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:37:59 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:37:59 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:37:59 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:48:58 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:48:58 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:48:58 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:49:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:49:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:49:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:49:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:49:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:49:25 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:49:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:49:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:49:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:49:43 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:49:43 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:49:43 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:51:44 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:51:44 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:51:44 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 12:52:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 12:52:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 12:52:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:17:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:17:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:17:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:18:08 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:18:08 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:18:08 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:19:03 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:19:03 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:19:03 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:19:10 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:19:10 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:19:10 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:21:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:21:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:21:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:22:01 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 13:22:01 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 13:22:02 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 13:22:02 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 13:22:02 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 13:22:02 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 13:22:02 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 13:22:02 Asia/Shanghai] PHP Warning:  Illegal string offset 'uid' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 286
+[28-Jul-2016 13:22:24 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:22:24 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:22:24 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:23:18 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 281
+[28-Jul-2016 13:23:18 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 13:23:18 Asia/Shanghai] PHP Warning:  getimagesize(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 6
+[28-Jul-2016 13:23:19 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(http://mywechat777.ittun.com/statics/uploads/i): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 13:23:19 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 13:23:19 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 13:23:19 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 13:34:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:34:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:34:01 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:34:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:34:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:34:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 13:49:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 13:49:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 13:49:27 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 14:33:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 14:33:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 14:33:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 14:34:07 Asia/Shanghai] PHP Warning:  move_uploaded_file(http://mywechat777.ittun.com/statics/uploads/shaidan/image.jpg): failed to open stream: HTTP wrapper does not support writeable connections in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 327
+[28-Jul-2016 14:34:07 Asia/Shanghai] PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpC59A.tmp' to 'http://mywechat777.ittun.com/statics/uploads/shaidan/image.jpg' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 327
+[28-Jul-2016 14:34:07 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 14:34:08 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 14:34:08 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 14:34:08 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 14:34:08 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 14:34:08 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 14:35:36 Asia/Shanghai] PHP Warning:  move_uploaded_file(http://mywechat777.ittun.com/statics/uploads/shaidan/23ae150fed1d9068495cedc0ec0a4003.jpg): failed to open stream: HTTP wrapper does not support writeable connections in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 14:35:36 Asia/Shanghai] PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php1DB9.tmp' to 'http://mywechat777.ittun.com/statics/uploads/shaidan/23ae150fed1d9068495cedc0ec0a4003.jpg' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 14:35:36 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 14:35:37 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 14:35:37 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 14:35:37 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 14:35:37 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 14:35:37 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 14:35:50 Asia/Shanghai] PHP Warning:  move_uploaded_file(http://mywechat777.ittun.com/statics/uploads/shaidan/23ae150fed1d9068495cedc0ec0a4003.jpg): failed to open stream: HTTP wrapper does not support writeable connections in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 14:35:50 Asia/Shanghai] PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php54E0.tmp' to 'http://mywechat777.ittun.com/statics/uploads/shaidan/23ae150fed1d9068495cedc0ec0a4003.jpg' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 14:35:51 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 14:35:51 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 14:35:51 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 14:35:51 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 14:35:51 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 14:35:51 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:03:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:03:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:03:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 15:03:28 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 283
+[28-Jul-2016 15:03:28 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:03:28 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:03:28 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:03:28 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:03:28 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  move_uploaded_file(): The second argument to copy() function cannot be a directory in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 15:06:09 Asia/Shanghai] PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php170D.tmp' to 'D:\xampp\htdocs\yungou\statics\uploads\shaidan/' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  move_uploaded_file(): The second argument to copy() function cannot be a directory in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 15:07:23 Asia/Shanghai] PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php3845.tmp' to 'D:\xampp\htdocs\yungou\statics\uploads\shaidan/' in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 328
+[28-Jul-2016 15:08:23 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 15:08:23 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:08:23 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:08:23 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:08:23 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:08:23 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:09:16 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 15:09:16 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:09:16 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:09:16 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:09:16 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:09:16 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:09:58 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 15:09:58 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:09:58 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:09:58 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:09:58 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:09:58 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:10:21 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 282
+[28-Jul-2016 15:10:22 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:10:22 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:10:22 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:10:22 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:10:22 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:10:54 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:10:54 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:10:54 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 15:22:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:22:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:22:05 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 15:22:46 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 288
+[28-Jul-2016 15:22:46 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 289
+[28-Jul-2016 15:22:46 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:22:47 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:22:48 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:22:48 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:22:48 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:22:48 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:22:48 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:24:00 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 288
+[28-Jul-2016 15:24:00 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 289
+[28-Jul-2016 15:24:00 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:24:01 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:24:02 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:24:02 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:24:02 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:24:02 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:24:02 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:25:17 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:25:17 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:25:17 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 288
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 289
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:25:42 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:25:43 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:27:03 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 288
+[28-Jul-2016 15:27:03 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 289
+[28-Jul-2016 15:27:03 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 15:27:04 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:27:04 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:27:04 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:27:04 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:27:04 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:27:05 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:28:23 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:28:23 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:28:23 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 15:28:26 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:28:26 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:28:26 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 15:28:45 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 288
+[28-Jul-2016 15:28:45 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 289
+[28-Jul-2016 15:28:45 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:28:46 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:28:47 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:28:47 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:28:47 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:28:47 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:28:47 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:42:31 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 277
+[28-Jul-2016 15:42:32 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:42:32 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:42:32 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:42:32 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:42:32 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:47:03 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 278
+[28-Jul-2016 15:47:04 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:47:04 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:47:04 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:47:04 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:47:04 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:47:04 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 287
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 296
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:47:05 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:48:47 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 278
+[28-Jul-2016 15:48:48 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:48:48 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:48:48 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:48:48 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:48:48 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:55:59 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 278
+[28-Jul-2016 15:55:59 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:55:59 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:55:59 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:55:59 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:55:59 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:56:00 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 287
+[28-Jul-2016 15:56:00 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:56:00 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:56:00 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:56:00 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:56:00 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:56:00 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 296
+[28-Jul-2016 15:56:01 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:56:01 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 15:56:01 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 15:56:01 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 15:56:01 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 15:58:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:58:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:58:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 15:59:06 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 15:59:06 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 15:59:06 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:04:29 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 278
+[28-Jul-2016 16:04:29 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:04:29 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:04:29 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 16:04:29 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 16:04:29 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 16:04:29 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 16:04:30 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:04:30 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:04:30 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 16:04:30 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 16:04:30 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 16:05:13 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 278
+[28-Jul-2016 16:05:14 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:05:14 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:05:14 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 16:05:14 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 16:05:14 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 16:05:14 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 16:05:15 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:05:15 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 16:05:15 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 16:05:15 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 16:05:15 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 16:15:36 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:15:36 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:15:36 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:16:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:16:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:16:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:16:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:16:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:16:22 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:17:07 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:17:07 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:17:07 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:17:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:17:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:17:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:36:20 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:36:20 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:36:20 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:38:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:38:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:38:41 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:38:48 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:38:48 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:38:48 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 16:42:49 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 16:42:49 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 16:42:49 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 17:08:28 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 17:08:28 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 17:08:28 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 17:09:15 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 17:09:15 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 17:09:15 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 17:26:35 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 17:26:35 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 17:26:35 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 17:34:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 17:34:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 17:34:12 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 19:11:42 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 83
+[28-Jul-2016 19:11:42 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 89
+[28-Jul-2016 19:11:42 Asia/Shanghai] PHP Warning:  Illegal string offset 'id' in D:\xampp\htdocs\yungou\system\caches\caches_template\yungou\b8ed344fdd84d17dc164c4dca0443488.tpl.php on line 96
+[28-Jul-2016 19:27:57 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 278
+[28-Jul-2016 19:27:57 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 19:27:57 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 19:27:57 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 19:27:57 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 19:27:57 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 19:27:57 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 290
+[28-Jul-2016 19:27:58 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 19:27:58 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 19:27:58 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 19:27:58 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 19:27:58 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12
+[28-Jul-2016 19:27:58 Asia/Shanghai] PHP Warning:  Division by zero in D:\xampp\htdocs\yungou\system\modules\mobile\home.action.php on line 301
+[28-Jul-2016 19:27:59 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 19:27:59 Asia/Shanghai] PHP Warning:  imagecreatefromjpeg(): 'http://mywechat777.ittun.com/statics/uploads/' is not a valid JPEG file in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 9
+[28-Jul-2016 19:27:59 Asia/Shanghai] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 10
+[28-Jul-2016 19:27:59 Asia/Shanghai] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 11
+[28-Jul-2016 19:27:59 Asia/Shanghai] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\yungou\system\modules\go\lib\user.fun.php on line 12

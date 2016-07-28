@@ -132,20 +132,7 @@
 			                    </div> -->
 			            </li>
                   {wc:loop:end}
-			            <!-- <li class="mui-table-view-cell mui-media mui-col-xs-6">
-			            	<a href="#">
-			            		<div class="index_imgBox"><img src="{G_TEMPLATES_IMAGE}/mobile/index_pic_03.jpg"></div>
-			                    <div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div>
-			                    <div class="progressBox">
-			                    	<h5>81%</h5>
-			                    	<div><span style="width: 81%;"></span></div>
-			                    </div>
-			                    <div class="index_imgBoxBottom">
-			                    	<h4>共1000份</h4>
-			                    	<h4 style="float: right;">剩余59份</h4>
-			                    </div>
-			            	</a>
-			            </li> -->
+
 			        </ul>
 			        <li class="mui-table-view-cell indexListName">
 						<a href="{WEB_PATH}/mobile/mobile/glist"><h4>热门商品</h4></a>
@@ -176,24 +163,7 @@
 				</ul>
 			</div>
 		</div>
-		<!-- <nav class="mui-bar mui-bar-tab mui-bottom-part">
-					<a class="mui-tab-item mui-active" id="{WEB_PATH}/mobile/mobile/init" >
-						<span class="mui-icon logo01"></span>
-						<span class="mui-tab-label">首页</span>
-					</a>
-					<a class="mui-tab-item" id="{WEB_PATH}/mobile/mobile/glist">
-						<span class="mui-icon logo02"></span>
-						<span class="mui-tab-label">全部商品</span>
-					</a>
-					<a class="mui-tab-item" id="show_all">
-						<span class="mui-icon logo03"></span>
-						<span class="mui-tab-label">晒单</span>
-					</a>
-					<a class="mui-tab-item" id="account">
-						<span class="mui-icon logo04"></span>
-						<span class="mui-tab-label">我的</span>
-					</a>
-				</nav> -->
+
 				{wc:templates "mobile/index","foot"}
 
 		<script src="{G_TEMPLATES_JS}/mobile/mui.js"></script>
@@ -207,23 +177,23 @@
 					}
 				}
 			});
-			/**
-			 * 下拉刷新具体业务实现
-			 */
-//			function pulldownRefresh() {
-//				setTimeout(function() {
-//					var table = document.body.querySelector('.mui-table-view');
-//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-//					for (var i = cells.length, len = i + 3; i < len; i++) {
-//						var li = document.createElement('li');
-//						li.className = 'mui-table-view-cell';
-//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
-//						//下拉刷新，新纪录插到最前面；
-//						table.insertBefore(li, table.firstChild);
-//					}
-//					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
-//				}, 1500);
-//			}
+// 			/**
+// 			 * 下拉刷新具体业务实现
+// 			 */
+// //			function pulldownRefresh() {
+// //				setTimeout(function() {
+// //					var table = document.body.querySelector('.mui-table-view');
+// //					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+// //					for (var i = cells.length, len = i + 3; i < len; i++) {
+// //						var li = document.createElement('li');
+// //						li.className = 'mui-table-view-cell';
+// //						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+// //						//下拉刷新，新纪录插到最前面；
+// //						table.insertBefore(li, table.firstChild);
+// //					}
+// //					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+// //				}, 1500);
+// //			}
 			var count = 0;
 			/**
 			 * 上拉加载具体业务实现
@@ -233,10 +203,10 @@
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i + 20; i < len; i++) {
+					for (var i = cells.length, len = i ; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'mui-table-view-cell';
-						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						// li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
 						table.appendChild(li);
 					}
 				}, 1500);
