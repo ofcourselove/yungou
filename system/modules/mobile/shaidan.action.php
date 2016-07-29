@@ -66,7 +66,7 @@ class shaidan extends base {
 	public function my_shaidan(){
 		// $sdhf_userid=abs(intval($this->segment(4)));
 		$sdhf_userid=_getcookie("uid");
-		$shaidan=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_userid`='$sdhf_userid' ");
+		$shaidan=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_userid`='$sdhf_userid' order by `sdhf_time` DESC");
 		// print_r($shaidan);die;
     include templates("mobile/index","show_all");
 
@@ -79,7 +79,6 @@ class shaidan extends base {
 		$sd_id=intval($this->segment(4));
 		$shaidan=$this->db->GetOne("select * from `@#_shaidan` where `sd_id`='$sd_id'");
 		$goods = $this->db->GetOne("select * from `@#_shoplist` where `sid` = '$shaidan[sd_shopid]' order by `qishu` DESC");
-
 
 		$shaidannew=$this->db->GetList("select * from `@#_shaidan` order by `sd_id` DESC limit 5");
 		$shaidan_hueifu=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_id`='$sd_id'");

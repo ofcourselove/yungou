@@ -62,7 +62,7 @@
 		<nav class="mui-bar mui-bar-tab mui-bottom-part" style="background-color: #FFF; border-top: 1px solid #f2f2f2; height: 50px;">
 			<div class="bottom_left">
 				<span style="line-height: 50px; margin-right: 5px; padding-left: 15px;">份数:</span>
-				<div class="mui-numbox" data-numbox-min='1' data-numbox-max='9'>
+				<div class="mui-numbox" data-numbox-min='1' data-numbox-max='99'>
 					<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
 					<input id="test" class="mui-input-numbox" type="number" value="5" />
 					<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>

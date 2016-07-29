@@ -83,7 +83,7 @@
 						<div class="list_imgBox" style="width: 18%; margin-right: 2%; height: 60px;"><img src="images/win_pic_03.png"></div>
 						<div class="list_imgBox" style="width: 18%; margin-right: 2%; height: 60px;"><img src="images/win_pic_03.png"></div> -->
 
-           <div id="sd_file" class="" style="float:left; margin-right:15px;margin-left:15px;	width:80px;height:80px;background: url(<?php echo G_TEMPLATES_IMAGE; ?>/mobile/upload_jia.png) no-repeat ;">
+           <div id="sd_file" class="" style="float:left; margin-right:15px;margin-left:15px;	width:80px;height:80px;background: url(<?php echo G_TEMPLATES_IMAGE; ?>/mobile/tianjia.png) no-repeat ;">
 						 <input id="sd_file" style=" opacity:0;float:left" type="file" name="fileurl_tmp" />
            </div>
 

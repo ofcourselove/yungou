@@ -151,16 +151,15 @@
 									</div>
 									<div style="overflow: hidden;">
 										<?php if($sd['sdhf_img'] !=null): ?>
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img']; ?>"></div>
+										<div class="list_imgBox" style="width: 28%; margin-right: 5%; height: 80px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img']; ?>"></div>
 										<?php endif; ?>
 
 										<?php if($sd['sdhf_img2'] !=null): ?>
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img2']; ?>"></div>
+										<div class="list_imgBox" style="width: 28%; margin-right: 5%; height: 80px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img2']; ?>"></div>
 										<?php endif; ?>
 
 										<?php if($sd['sdhf_img3'] !=null): ?>
-										<div class="list_imgBox" style="width: 30%; margin-right: 5%; height: 100px;"><img src="<?php echo G_UPLOAD_PATH; ?>/{wc:$sd['sdhf_img3
-											']}"></div>
+										<div class="list_imgBox" style="width: 28%; margin-right: 5%; height: 80px;"><img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $sd['sdhf_img3']; ?>"></div>
 										<?php endif; ?>
 									</div>
 									<h4 class="show_h4" style="color: #FF9A15;"><?php echo $sd['sdhf_content']; ?></h4>

@@ -1,14 +1,13 @@
 <?php
 /**
- *
+ *暂时没有用到此文件
  */
-class wechat 
+class wechat
 {
   public  $appid = "wx9df2725cc2dd130f";
   public  $secret = "351c264296853b8b1a23f92017e9af59";
   public  $code = $_GET["code"];
   public function init(){
-     echo "666";die;
     //第一步:取得openid
     $oauth2Url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appid&secret=$secret&code=$code&grant_type=authorization_code";
     $oauth2 = getJson($oauth2Url);
