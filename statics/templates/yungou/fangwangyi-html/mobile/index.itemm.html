@@ -131,8 +131,9 @@
 	  	mui('.mui-scroll-wrapper').scroll();
 		  $("#button").click(function(){
          var num = $("#test").val();
-				//  alert(num);
-				 url="{WEB_PATH}/mobile/cart/mypay/"+num;
+				 var shopid = {wc:$item['id']};
+				//  alert(shopid);
+				 url="{WEB_PATH}/mobile/cart/wxpay/"+num+"/"+shopid;
 				//  url="{WEB_PATH}/mobile/cart/mypay";
 				  window.location.href=url;
 

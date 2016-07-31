@@ -13,8 +13,8 @@
     <link href="favicon.ico" rel="shortcut icon" />
     <link href="{G_TEMPLATES_CSS}/mobile/comm.css" rel="stylesheet" type="text/css" />
   <link href="{G_TEMPLATES_CSS}/mobile/index.css" rel="stylesheet" type="text/css" />
-  <script src="{G_TEMPLATES_JS}/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
-  <script id="pageJS" data="{G_TEMPLATES_JS}/mobile/Index.js" language="javascript" type="text/javascript"></script>
+  <!-- <script src="{G_TEMPLATES_JS}/mobile/jquery190.js" language="javascript" type="text/javascript"></script> -->
+  <!-- <script id="pageJS" data="{G_TEMPLATES_JS}/mobile/Index.js" language="javascript" type="text/javascript"></script> -->
 
 
 
@@ -41,11 +41,11 @@
 	</head>
 
 	<body>
-    <div class="h5-1yyg-v1" id="loadingPicBlock">
+    <!-- <div class="h5-1yyg-v1" id="loadingPicBlock">
       <div class="mui-bar mui-bar-tab mui-bottom-part">
 
-        <!-- {wc:templates "mobile/index","head"} -->
-      </div>
+        {wc:templates "mobile/index","head"}
+      </div> -->
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
 
@@ -203,7 +203,7 @@
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i ; i < len; i++) {
+					for (var i = cells.length, len = i + 2; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'mui-table-view-cell';
 						// li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';

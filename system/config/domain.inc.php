@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  // 'yungou.com' =>
+  // 'sybgt.cn' =>
   'mywechat777.ittun.com' =>
   array (
     'm' => 'mobile',

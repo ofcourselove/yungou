@@ -132,9 +132,9 @@ class home extends base {
 	public function record_list(){
 		$webname=$this->_cfg['web_name'];
 		$mysql_model=System::load_sys_class('model');
-		$uid = $this->segment(4);
+		$uid = _getcookie("uid");
 		// print_r($uid);die;
-		$record=$mysql_model->GetList("select * from `@#_member_go_record` where `uid`='$uid' ORDER BY `time` DESC");
+		$record=$mysql_model->GetList("select * from `@#_member_go_record` where `uid`='$uid' ORDER BY id DESC");
 		// print_r($record);die;
 		include templates("mobile/user","record_list");
 	}
@@ -143,9 +143,9 @@ class home extends base {
 	    $webname=$this->_cfg['web_name'];
 		$member=$this->userinfo;
 		$title="获得的商品";
-		$uid = $this->segment(4);
+		$uid = _getcookie("uid");
 		// $record=$this->db->GetList("select * from `@#_member_go_record` where `uid`='".$member['uid']."' and `huode`>'10000000' ORDER BY id DESC");
-		$record=$this->db->GetList("select * from `@#_member_go_record` where `uid`='".$uid."' and `huode`>'10000000' ORDER BY id DESC");
+		$record=$this->db->GetList("select * from `@#_member_go_record` where `uid`='".$uid."' and `huode`>'10000000' ORDER BY time DESC");
 		include templates("mobile/user","order_show");
 	}
 	//账户管理
@@ -165,7 +165,6 @@ class home extends base {
 			  }
 			}
 		}
-
 		include templates("mobile/user","userbalance");
 	}
 
@@ -213,8 +212,10 @@ class home extends base {
 	//添加地址
 	public function useraddress(){
 		$mysql_model=System::load_sys_class('model');
-		// $member=$this->userinfo;
 		$uid=_getcookie("uid");
+		$dizhi=$mysql_model->Getone("select * from `@#_member_dizhi` where `uid`='$uid' ");
+		// var_dump($uid);die;
+		// $member=$this->userinfo;
 		if(isset($_POST)){
 			// foreach($_POST as $k=>$v){
 			// 	$_POST[$k] = _htmtocode($v);
@@ -236,6 +237,7 @@ class home extends base {
 				exit;
 			}
 			// print_r($sheng);die;
+			if ($dizhi) {
 			$mysql_model->Query("UPDATE `@#_member_dizhi` SET
 			`sheng`='".$sheng."',
 			`shi`='".$shi."',
@@ -245,10 +247,17 @@ class home extends base {
 			`shouhuoren`='".$shouhuoren."',
 			`mobile`='".$mobile."' where `uid`='".$uid."'");
 			_message("更新地址成功",WEB_PATH."/mobile/user/address",2);
-			}
+
+		} else {
+			// print_r('oookkk');die;
+			$mysql_model->Query("INSERT INTO
+				`@#_member_dizhi` (`uid`,`sheng`,`shi`,`xian`,`jiedao`,`youbian`,`shouhuoren`,`mobile`,`time`)
+				VALUES	('$uid','$sheng','$shi','$xian','$jiedao','$youbian','$shouhuoren','$mobile','$time') ");
+		}
+		_message("更新地址成功",WEB_PATH."/mobile/user/address",2);
 	}
 
-
+}
 	//晒单
 	public function singlelist(){
 		 $webname=$this->_cfg['web_name'];
@@ -360,7 +369,8 @@ class home extends base {
 			// var_dump($thumbs2);
 			// var_dump($thumbs3);
 			// die;
-			$upload_url = strstr(__FILE__,'system',true).'statics\uploads\shaidan';
+			$upload_url = strstr(__FILE__,'system',true).'statics/uploads/shaidan';
+			// var_dump($upload_url);die;
 			if ($thumbs != '') {
 				if(!move_uploaded_file($_FILES["fileurl_tmp"]["tmp_name"],$upload_url."/".$thumbs)){
 					echo '<script>alert(\'上传失败了\');</script>';

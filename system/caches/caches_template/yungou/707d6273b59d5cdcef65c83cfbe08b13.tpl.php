@@ -62,7 +62,7 @@
 			<a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-left" style=" font-size: 40px;"></a>
 			<h1 class="mui-title">购买</h1>
 		</header>
-		<div class="mui-content">
+		<!-- <div class="mui-content">
 			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 50px; padding-bottom:70px;">
 				<div class="mui-scroll">
 
@@ -94,16 +94,54 @@
 						</ul>
 						<p style="margin-top: 10px;">* 客服电话：400-8888-0000</p>
 					</div>
-          <a href="<?php echo WEB_PATH; ?>/mobile/cart/paysubmit">
-						<button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding: 10px 0; width: 90%; margin: 0 auto; margin-top: 15px; background-color: #FF9A15; border: none 0;">立即支付</button>
-					</a>
-
+						<button type="button" id="chooseWXPay" class="mui-btn mui-btn-warning mui-btn-block" style="padding: 10px 0; width: 90%; margin: 0 auto; margin-top: 15px; background-color: #FF9A15; border: none 0;">立即支付</button>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.js"></script>
-		<script>
+
+		<div>
+      <h3 id="menu-pay">微信支付接口</h3>
+      <span class="desc">发起一个微信支付请求</span>
+      <button class="btn btn_primary" id="chooseWXPay">chooseWXPay</button>
+    </div>
+
+  </body>
+	<script src="<?php echo G_TEMPLATES_JS; ?>/mobile/mui.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script>
+  wx.config({
+      debug: true, // 调试开关
+      appId: '&lt;?php echo $signPackage["appId"];?>',
+      timestamp: &lt;?php echo $signPackage["timestamp"];?>,
+      nonceStr: '&lt;?php echo $signPackage["nonceStr"];?>',
+      signature: '&lt;?php echo $signPackage["signature"];?>',
+      jsApiList: [
+        'checkJsApi',
+        'chooseWXPay'
+      ]
+  });
+
+  wx.ready(function () {
+    document.querySelector('#chooseWXPay').onclick = function () {
+      wx.chooseWXPay({
+          timestamp: &lt;?php echo $payPackage["timeStamp"];?>,
+          nonceStr: '&lt;?php echo $payPackage["nonceStr"];?>',
+          package: '&lt;?php echo  $payPackage['package'];?>',
+          signType: '&lt;?php echo $payPackage["signType"];?>', // 注意：新版支付接口使用 MD5 加密
+          paySign: '&lt;?php echo $payPackage["paySign"];?>',
+          success: function () {
+            alert('支付成功');
+            // Add Your Code Here If You Need
+          }
+      });
+    };
+  });
+
+  wx.error(function (res) {
+    alert('验证失败:' + res.errMsg);
+    // Add Your Code Here If You Need
+  });
 
 		mui('.mui-scroll-wrapper').scroll();
 

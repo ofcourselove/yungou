@@ -26,8 +26,9 @@ class user extends memberbase {
 		// if($user){
 		// 	header("Location:".WEB_PATH."/mobile/home/");exit;
 		// }
-		$appid ="wx9df2725cc2dd130f";
+		$appid ="wx9d66a72ff8e7559a";
 		$redirect_uri = urlencode(WEB_PATH."/mobile/user/wechat/");
+		// var_dump($redirect_uri);die;
 		$url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".$redirect_uri."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
 		header("Location:".$url);
 
@@ -35,11 +36,12 @@ class user extends memberbase {
 	}
 
 	public function wechat(){
-		 $appid = "wx9df2725cc2dd130f";
-		 $secret = "351c264296853b8b1a23f92017e9af59";
+		 $appid = "wx9d66a72ff8e7559a";
+		 $secret = "51c046f5c526d9c4009c897a11b3a2e1";
 		 $code = $this->code(4);
 		 if (isset($_COOKIE['uid'])) {
 		 	  $userid =_getcookie("uid");
+
 				// print_r($userid);die;
 				$userinfo = $this->db->GetOne("select * from `@#_user` where `id` = '$userid'");
 		} else {
@@ -63,6 +65,7 @@ class user extends memberbase {
 			//  https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
 			$get_user_info_url = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
 			$userinfo =$this->getJson($get_user_info_url);
+			// print_r($userinfo);die;
 			$time = time();
 			$nickname = $userinfo['nickname'];
 			$userid = $this->db->GetOne("select id from `@#_user` where `open_id` = '$openid'");
@@ -73,8 +76,8 @@ class user extends memberbase {
        }
 			//  print_r($userid);
 			 _setcookie("uid","$userid[id]",60*60*24*1);
+			 _setcookie("openid","$openid",60*60*24*1);
 			// //打印用户信息
-			// print_r($userinfo);die;
 			// session_start();
 			// $_SESSION['$open_id'] = $userinfo;
 		}

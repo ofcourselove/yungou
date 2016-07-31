@@ -4416,7 +4416,8 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 			this._super(element, $.extend(true, {
 				fingers: 1,
 				interval: 0, //设置为0，则不定时轮播
-				scrollX: false,
+				scrollY: false,
+				scrollX: true,
 				indicators: false,
 				scrollTime: 1000,
 				startX: false,

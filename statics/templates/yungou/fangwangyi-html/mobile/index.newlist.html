@@ -9,6 +9,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no" />
+
 		<link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/mui.css">
 		<link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/app.css">
 		<style>
@@ -158,82 +159,133 @@
 					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active" >
 						<div id="scroll1" class="mui-scroll-wrapper">
 							<div class="mui-scroll"  style="padding: 15px; padding-bottom: 120px;">
-								{wc:loop $shoplist_ing $list}
-	 								 {wc:php:start}
-	 									 $list['q_user'] = unserialize($list['q_user']);
-	 								 {wc:php:end}
 								<div class="listBox">
-									<a href="{WEB_PATH}/mobile/mobile/item/{wc:$list['id']}">
-									<div class="list_imgBox"><img src="{G_UPLOAD_PATH}/{wc:$list['thumb']}"></div>
-								  </a>
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"></div>
 									<div class="list_rightBox">
-										<div class="mui-media-body" style="text-align: left;">{wc:$lsit['title']}</div>
-										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：{wc:$list['qishu']}</div>
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：20160702000001</div>
 					                    <div class="progressBox">
-					                    	<h5 style="margin: 0;">{wc:$list['canyurenshu']}份</h5>
-					                    	<div style="margin-top: 5px;"><span style="width:{wc:$list['canyurenshu']/$list['zongrenshu']*100}%;"></span></div>
+					                    	<h5 style="margin: 0;">81%</h5>
+					                    	<div style="margin-top: 5px;"><span style="width: 81%;"></span></div>
 					                    </div>
 					                    <div class="index_imgBoxBottom" style="padding-top: 5px;">
-					                    	<h4>共{wc:$list['zongrenshu']}份</h4>
-					                    	<h4 style="float: right;">剩余{wc:$list['zongrenshu']-$list['canyurenshu']}份</h4>
+					                    	<h4>共1000份</h4>
+					                    	<h4 style="float: right;">剩余59份</h4>
 					                    </div>
 					                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
 									</div>
 								</div>
-                {wc:loop:end}
+								<div class="listBox">
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"></div>
+									<div class="list_rightBox">
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：20160702000001</div>
+					                    <div class="progressBox">
+					                    	<h5 style="margin: 0;">81%</h5>
+					                    	<div style="margin-top: 5px;"><span style="width: 81%;"></span></div>
+					                    </div>
+					                    <div class="index_imgBoxBottom" style="padding-top: 5px;">
+					                    	<h4>共1000份</h4>
+					                    	<h4 style="float: right;">剩余59份</h4>
+					                    </div>
+					                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+									</div>
+								</div>
+								<div class="listBox">
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"></div>
+									<div class="list_rightBox">
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：20160702000001</div>
+					                    <div class="progressBox">
+					                    	<h5 style="margin: 0;">81%</h5>
+					                    	<div style="margin-top: 5px;"><span style="width: 81%;"></span></div>
+					                    </div>
+					                    <div class="index_imgBoxBottom" style="padding-top: 5px;">
+					                    	<h4>共1000份</h4>
+					                    	<h4 style="float: right;">剩余59份</h4>
+					                    </div>
+					                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+									</div>
+								</div>
+								<div class="listBox">
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"></div>
+									<div class="list_rightBox">
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：20160702000001</div>
+					                    <div class="progressBox">
+					                    	<h5 style="margin: 0;">81%</h5>
+					                    	<div style="margin-top: 5px;"><span style="width: 81%;"></span></div>
+					                    </div>
+					                    <div class="index_imgBoxBottom" style="padding-top: 5px;">
+					                    	<h4>共1000份</h4>
+					                    	<h4 style="float: right;">剩余59份</h4>
+					                    </div>
+					                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+									</div>
+								</div>
+								<div class="listBox">
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"></div>
+									<div class="list_rightBox">
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：20160702000001</div>
+					                    <div class="progressBox">
+					                    	<h5 style="margin: 0;">81%</h5>
+					                    	<div style="margin-top: 5px;"><span style="width: 81%;"></span></div>
+					                    </div>
+					                    <div class="index_imgBoxBottom" style="padding-top: 5px;">
+					                    	<h4>共1000份</h4>
+					                    	<h4 style="float: right;">剩余59份</h4>
+					                    </div>
+					                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+									</div>
+								</div>
+								<div class="listBox">
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"></div>
+									<div class="list_rightBox">
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行</div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：20160702000001</div>
+					                    <div class="progressBox">
+					                    	<h5 style="margin: 0;">81%</h5>
+					                    	<div style="margin-top: 5px;"><span style="width: 81%;"></span></div>
+					                    </div>
+					                    <div class="index_imgBoxBottom" style="padding-top: 5px;">
+					                    	<h4>共1000份</h4>
+					                    	<h4 style="float: right;">剩余59份</h4>
+					                    </div>
+					                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div id="item2mobile" class="mui-slider-item mui-control-content">
 						<div class="mui-scroll-wrapper">
 							<div class="mui-scroll"  style="padding: 15px; padding-bottom: 120px;">
-								{wc:loop $shoplist_new $lnew}
-										{wc:php:start}
-											$lnew['q_user'] = unserialize($lnew['q_user']);
-										{wc:php:end}
-										<div class="listBox">
-											<a href="{WEB_PATH}/mobile/mobile/item/{wc:$lnew['id']}">
-											<div class="list_imgBox"><img src="{G_UPLOAD_PATH}/{wc:$lnew['thumb']}"></div>
-										  </a>
-											<div class="list_rightBox">
-												<!-- <div class="mui-media-body" style="text-align: left;">{wc:$lnew['title']}</div> -->
-												<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999;">期号：{wc:$lnew['qishu']}</div>
-							                    <div class="progressBox">
-							                    	<h5 style="margin: 0;">{wc:$lnew['canyurenshu']}份</h5>
-							                    	<div style="margin-top: 5px;"><span style="width:{wc:$lnew['canyurenshu']/$lnew['zongrenshu']*100}%;"></span></div>
-							                    </div>
-							                    <div class="index_imgBoxBottom" style="padding-top: 5px;">
-							                    	<h4>共{wc:$lnew['zongrenshu']}份</h4>
-							                    	<h4 style="float: right;">剩余{wc:$lnew['zongrenshu']-$lnew['canyurenshu']}份</h4>
-							                    </div>
-							                    <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 10px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
-											</div>
-										</div>
-                {wc:loop:end}
+								<div class="listBox">
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"><span>揭晓时间：2016-06-20</span></div>
+									<div class="list_rightBox" style="padding-top: 10px;">
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行<span style="font-size: 12px; color: #999; float: right;">已揭晓</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;">20160702000001</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 5px;">获得者：<span>我要礼物</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 14px; padding-top: 5px;">幸运代码：<span style="color: #e73434;">1000298</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div id="item3mobile" class="mui-slider-item mui-control-content">
 						<div class="mui-scroll-wrapper">
 							<div class="mui-scroll"  style="padding: 15px; padding-bottom: 120px;">
-
-								{wc:loop $shoplist_lottery $lottery}
-										{wc:php:start}
-											$lottery['q_user'] = unserialize($lottery['q_user']);
-										{wc:php:end}
 								<div class="listBox">
-									<a href="{WEB_PATH}/mobile/mobile/item/{wc:$lottery['id']}">
-									<div class="list_imgBox"><img src="{G_UPLOAD_PATH}/{wc:$lottery['thumb']}"><span>揭晓时间：{wc:fun:microt($lottery['q_end_time'],'r')}</span></div>
-									</a>
+									<div class="list_imgBox"><img src="images/list_img_03.jpg"><span>揭晓时间：2016-06-20</span></div>
 									<div class="list_rightBox" style="padding-top: 0px;">
-										<!-- <div class="mui-media-body" style="text-align: left;">{wc:$lottery['title']}<span style="font-size: 12px; color: #999; float: right;">已揭晓</span></div> -->
-										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;">{wc:$lottery['qishu']}</span></div>
-										<div class="mui-media-body" style="text-align: left; font-size: 12px;">获得者：<span>{wc:fun:get_user_name($lottery['q_user'])}</span></div>
-										<div class="mui-media-bod" style="text-align: left; font-size: 12px;">幸运代码：<b class="orange">{wc:$lottery['q_user_code']}</b></div>
+										<div class="mui-media-body" style="text-align: left;">全新路虎发现神行<span style="font-size: 12px; color: #999; float: right;">已揭晓</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;">20160702000001</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px;">获得者：<span>我要礼物</span></div>
+										<div class="mui-media-body" style="text-align: left; font-size: 12px;">幸运代码：<span style="color: #e73434;">1000298</span></div>
+										<button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding:0; background-color: #ff9a15; margin-top: 1px; border: none 0; font-size: 16px; height: 25px;">立即夺宝</button>
 									</div>
 								</div>
-								{wc:loop:end}
-
 							</div>
 						</div>
 					</div>
@@ -263,16 +315,16 @@
 					//循环初始化所有下拉刷新，上拉加载。
 					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
 						$(pullRefreshEl).pullToRefresh({
-//							down: {
-//								callback: function() {
-//									var self = this;
-//									setTimeout(function() {
-//										var ul = self.element.querySelector('.mui-table-view');
-//										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
-//										self.endPullDownToRefresh();
-//									}, 1000);
-//								}
-//							},
+							down: {
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+										var ul = self.element.querySelector('.mui-table-view');
+										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+										self.endPullDownToRefresh();
+									}, 1000);
+								}
+							},
 							up: {
 								callback: function() {
 									var self = this;
@@ -306,7 +358,7 @@
 			  //打开关于页面
 			    var _url = this.getAttribute("id");
 			    mui.openWindow({
-				    url: _url + '.html',
+				    url: _url ,
 				    id:_url
 			    });
 			});

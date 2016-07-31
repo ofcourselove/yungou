@@ -66,12 +66,9 @@ class mobile extends base {
 		//他们正在云购
 		$go_record=$this->db->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,`@#_member_go_record`.shopname,`@#_member_go_record`.shopid from `@#_member_go_record`,`@#_member` where `@#_member`.uid = `@#_member_go_record`.uid and `@#_member_go_record`.`status` LIKE '%已付款%'  ORDER BY `@#_member_go_record`.time DESC LIMIT 0,7");
 		//最新揭晓
-		$shopqi=$this->db->GetList("select * from `@#_shopqishu` where `shopendtime` !='' ORDER BY `shopendtime` DESC LIMIT 4");
-    foreach ($shopqi as  $v) {
-			$id = $v['shopid'];
-			$shopqishu[] = $this->db->GetOne("select * from `@#_shoplist` where `id` = '$id' ");
-    }
-		// var_dump($shopqishu);die;
+		$shopqishu=$this->db->GetList("select * from `@#_shoplist` where `q_end_time` !='' ORDER BY `q_end_time` DESC LIMIT 4");
+
+
 		$jinri_shoplist = $this->db->GetList("select * from `@#_shoplist` where `xsjx_time` > '$w_jinri_time' and `xsjx_time` < '$w_minri_time' order by xsjx_time limit 0,3 ");
 
 		//云购动态
@@ -432,12 +429,8 @@ class mobile extends base {
 	//************************************************//
 	//************************************************//
 	public function paysuccess(){
-		$file_url = strstr(__FILE__,'mobile',true);
-    // echo "$file_url";
-		include_once("$file_url/mobile/lib/gopay.fun.php");
 		$shopnum=intval($this->segment(4));
-		// echo "$shopnum";die;
-    houpay($shopnum);
+		echo "$shopnum";die;
 
 	}
 

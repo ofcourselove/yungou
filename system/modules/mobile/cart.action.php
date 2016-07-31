@@ -137,7 +137,77 @@ class cart extends base {
 		$_SESSION['submitcode'] = $submitcode = uniqid();
 		include templates("mobile/cart","payment");
 	}
+  public function wxpay(){
+		  //商品名称
+			//购买分数
+			$num = $this->segment(4);
+			$shopid = $this->segment(5);
+			_setcookie("shopid","$shopid");//将可能要购买点shopid存入cookie
+			// $a = _getcookie("shopid");
+			// echo "$a";die;
+			// echo $num;
+			// echo $shop_id;
+			// die;
+		  $file_url = strstr(__FILE__,'cart',true);
+	  	include_once("$file_url/wechat/conf/WxPay.pub.config.php");
+			include_once("$file_url/wechat/lib/JsSdk.php");
+			include_once("$file_url/wechat/lib/CommonUtilPub.php");
+			include_once("$file_url/wechat/lib/SDKRuntimeException.php");
+			include_once("$file_url/wechat/lib/WxpayClientPub.php");
+			include_once("$file_url/wechat/lib/UnifiedOrderPub.php");
+			// var_dump('bbooooookkkk');die;
+			$openId = _getcookie("openid");
+			// $openId = "oJzJ6szeccDWX1iN64QWsfU0Rc4I";
+			// var_dump($openId);die;
+			// $openId = "oJzJ6sy5cmN9X-cYp_fIfUmB993E";
+			$appId = WxPayConfPub::APPID;
+			$appSecret = WxPayConfPub::APPSECRET;
+			// $appSecret = WxPayConfPub::SSLCERT_PATH;
+			// print8_r($appSecret);die;
+			// 获取jssdk相关参数
+			$jssdk = new JsSdk($appId, $appSecret);
+			$signPackage = $jssdk->GetSignPackage();
+			$timeStamp = (string)$signPackage['timestamp'];
+			$nonceStr = $signPackage['nonceStr'];
+			// var_dump($signPackage);die;
+			$time = time();
+			$title = "一元云购";
+			// 获取prepay_id
+			// 具体参数设置可以看文档http://pay.weixin.qq.com/wiki/doc/api/index.php?chapter=9_1
+			$unifiedOrder = new UnifiedOrderPub();
+			$unifiedOrder->setParameter("openid",$openId);//用户openId
+			$unifiedOrder->setParameter("body", $title);//商品描述，文档里写着不能超过32个字符，否则会报错，经过实际测试，临界点大概在128左右，稳妥点最好按照文档，不要超过32个字符
+			$unifiedOrder->setParameter("out_trade_no",$time);//商户订单号
+			$unifiedOrder->setParameter("total_fee", $num);//总金额,单位为分
+			$unifiedOrder->setParameter("notify_url",WxPayConfPub::NOTIFY_URL);//通知地址
+			$unifiedOrder->setParameter("trade_type","JSAPI");//交易类型
+			$unifiedOrder->setParameter("nonce_str", $nonceStr);//随机字符串
+			//非必填参数，商户可根据实际情况选填
+			//$unifiedOrder->setParameter("sub_mch_id","XXXX");//子商户号
+			//$unifiedOrder->setParameter("device_info","XXXX");//设备号
+			//$unifiedOrder->setParameter("attach","XXXX");//附加数据
+			//$unifiedOrder->setParameter("time_start","XXXX");//交易起始时间
+			//$unifiedOrder->setParameter("time_expire","XXXX");//交易结束时间
+			//$unifiedOrder->setParameter("goods_tag","XXXX");//商品标记
+			//$unifiedOrder->setParameter("openid","XXXX");//用户标识
+			//$unifiedOrder->setParameter("product_id","XXXX");//商品ID
+			$prepayId = $unifiedOrder->getPrepayId();
 
+			// 计算paySign
+			$payPackage = [
+			    "appId" => WxPayConfPub::APPID,
+			    "nonceStr" => $nonceStr,
+			    "package" => "prepay_id=" . $prepayId,
+			    "signType" => "MD5",
+			    "timeStamp" => $timeStamp,
+			];
+			$paySign = $unifiedOrder->getSign($payPackage);
+			$payPackage['paySign'] = $paySign;
+			//  var_dump($payPackage);die;
+
+			include templates("mobile/cart","mypay");
+
+	}
 	//开始支付
 	public function paysubmit(){
 		$webname=$this->_cfg['web_name'];

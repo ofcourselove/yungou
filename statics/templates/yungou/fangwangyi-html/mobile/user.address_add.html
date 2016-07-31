@@ -8,9 +8,10 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no" />
-
-    <link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/mui.css">
-    <link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/app.css">
+		<link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/mui.css">
+		<link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/app.css">
+		<link href="{G_TEMPLATES_CSS}/mobile/mui.picker.css" rel="stylesheet" />
+		<link href="{G_TEMPLATES_CSS}/mobile/mui.poppicker.css" rel="stylesheet" />
 		<style>
 			.mui-segmented-control .mui-control-item{
 				line-height: 36px;
@@ -65,8 +66,8 @@
 		</header>
 		<div class="mui-content">
 			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 50px; padding-bottom:70px;">
-				<form class="registerform" method="post" action="{wc:WEB_PATH}/mobile/home/useraddress">
 				<div class="mui-scroll">
+				<form class="registerform" method="post" action="{wc:WEB_PATH}/mobile/home/useraddress">
 					<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 5px;">
 						<li class="mui-table-view-cell indexListName" >
 							<h4 style="border: none 0; width: 20%;">姓名：</h4>
@@ -97,13 +98,17 @@
 						</li>
 					</ul>
 					<button type="submit" class="mui-btn mui-btn-warning mui-btn-block" style="padding: 10px 0; width: 90%; margin: 0 auto; margin-top: 10px; background-color: #FF9A15; border: none 0;">确认添加</button>
-				</div>
 					</form>
+				</div>
 			</div>
 		</div>
 
-	<script src="{G_TEMPLATES_JS}/mobile/mui.js"></script>
-		<script>
+
+		<script src="{G_TEMPLATES_JS}/mobile/mui.js"></script>
+		<script src="{G_TEMPLATES_JS}/mobile/mui.picker.js"></script>
+		<script src="{G_TEMPLATES_JS}/mobile/mui.poppicker.js"></script>
+		<script src="{G_TEMPLATES_JS}/mobile/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{G_TEMPLATES_JS}/mobile/city.data-3.js" type="text/javascript" charset="utf-8"></script>		<script>
 
 		mui('.mui-scroll-wrapper').scroll();
 
@@ -119,6 +124,84 @@
 //			document.body.addEventListener('touchmove', function (event) {
 //		    event.preventDefault();
 //		}, false);
+(function($, doc) {
+		$.init();
+		$.ready(function() {
+			//普通示例
+//					var userPicker = new $.PopPicker();
+//					userPicker.setData([{
+//						value: 'ywj',
+//						text: '董事长 叶文洁'
+//					}, {
+//						value: 'aaa',
+//						text: '总经理 艾AA'
+//					}, {
+//						value: 'lj',
+//						text: '罗辑'
+//					}, {
+//						value: 'ymt',
+//						text: '云天明'
+//					}, {
+//						value: 'shq',
+//						text: '史强'
+//					}, {
+//						value: 'zhbh',
+//						text: '章北海'
+//					}, {
+//						value: 'zhy',
+//						text: '庄颜'
+//					}, {
+//						value: 'gyf',
+//						text: '关一帆'
+//					}, {
+//						value: 'zhz',
+//						text: '智子'
+//					}, {
+//						value: 'gezh',
+//						text: '歌者'
+//					}]);
+//					var showUserPickerButton = doc.getElementById('showUserPicker');
+//					var userResult = doc.getElementById('userResult');
+//					showUserPickerButton.addEventListener('tap', function(event) {
+//						userPicker.show(function(items) {
+//							userResult.innerText = JSON.stringify(items[0]);
+//							//返回 false 可以阻止选择框的关闭
+//							//return false;
+//						});
+//					}, false);
+			//-----------------------------------------
+			// 级联示例
+			// var cityPicker = new $.PopPicker({
+			// 	layer: 2
+			// });
+			// cityPicker.setData(cityData);
+			// var showCityPickerButton = doc.getElementById('showCityPicker');
+			// var cityResult = doc.getElementById('cityResult');
+			// showCityPickerButton.addEventListener('tap', function(event) {
+			// 	cityPicker.show(function(items) {
+			// 		cityResult.innerText = "你选择的城市是:" + items[0].text + " " + items[1].text;
+			// 		//返回 false 可以阻止选择框的关闭
+			// 		//return false;
+			// 	});
+			// }, false);
+			// -----------------------------------------
+			// 					//级联示例
+			// var cityPicker3 = new $.PopPicker({
+			// 	layer: 3
+			// });
+			// cityPicker3.setData(cityData3);
+			// var showCityPickerButton = doc.getElementById('showCityPicker3');
+			// var cityResult3 = doc.getElementById('cityResult3');
+			// showCityPickerButton.addEventListener('tap', function(event) {
+			// 	cityPicker3.show(function(items) {
+			// 		cityResult3.innerText =  (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+			// 		cityResult3.style.color = "#333";
+			// 		//返回 false 可以阻止选择框的关闭
+			// 		//return false;
+			// 	});
+			// }, false);
+		});
+	})(mui, document);
 		</script>
 	</body>
 
