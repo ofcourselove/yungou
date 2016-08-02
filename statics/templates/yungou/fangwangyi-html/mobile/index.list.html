@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>全部商品</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -49,6 +49,75 @@
 				display: initial;
 			    position: relative;
 			}*/
+			.mui-bar~.mui-content .mui-fullscreen {
+			top: 50px;
+			height: auto;
+		}
+		.mui-pull-top-tips {
+			position: absolute;
+			top: -20px;
+			left: 50%;
+			margin-left: -25px;
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			z-index: 1;
+		}
+		.mui-bar~.mui-pull-top-tips {
+			top: 24px;
+		}
+		.mui-pull-top-wrapper {
+			width: 42px;
+			height: 42px;
+			display: block;
+			text-align: center;
+			background-color: #efeff4;
+			border: 1px solid #ddd;
+			border-radius: 25px;
+			background-clip: padding-box;
+			box-shadow: 0 4px 10px #bbb;
+			overflow: hidden;
+		}
+		.mui-pull-top-tips.mui-transitioning {
+			-webkit-transition-duration: 200ms;
+			transition-duration: 200ms;
+		}
+		.mui-pull-top-tips .mui-pull-loading {
+			/*-webkit-backface-visibility: hidden;
+			-webkit-transition-duration: 400ms;
+			transition-duration: 400ms;*/
+
+			margin: 0;
+		}
+		.mui-pull-top-wrapper .mui-icon,
+		.mui-pull-top-wrapper .mui-spinner {
+			margin-top: 7px;
+		}
+		.mui-pull-top-wrapper .mui-icon.mui-reverse {
+			/*-webkit-transform: rotate(180deg) translateZ(0);*/
+		}
+		.mui-pull-bottom-tips {
+			text-align: center;
+			background-color: #efeff4;
+			font-size: 15px;
+			line-height: 40px;
+			color: #777;
+		}
+		.mui-pull-top-canvas {
+			overflow: hidden;
+			background-color: #fafafa;
+			border-radius: 40px;
+			box-shadow: 0 4px 10px #bbb;
+			width: 40px;
+			height: 40px;
+			margin: 0 auto;
+		}
+		.mui-pull-top-canvas canvas {
+			width: 40px;
+		}
+		.mui-slider-indicator.mui-segmented-control {
+			background-color: #efeff4;
+		}
 		</style>
 		</style>
 	</head>
@@ -132,15 +201,17 @@
 							  	$lottery['q_user'] = unserialize($lottery['q_user']);
 								{wc:php:end}
 				  	<div class="listBox">
-							<a href="{WEB_PATH}/mobile/mobile/item/{wc:$lottery['id']}">
-							<div class="list_imgBox"><img src="{G_UPLOAD_PATH}/{wc:$lottery['thumb']}"><span>揭晓时间：{wc:fun:microt($lottery['q_end_time'],'r')}</span></div>
+							<a href="{WEB_PATH}/mobile/mobile/dataserver/{wc:$lottery['shopid']}/{wc:$lottery['shopqishu']}">
+							<div class="list_imgBox"><img src="{G_UPLOAD_PATH}/{wc:$lottery['shopthumb']}"></div>
 						  </a>
 							<div class="list_rightBox" style="padding-top: 0px;">
 								<!-- <div class="mui-media-body" style="text-align: left;">{wc:$lottery['title']}<span style="font-size: 12px; color: #999; float: right;">已揭晓</span></div> -->
-								<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;">{wc:$lottery['qishu']}</span></div>
-								<div class="mui-media-body" style="text-align: left; font-size: 12px;">获得者：<span>{wc:fun:get_user_name($lottery['q_user'])}</span></div>
-								<div class="mui-media-bod" style="text-align: left; font-size: 12px;">幸运代码：<b class="orange">{wc:$lottery['q_user_code']}</b></div>
+								<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;">{wc:$lottery['shopqishu']}</span></div>
+								<div class="mui-media-body" style="text-align: left; font-size: 12px;">获得者：<span>{wc:$lottery['nickname']}</span></div>
+								<div class="mui-media-body" style="text-align: left; font-size: 12px;">幸运代码：<span style="color:#000000;">{wc:$lottery['shopcode']}</span>	</div>
+								<div class="mui-media-body" style="text-align: left; font-size: 12px;">揭晓时间：{wc:fun:date("Y-m-d H:i",$lottery['shopendtime'])}</div>
 							</div>
+
 						</div>
 						{wc:loop:end}
 					</div>

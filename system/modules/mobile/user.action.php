@@ -26,18 +26,19 @@ class user extends memberbase {
 		// if($user){
 		// 	header("Location:".WEB_PATH."/mobile/home/");exit;
 		// }
-		$appid ="wx9d66a72ff8e7559a";
+		$appid ="";
 		$redirect_uri = urlencode(WEB_PATH."/mobile/user/wechat/");
 		// var_dump($redirect_uri);die;
 		$url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".$redirect_uri."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+
 		header("Location:".$url);
 
 
 	}
 
 	public function wechat(){
-		 $appid = "wx9d66a72ff8e7559a";
-		 $secret = "51c046f5c526d9c4009c897a11b3a2e1";
+		 $appid = "";
+		 $secret = "";
 		 $code = $this->code(4);
 		 if (isset($_COOKIE['uid'])) {
 		 	  $userid =_getcookie("uid");
@@ -81,6 +82,7 @@ class user extends memberbase {
 			// session_start();
 			// $_SESSION['$open_id'] = $userinfo;
 		}
+		  $key="我的";
       include templates("mobile/user","account");
 	}
 	function getJson($url){

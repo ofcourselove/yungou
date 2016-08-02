@@ -149,15 +149,17 @@ function houpay($shopnum){
 			VALUES('$uid','$username','$img','$shopnum','$shopnum','$shopid','$shopname','$shopqishu','$goucode','$time')");
 	}
 	$canyurenshu=$shoptitle['canyurenshu']+$shopnum;
-	$mysql_model->Query("UPDATE `@#_shoplist` SET canyurenshu='".$canyurenshu."' where id='".$shopid."'");
+	$shenyurenshu =$shoptitle['zongrenshu']-$canyurenshu;
+	$mysql_model->Query("UPDATE `@#_shoplist` SET canyurenshu='$canyurenshu',shenyurenshu='$shenyurenshu' where id='$shopid'");
 	if($shoptitle['zongrenshu']==$canyurenshu){
 		$num=$shoptitle['zongrenshu'];
 		if(isset($num)){
 			tencord($time,$num,$shopid,$shoptitle['qishu'],$shoptitle['title'],$shoptitle['money'],$shoptitle['yunjiage']);
 		}
 	}
-
-	 	echo _message("支付成功",WEB_PATH.'/mobile/mobile/glist',3);
+	header("location:".WEB_PATH."/mobile/mobile/glist");
+	exit;
+		// 	echo _message("支付成功",WEB_PATH.'/mobile/mobile/glist',3);
 
 	// }
 }
@@ -168,6 +170,8 @@ function tencord($time,$num,$shopid,$qishu,$shoptitle,$shopmoney,$shopjiage){
 	$mysql_model=System::load_sys_class('model');
 	$record=$mysql_model->GetOne("select * from `@#_member_go_record` where `time`='".$time."'");
 	$recordm=$mysql_model->GetList("select * from `@#_member_go_record` where `id`<='".$record['id']."' limit 100");
+	$shoplist=$mysql_model->GetOne("select * from `@#_shoplist` where `id`='".$shopid."'");
+  $shopthumb = $shoplist['thumb'];
 	$s=0;
 	foreach($recordm as $record){
 		$list=explode(" ",$record['time']);
@@ -177,17 +181,18 @@ function tencord($time,$num,$shopid,$qishu,$shoptitle,$shopmoney,$shopjiage){
 	}
 	$huode=10000000+$s%$num;
 	$shopqishu=$mysql_model->GetList("select * from `@#_member_go_record` where `shopid`='$shopid' and `shopqishu`='$qishu'");
-
+	$time=time();
 	foreach($shopqishu as $shopqi){
 		$goucodex=strpos($shopqi['goucode'],"$huode");
+		$nickname = $shopqi['username'];
 		if(!is_bool($goucodex)){
 			$mysql_model->Query("UPDATE `@#_member_go_record` SET huode='$huode' where shopid='$shopid' and shopqishu='$qishu' and uid='$shopqi[uid]'");
-			$mysql_model->Query("INSERT INTO `@#_shopqishu`(`shopid`,`shopqishu`,`shoptitle`,`shopmoney`,`shopjiage`,`shopuserid`,`shopendtime`)
-			VALUES('$shopid','$qishu','$shoptitle','$shopmoney','$shopjiage','$shopqi[uid]','$time')");
+			$mysql_model->Query("INSERT INTO `@#_shopqishu`(`shopid`,`shopqishu`,`shoptitle`,`shopmoney`,`shopjiage`,`shopuserid`,`nickname`,`shopcode`,`shopthumb`,`shopendtime`)
+			VALUES('$shopid','$qishu','$shoptitle','$shopmoney','$shopjiage','$shopqi[uid]','$nickname','$huode','$shopthumb','$time')");
 		}
 	}
 	$qishu=$qishu+1;
-	$mysql_model->Query("UPDATE `@#_shoplist` SET qishu='$qishu',canyurenshu='0' where id='$shopid'");
+	$mysql_model->Query("UPDATE `@#_shoplist` SET qishu='$qishu',canyurenshu='0',shenyurenshu='0',q_uid='null' where id='$shopid'");
 
 }
 ?>

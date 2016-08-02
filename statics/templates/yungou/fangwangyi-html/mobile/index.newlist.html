@@ -9,9 +9,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no" />
-
-		<link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/mui.css">
-		<link rel="stylesheet" href="{G_TEMPLATES_CSS}/mobile/app.css">
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/app.css">
 		<style>
 			.mui-segmented-control .mui-control-item{
 				line-height: 36px;
@@ -293,9 +292,9 @@
 			</div>
 		</div>
 
-		<script src="{G_TEMPLATES_JS}/mobile/mui.js"></script>
-		<script src="{G_TEMPLATES_JS}/mobile/mui.pullToRefresh.js"></script>
-		<script src="{G_TEMPLATES_JS}/mobile/mui.pullToRefresh.material.js"></script>
+		<script src="js/mui.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
 		<script>
 
 		mui('.mui-scroll-wrapper').scroll();
@@ -358,7 +357,7 @@
 			  //打开关于页面
 			    var _url = this.getAttribute("id");
 			    mui.openWindow({
-				    url: _url ,
+				    url: _url + '.html',
 				    id:_url
 			    });
 			});

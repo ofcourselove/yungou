@@ -67,10 +67,13 @@ class mobile extends base {
 		$go_record=$this->db->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,`@#_member_go_record`.shopname,`@#_member_go_record`.shopid from `@#_member_go_record`,`@#_member` where `@#_member`.uid = `@#_member_go_record`.uid and `@#_member_go_record`.`status` LIKE '%已付款%'  ORDER BY `@#_member_go_record`.time DESC LIMIT 0,7");
 		//最新揭晓
 		$shopqi=$this->db->GetList("select * from `@#_shopqishu` where `shopendtime` !='' ORDER BY `shopendtime` DESC LIMIT 4");
-    foreach ($shopqi as  $v) {
+		foreach ($shopqi as  $v) {
 			$id = $v['shopid'];
-			$shopqishu[] = $this->db->GetOne("select * from `@#_shoplist` where `id` = '$id' ");
-    }
+			$shoplist = $this->db->GetOne("select * from `@#_shoplist` where `id` = '$id' ");
+      // $shoplist['qishu']=666;
+      $shoplist['qishu']=$v['shopqishu'];
+			$shopqishu[] = $shoplist;
+		}
 		// var_dump($shopqishu);die;
 		$jinri_shoplist = $this->db->GetList("select * from `@#_shoplist` where `xsjx_time` > '$w_jinri_time' and `xsjx_time` < '$w_minri_time' order by xsjx_time limit 0,3 ");
 
@@ -139,7 +142,8 @@ class mobile extends base {
 		$shoplist_new=$this->db->GetList("select * from `@#_shoplist` where `q_uid` is null ORDER BY `shenyurenshu` ASC  ");
     // print_r($shoplist_new);die;
 	  //往期夺宝
-		$shoplist_lottery=$this->db->GetList("select * from `@#_shoplist` where `q_end_time`  is not null ORDER BY `q_end_time` ");
+		// $shoplist_lottery=$this->db->GetList("select * from `@#_shoplist` where `q_end_time`  is not null ORDER BY `q_end_time` ");
+		$shoplist_lottery=$this->db->GetList("select * from `@#_shopqishu`  ORDER BY `shopendtime` DESC ");
     //  print_r($shoplist_lottery);die;
 		include templates("mobile/index","list");
 	}
@@ -319,111 +323,124 @@ class mobile extends base {
 
 		include templates("mobile/index","itemm");
 	}
+  public function dataserver(){
+			$shopid=intval($this->segment(4));
+			$shopqishu=intval($this->segment(5));
+			// var_dump($shopqishu);die;
+			// $shopqi=$this->db->GetOne("select * from `@#_shopqishu` where `shopid` ='$itemid' ");
+			$item=$this->db->GetOne("select a.*,b.title,b.title2  from `@#_shopqishu` a left join
+			`@#_shoplist` b on a.shopid=b.id where a.shopid ='$shopid' and a.shopqishu='$shopqishu' ");
+      // $item =$item[];
+			// var_dump($item);die;
 
-	//往期商品查看
-	public function dataserver(){
-	    $webname=$this->_cfg['web_name'];
-		$key="揭晓结果";
-		$itemid=intval($this->segment(4));
-		$item=$this->db->GetOne("select * from `@#_shoplist` where `id`='$itemid' and `q_end_time` is not null LIMIT 1");
-		if(!$item){
-			_messagemobile("商品不存在！");
-		}
-		if(empty($item['q_user_code'])){
-			_messagemobile("该商品正在进行中...");
-		}
+      include templates("mobile/index","itemm_data");
 
-		$itemlist = $this->db->GetList("select * from `@#_shoplist` where `sid`='$item[sid]' order by `qishu` DESC");
-		$category=$this->db->GetOne("select * from `@#_category` where `cateid` = '$item[cateid]' LIMIT 1");
-		$brand=$this->db->GetOne("select * from `@#_brand` where `id` = '$item[brandid]' LIMIT 1");
-
-		//云购中奖码
-		$q_user = unserialize($item['q_user']);
-		$q_user_code_len = strlen($item['q_user_code']);
-		$q_user_code_arr = array();
-		for($q_i=0;$q_i < $q_user_code_len;$q_i++){
-			$q_user_code_arr[$q_i] = substr($item['q_user_code'],$q_i,1);
-		}
-
-		//期数显示
-		$loopqishu='';
-		if(empty($itemlist[0]['q_end_time'])){
-			$loopqishu.='<li><a href="'.WEB_PATH.'/mobile/mobile/item/'.$itemlist[0]['id'].'">'."第".$itemlist[0]['qishu']."期</a><b></b></li>";
-			array_shift($itemlist);
-		}
-
-		foreach($itemlist as $qitem){
-			if($qitem['id'] == $itemid){
-
-				$loopqishu.='<li class="cur"><a href="javascript:;">'."第".$qitem['qishu']."期</a><b></b></li>";
-			}else{
-				$loopqishu.='<li><a href="'.WEB_PATH.'/mobile/mobile/dataserver/'.$qitem['id'].'" >第'.$qitem['qishu'].'期</a></li>';
-			}
-		}
-
-		//总云购次数
-		$user_shop_number = 0;
-		//用户云购时间
-		$user_shop_time = 0;
-		//得到云购码
-		$user_shop_codes = '';
-
-		$user_shop_list = $this->db->GetList("select * from `@#_member_go_record` where `uid`= '$item[q_uid]' and `shopid` = '$itemid' and `shopqishu` = '$item[qishu]'");
-		foreach($user_shop_list as $user_shop_n){
-			$user_shop_number += $user_shop_n['gonumber'];
-			if($user_shop_n['huode']){
-				$user_shop_time = $user_shop_n['time'];
-				$user_shop_codes = $user_shop_n['goucode'];
-			}
-		}
-
-		$h=abs(date("H",$item['q_end_time']));
-		$i=date("i",$item['q_end_time']);
-		$s=date("s",$item['q_end_time']);
-		$w=substr($item['q_end_time'],11,3);
-		$user_shop_time_add = $h.$i.$s.$w;
-		$user_shop_fmod = fmod($user_shop_time_add*100,$item['canyurenshu']);
-
-		if($item['q_content']){
-			$item['q_content'] = unserialize($item['q_content']);
-		}
-        $item['picarr'] = unserialize($item['picarr']) ;
-
-		//记录
-		$itemzx=$this->db->GetOne("select * from `@#_shoplist` where `sid`='$item[sid]' and `qishu`>'$item[qishu]' and `q_end_time` is null order by `qishu` DESC LIMIT 1");
-
-	    $gorecode=$this->db->GetOne("select * from `@#_member_go_record` where `shopid`='".$itemid."' AND `shopqishu`='".$item['qishu']."' and `uid`= '$item[q_uid]' and huode!=0 LIMIT 1");
-	    $gorecode_count=$this->db->GetOne("select sum(gonumber) as count from `@#_member_go_record` where `shopid`='".$itemid."' AND `shopqishu`='".$item['qishu']."' and `uid`= '$item[q_uid]'");
-	    $gorecode_count=$gorecode_count ? $gorecode_count['count'] : 0;
-
-		$shopitem='dataserverfun';
-		$curtime=time();
-		//晒单数
-		$shopid=$this->db->GetOne("select * from `@#_shoplist` where `id`='$itemid'");
-		$shoplist=$this->db->GetList("select * from `@#_shoplist` where `sid`='$shopid[sid]'");
-		$shop='';
-		foreach($shoplist as $list){
-			$shop.=$list['id'].',';
-		}
-		$id=trim($shop,',');
-		if($id){
-			$shaidan=$this->db->GetList("select * from `@#_shaidan` where `sd_shopid` IN ($id)");
-			$sum=0;
-			foreach($shaidan as $sd){
-				$shaidan_hueifu=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_id`='$sd[sd_id]'");
-				$sum=$sum+count($shaidan_hueifu);
-			}
-		}else{
-			$shaidan=0;
-			$sum=0;
-		}
-		$itemxq=0;
-		if(!empty($itemzx)){
-		  $itemxq=1;
-		}
-
-		include templates("mobile/index","item_data");
 	}
+	//往期商品查看
+	// public function dataserver(){
+	//     $webname=$this->_cfg['web_name'];
+	// 	$key="揭晓结果";
+	// 	$itemid=intval($this->segment(4));
+	// 	// $item=$this->db->GetOne("select * from `@#_shoplist` where `id`='$itemid' and `q_end_time` is not null LIMIT 1");
+	// 	$item=$this->db->GetOne("select * from `@#_shoplist` where `id`='$itemid'   LIMIT 1");
+	// 	if(!$item){
+	// 		_messagemobile("商品不存在！");
+	// 	}
+	// 	// if(empty($item['q_user_code'])){
+	// 	// 	_messagemobile("该商品正在进行中...");
+	// 	// }
+	//
+	// 	$itemlist = $this->db->GetList("select * from `@#_shoplist` where `sid`='$item[sid]' order by `qishu` DESC");
+	// 	$category=$this->db->GetOne("select * from `@#_category` where `cateid` = '$item[cateid]' LIMIT 1");
+	// 	$brand=$this->db->GetOne("select * from `@#_brand` where `id` = '$item[brandid]' LIMIT 1");
+	//
+	// 	//云购中奖码
+	// 	$q_user = unserialize($item['q_user']);
+	// 	$q_user_code_len = strlen($item['q_user_code']);
+	// 	$q_user_code_arr = array();
+	// 	for($q_i=0;$q_i < $q_user_code_len;$q_i++){
+	// 		$q_user_code_arr[$q_i] = substr($item['q_user_code'],$q_i,1);
+	// 	}
+	//
+	// 	//期数显示
+	// 	$loopqishu='';
+	// 	if(empty($itemlist[0]['q_end_time'])){
+	// 		$loopqishu.='<li><a href="'.WEB_PATH.'/mobile/mobile/item/'.$itemlist[0]['id'].'">'."第".$itemlist[0]['qishu']."期</a><b></b></li>";
+	// 		array_shift($itemlist);
+	// 	}
+	//
+	// 	foreach($itemlist as $qitem){
+	// 		if($qitem['id'] == $itemid){
+	//
+	// 			$loopqishu.='<li class="cur"><a href="javascript:;">'."第".$qitem['qishu']."期</a><b></b></li>";
+	// 		}else{
+	// 			$loopqishu.='<li><a href="'.WEB_PATH.'/mobile/mobile/dataserver/'.$qitem['id'].'" >第'.$qitem['qishu'].'期</a></li>';
+	// 		}
+	// 	}
+	//
+	// 	//总云购次数
+	// 	$user_shop_number = 0;
+	// 	//用户云购时间
+	// 	$user_shop_time = 0;
+	// 	//得到云购码
+	// 	$user_shop_codes = '';
+	//
+	// 	$user_shop_list = $this->db->GetList("select * from `@#_member_go_record` where `uid`= '$item[q_uid]' and `shopid` = '$itemid' and `shopqishu` = '$item[qishu]'");
+	// 	foreach($user_shop_list as $user_shop_n){
+	// 		$user_shop_number += $user_shop_n['gonumber'];
+	// 		if($user_shop_n['huode']){
+	// 			$user_shop_time = $user_shop_n['time'];
+	// 			$user_shop_codes = $user_shop_n['goucode'];
+	// 		}
+	// 	}
+	//
+	// 	$h=abs(date("H",$item['q_end_time']));
+	// 	$i=date("i",$item['q_end_time']);
+	// 	$s=date("s",$item['q_end_time']);
+	// 	$w=substr($item['q_end_time'],11,3);
+	// 	$user_shop_time_add = $h.$i.$s.$w;
+	// 	$user_shop_fmod = fmod($user_shop_time_add*100,$item['canyurenshu']);
+	//
+	// 	if($item['q_content']){
+	// 		$item['q_content'] = unserialize($item['q_content']);
+	// 	}
+  //       $item['picarr'] = unserialize($item['picarr']) ;
+	//
+	// 	//记录
+	// 	$itemzx=$this->db->GetOne("select * from `@#_shoplist` where `sid`='$item[sid]' and `qishu`>'$item[qishu]' and `q_end_time` is null order by `qishu` DESC LIMIT 1");
+	//
+	//     $gorecode=$this->db->GetOne("select * from `@#_member_go_record` where `shopid`='".$itemid."' AND `shopqishu`='".$item['qishu']."' and `uid`= '$item[q_uid]' and huode!=0 LIMIT 1");
+	//     $gorecode_count=$this->db->GetOne("select sum(gonumber) as count from `@#_member_go_record` where `shopid`='".$itemid."' AND `shopqishu`='".$item['qishu']."' and `uid`= '$item[q_uid]'");
+	//     $gorecode_count=$gorecode_count ? $gorecode_count['count'] : 0;
+	//
+	// 	$shopitem='dataserverfun';
+	// 	$curtime=time();
+	// 	//晒单数
+	// 	$shopid=$this->db->GetOne("select * from `@#_shoplist` where `id`='$itemid'");
+	// 	$shoplist=$this->db->GetList("select * from `@#_shoplist` where `sid`='$shopid[sid]'");
+	// 	$shop='';
+	// 	foreach($shoplist as $list){
+	// 		$shop.=$list['id'].',';
+	// 	}
+	// 	$id=trim($shop,',');
+	// 	if($id){
+	// 		$shaidan=$this->db->GetList("select * from `@#_shaidan` where `sd_shopid` IN ($id)");
+	// 		$sum=0;
+	// 		foreach($shaidan as $sd){
+	// 			$shaidan_hueifu=$this->db->GetList("select * from `@#_shaidan_hueifu` where `sdhf_id`='$sd[sd_id]'");
+	// 			$sum=$sum+count($shaidan_hueifu);
+	// 		}
+	// 	}else{
+	// 		$shaidan=0;
+	// 		$sum=0;
+	// 	}
+	// 	$itemxq=0;
+	// 	if(!empty($itemzx)){
+	// 	  $itemxq=1;
+	// 	}
+	//
+	// 	include templates("mobile/index","item_data");
+	// }
 
 
 

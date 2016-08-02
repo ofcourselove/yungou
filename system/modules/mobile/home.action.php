@@ -229,11 +229,11 @@ class home extends base {
 			$jiedao=isset($_POST['jiedao']) ? $_POST['jiedao'] : "";
 			$time=time();
 			if($sheng==null  or $shouhuoren==null or $mobile==null){
-				echo "带星号不能为空;";
+				_messagemobile("信息填写不完整");
 				exit;
 			}
 			if(!_checkmobile($mobile)){
-				echo "手机号错误;";
+				_messagemobile("手机号错误;");
 				exit;
 			}
 			// print_r($sheng);die;
@@ -262,8 +262,8 @@ class home extends base {
 	public function singlelist(){
 		 $webname=$this->_cfg['web_name'];
 		include templates("mobile/user","singlelist");
-	}
 
+	}
 	//添加晒单---------------解除封印
 	public function postsingle(){
 		$member=$this->userinfo;
@@ -272,10 +272,11 @@ class home extends base {
 		$title="添加晒单";
 		if(isset($_POST['submit'])){
 			// if($_POST['title']==null)_message("标题不能为空");
-			if($_POST['content']==null)_message("内容不能为空");
-			// if(!isset($_POST['fileurl_tmp'])){
-			// 	_message("图片不能为空");
-			// }
+			// if($_POST['content']==null)_message("内容不能为空");
+			if($_POST['content']==null)_messagemobile("内容不能为空");
+			if(!$_FILES['fileurl_tmp']['name']){
+				_messagemobile("图片不能为空");
+			}
 			// print_r($data);die;
 			System::load_sys_class('upload','sys','no');
 			$width=220;
