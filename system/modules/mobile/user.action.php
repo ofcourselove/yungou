@@ -26,7 +26,7 @@ class user extends memberbase {
 		// if($user){
 		// 	header("Location:".WEB_PATH."/mobile/home/");exit;
 		// }
-		$appid ="";
+		$appid ="";//添加
 		$redirect_uri = urlencode(WEB_PATH."/mobile/user/wechat/");
 		// var_dump($redirect_uri);die;
 		$url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".$redirect_uri."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
