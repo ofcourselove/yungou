@@ -138,16 +138,21 @@ class cart extends base {
 		include templates("mobile/cart","payment");
 	}
   public function wxpay(){
+		$mysql_model=System::load_sys_class('model');
 		  //商品名称
 			//购买分数
-			$num = $this->segment(4);
+			$num = intval($this->segment(4));
 			$shopid = $this->segment(5);
 			_setcookie("shopid","$shopid");//将可能要购买点shopid存入cookie
-			// $a = _getcookie("shopid");
-			// echo "$a";die;
-			// echo $num;
-			// echo $shop_id;
+			$shengyu=$mysql_model->GetOne("select shenyurenshu from `@#_shoplist` where `id`='$shopid' ");
+			$shengyu = (int)$shengyu['shenyurenshu'];
+			// var_dump($shengyu);
 			// die;
+			//商品剩余不足判断
+      if ($shengyu < $num) {
+					$WEB_PATH = WEB_PATH;
+         _messagemobile("商品库存不足...<a href='{$WEB_PATH}/mobile/mobile/item/$shopid' style='color:#22AAFF'>返回商品详情</a>");
+      }
 		  $file_url = strstr(__FILE__,'cart',true);
 	  	include_once("$file_url/wechat/conf/WxPay.pub.config.php");
 			include_once("$file_url/wechat/lib/JsSdk.php");
@@ -155,25 +160,17 @@ class cart extends base {
 			include_once("$file_url/wechat/lib/SDKRuntimeException.php");
 			include_once("$file_url/wechat/lib/WxpayClientPub.php");
 			include_once("$file_url/wechat/lib/UnifiedOrderPub.php");
-			// var_dump('bbooooookkkk');die;
 			$openId = _getcookie("openid");
-			// $openId = "oJzJ6szeccDWX1iN64QWsfU0Rc4I";
-			// var_dump($openId);die;
-			// $openId = "oJzJ6sy5cmN9X-cYp_fIfUmB993E";
 			$appId = WxPayConfPub::APPID;
 			$appSecret = WxPayConfPub::APPSECRET;
-			// $appSecret = WxPayConfPub::SSLCERT_PATH;
-			// print8_r($appSecret);die;
 			// 获取jssdk相关参数
 			$jssdk = new JsSdk($appId, $appSecret);
 			$signPackage = $jssdk->GetSignPackage();
 			$timeStamp = (string)$signPackage['timestamp'];
 			$nonceStr = $signPackage['nonceStr'];
-			// var_dump($signPackage);die;
 			$time = time();
 			$title = "一元云购";
 			// 获取prepay_id
-			// 具体参数设置可以看文档http://pay.weixin.qq.com/wiki/doc/api/index.php?chapter=9_1
 			$unifiedOrder = new UnifiedOrderPub();
 			$unifiedOrder->setParameter("openid",$openId);//用户openId
 			$unifiedOrder->setParameter("body", $title);//商品描述，文档里写着不能超过32个字符，否则会报错，经过实际测试，临界点大概在128左右，稳妥点最好按照文档，不要超过32个字符

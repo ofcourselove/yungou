@@ -228,7 +228,8 @@ class home extends base {
 			$mobile=isset($_POST['mobile']) ? $_POST['mobile'] : "";
 			$jiedao=isset($_POST['jiedao']) ? $_POST['jiedao'] : "";
 			$time=time();
-			if($sheng==null  or $shouhuoren==null or $mobile==null){
+       /* 前台已经检测 后台在检测一遍 双重保险*/
+			if( $shouhuoren==null or $mobile==null){
 				_messagemobile("信息填写不完整");
 				exit;
 			}
@@ -236,6 +237,7 @@ class home extends base {
 				_messagemobile("手机号错误;");
 				exit;
 			}
+
 			// print_r($sheng);die;
 			if ($dizhi) {
 			$mysql_model->Query("UPDATE `@#_member_dizhi` SET
@@ -246,15 +248,17 @@ class home extends base {
 			`youbian`='".$youbian."',
 			`shouhuoren`='".$shouhuoren."',
 			`mobile`='".$mobile."' where `uid`='".$uid."'");
-			_message("更新地址成功",WEB_PATH."/mobile/user/address",2);
-
+			// _message("更新地址成功",WEB_PATH."/mobile/user/address",2);
+			header("location: ".WEB_PATH."/mobile/user/address");
 		} else {
 			// print_r('oookkk');die;
 			$mysql_model->Query("INSERT INTO
 				`@#_member_dizhi` (`uid`,`sheng`,`shi`,`xian`,`jiedao`,`youbian`,`shouhuoren`,`mobile`,`time`)
 				VALUES	('$uid','$sheng','$shi','$xian','$jiedao','$youbian','$shouhuoren','$mobile','$time') ");
 		}
-		_message("更新地址成功",WEB_PATH."/mobile/user/address",2);
+		header("location: ".WEB_PATH."/mobile/user/address");
+		// _message("更新地址成功",WEB_PATH."/mobile/user/address",2);
+			 exit;
 	}
 
 }
@@ -334,7 +338,6 @@ class home extends base {
 			$data =	$this->singphotoup($thumbs,$thumbs2,$thumbs3);
 			$this->db->Query("INSERT INTO `@#_shaidan_hueifu`(`sdhf_userid`,`sdhf_id`,`sdhf_img`,`sdhf_img2`,`sdhf_img3`,`sdhf_content`,`sdhf_time`)VALUES
 			('$sd_userid','$sd_shopid','$sd_thumbs','$sd_thumbs2','$sd_thumbs3','$sd_content','$sd_time')");
-			echo '<script>alert(\'分享成功，嘿嘿嘿\');</script>';
 			$url = WEB_PATH."/mobile/shaidan/my_shaidan/".$uid;
 			// print_r($uid);die;
 			header("Location:".$url);

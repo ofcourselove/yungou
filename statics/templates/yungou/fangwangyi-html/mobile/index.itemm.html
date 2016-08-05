@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>一元夺宝</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -62,10 +62,10 @@
 		<nav class="mui-bar mui-bar-tab mui-bottom-part" style="background-color: #FFF; border-top: 1px solid #f2f2f2; height: 50px;">
 			<div class="bottom_left">
 				<span style="line-height: 50px; margin-right: 5px; padding-left: 15px;">份数:</span>
-				<div class="mui-numbox" data-numbox-min='1' data-numbox-max='99'>
-					<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-					<input id="test" class="mui-input-numbox" type="number" value="5" />
-					<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+				<div id="maxnum" class="mui-numbox" data-numbox-min='1' data-numbox-max='99'>
+					<button  class="mui-btn mui-btn-numbox-minus" disabled="false" type="button">-</button>
+					<input id="test" class="mui-input-numbox" type="number" value="1" />
+					<button  class="mui-btn mui-btn-numbox-plus" disabled="false" type="button">+</button>
 				</div>
 			</div>
 			<button id="button" type="button" class="mui-btn mui-btn-warning" style="background-color: #ff9a15; border: none 0; margin-top: 3px; float: right; margin-right: 15px;">
@@ -87,20 +87,30 @@
 	                    	<h4>共{wc:$item['zongrenshu']}份</h4>
 	                    	<h4 style="float: right;">剩余{wc:$item['zongrenshu']-$item['canyurenshu']}份</h4>
 	                    </div>
-	                    <div class="details_passage">商品详情：{wc:$item['title2']}</div>
+											<div class="">
+
+												<div class="details_passage">商品详情：{wc:$item['title2']}</div>
+												<div id="sd_img" class="details_passage" >
+													{wc:$item['content']}
+												</div>
+											</div>
               	<ul class="mui-table-view">
-							<li class="mui-table-view-cell mui-collapse">
-								<a class="mui-navigate-right" href="#" style="font-size: 16px; border-left: 3px solid #FF9A15;">中奖计算说明</a>
-								<div class="mui-collapse-content">
-									<h5 style="font-size: 15px; line-height: 20px; ">中奖计算说明中奖计算说明中奖计算说明中奖计算说明</h5>
-								</div>
-							</li>
-							<li class="mui-table-view-cell mui-collapse">
+									<li class="mui-table-view-cell mui-collapse">
+										<a class="mui-navigate-right" href="#" style="font-size: 16px; border-left: 3px solid #FF9A15;">中奖计算说明</a>
+										<div class="mui-collapse-content">
+											<h5 style="font-size: 15px; line-height: 20px; ">
+										    取该商品最后购买时间前网站所有商品100条购买时间记录（限时揭晓商品取截止时间前网站所有商品100条购买时间记录）。
+										    时间按时、分、秒、毫秒依次排列组成一组数值。
+										    将这100组数值之和除以商品总需参与人次后取余数，余数加上10,000,001即为“幸运云购码”。
+											</h5>
+										</div>
+									</li>
+							<!-- <li class="mui-table-view-cell mui-collapse">
 								<a class="mui-navigate-right" href="#" style="font-size: 16px; border-left: 3px solid #ffc983;">往期揭晓</a>
 								<div class="mui-collapse-content">
 									<h5 style="font-size: 300;">小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库是小金库</h5>
 								</div>
-							</li>
+							</li> -->
 							<li class="mui-table-view-cell mui-collapse">
 								<a class="mui-navigate-right" href="#" style="font-size: 16px; border-left: 3px solid #FF9A15;">谁参与了</a>
                 {wc:loop $cords $c}
@@ -124,10 +134,26 @@
 				</div>
 			</div>
 		</div>
-
 		<script src="{G_TEMPLATES_JS}/mobile/mui.js"></script>
 		<script>
-
+		// document.getElementById("img2").getElementsByTagName("img")[0].src
+		$('#sd_img').find("img").css("width","100%");
+	   var sheng = {wc:$item['zongrenshu']-$item['canyurenshu']};
+    //  alert(sheng)
+     $('#maxnum').attr("data-numbox-max",sheng);
+		//  $('#test').change(function(){
+		// 	var num = $('#test').val();
+		// 	// alert(sheng+num);
+    //   if (parseInt(num) >= parseInt(sheng)) {
+		// 		//  alert('666');
+		// 		// $("#jia").remove();
+		// 		var button1 = document.getElementById("maxnum");
+    //      alert(button1.data-numbox-max);
+    //   } else {
+		// 		// $(".mui-numbox").append('<button id="jia" class="mui-btn mui-btn-numbox-plus" disabled="false" type="button">+</button>');
+    //   	 $('#jia').disabled = false;
+    //   }
+		//  });
 	  	mui('.mui-scroll-wrapper').scroll();
 		  $("#button").click(function(){
          var num = $("#test").val();

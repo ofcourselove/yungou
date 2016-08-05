@@ -90,9 +90,7 @@ function gopay($member,$shopu,$shoprc,$shopid){
 目前只是对未付款前的钱数做记录
 缺少接受微信支付后返回的信息
 */
-function test(){
-	echo "oookkkkll";die;
-}
+
 function houpay($shopnum){
 	// print_r('oooooookkk');die;
 	$mysql_model=System::load_sys_class('model');

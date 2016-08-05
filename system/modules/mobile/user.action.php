@@ -26,7 +26,7 @@ class user extends memberbase {
 		// if($user){
 		// 	header("Location:".WEB_PATH."/mobile/home/");exit;
 		// }
-		$appid ="";//添加
+		$appid ="wx9d66a72ff8e7559a";
 		$redirect_uri = urlencode(WEB_PATH."/mobile/user/wechat/");
 		// var_dump($redirect_uri);die;
 		$url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".$redirect_uri."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
@@ -37,7 +37,7 @@ class user extends memberbase {
 	}
 
 	public function wechat(){
-		 $appid = "";
+		 $appid = "wx9d66a72ff8e7559a";
 		 $secret = "";
 		 $code = $this->code(4);
 		 if (isset($_COOKIE['uid'])) {

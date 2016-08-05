@@ -13,8 +13,8 @@
     <link href="favicon.ico" rel="shortcut icon" />
     <link href="<?php echo G_TEMPLATES_CSS; ?>/mobile/comm.css" rel="stylesheet" type="text/css" />
   <link href="<?php echo G_TEMPLATES_CSS; ?>/mobile/index.css" rel="stylesheet" type="text/css" />
-  <script src="<?php echo G_TEMPLATES_JS; ?>/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
-  <script id="pageJS" data="<?php echo G_TEMPLATES_JS; ?>/mobile/Index.js" language="javascript" type="text/javascript"></script>
+  <!-- <script src="<?php echo G_TEMPLATES_JS; ?>/mobile/jquery190.js" language="javascript" type="text/javascript"></script> -->
+  <!-- <script id="pageJS" data="<?php echo G_TEMPLATES_JS; ?>/mobile/Index.js" language="javascript" type="text/javascript"></script> -->
 
 
 
@@ -41,11 +41,11 @@
 	</head>
 
 	<body>
-    <div class="h5-1yyg-v1" id="loadingPicBlock">
+    <!-- <div class="h5-1yyg-v1" id="loadingPicBlock">
       <div class="mui-bar mui-bar-tab mui-bottom-part">
 
-        <!-- <?php include templates("mobile/index","head");?> -->
-      </div>
+        <?php include templates("mobile/index","head");?>
+      </div> -->
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
 
@@ -56,37 +56,37 @@
 					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 					<div class="mui-slider-item mui-slider-item-duplicate">
 						<a href="#">
-							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/index_banner_02.jpg">
+							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/lunbo1.jpg">
 						</a>
 					</div>
 					<!-- 第一张 -->
 					<div class="mui-slider-item">
 						<a href="#" id="mutual/fund_company_private_details">
-							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/index_banner_02.jpg">
+							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/lunbo2.jpg">
 						</a>
 					</div>
 					<!-- 第二张 -->
 					<div class="mui-slider-item" >
 						<a href="#" id="static_bond">
-							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/index_banner_02.jpg">
+							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/lunbo1.jpg">
 						</a>
 					</div>
 					<!-- 第三张 -->
 					<div class="mui-slider-item" >
 						<a id="static_plan">
-							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/index_banner_02.jpg">
+							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/lunbo2.jpg">
 						</a>
 					</div>
 					<!-- 第四张 -->
 					<div class="mui-slider-item" >
 						<a id="static_plan">
-							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/index_banner_02.jpg">
+							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/lunbo1.jpg">
 						</a>
 					</div>
 					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
 					<div class="mui-slider-item mui-slider-item-duplicate">
 						<a href="#">
-							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/index_banner_02.jpg">
+							<img src="<?php echo G_TEMPLATES_IMAGE; ?>/mobile/lunbo2.jpg">
 						</a>
 					</div>
 				</div>
@@ -115,11 +115,11 @@
 			            <li class="mui-table-view-cell mui-media mui-col-xs-6">
 			            		<div class="index_imgBox">
 												<div class="mui-bottom-part">
-													<a id="<?php echo WEB_PATH; ?>/mobile/mobile/item/<?php echo $qishu['id']; ?>">
+													<a id="<?php echo WEB_PATH; ?>/mobile/mobile/dataserver/<?php echo $qishu['id']; ?>/<?php echo $qishu['qishu']; ?>">
 														<img  src="<?php echo G_UPLOAD_PATH; ?>/<?php echo $qishu['thumb']; ?>">
 													</a>
 												</div>
-                        <ins class="u-promo">价值:￥<?php echo $qishu['money']; ?></ins>
+                        <ins class="u-promo"><span style="color: #E73434;">[已揭晓]</span> 价值:￥<?php echo $qishu['money']; ?></ins>
                       </div>
                           <div class="mui-media-body" style="text-align: left;"><?php echo $qishu['title']; ?></div>
 			                    <!-- <div class="progressBox">
@@ -203,7 +203,7 @@
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i ; i < len; i++) {
+					for (var i = cells.length, len = i + 2; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'mui-table-view-cell';
 						// li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';

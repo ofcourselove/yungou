@@ -1,0 +1,6 @@
+[02-Aug-2016 16:17:44 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\yungou\system\modules\admin\index.action.php on line 83
+[02-Aug-2016 16:26:10 Asia/Shanghai] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\yungou\system\modules\admin\index.action.php on line 83
+[02-Aug-2016 16:44:23 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\mobile\mobile.action.php on line 70
+[02-Aug-2016 16:46:41 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\mobile\mobile.action.php on line 70
+[02-Aug-2016 16:47:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\mobile\mobile.action.php on line 70
+[02-Aug-2016 16:49:48 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\yungou\system\modules\mobile\mobile.action.php on line 70

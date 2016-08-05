@@ -131,12 +131,12 @@
 				<div class="mui-scroll">
 					<div style=" background-color: #FFF; height: 40px; padding-top: 5px; border-bottom: 1px solid #eee;">
 						<div id="segmentedControl" class="mui-segmented-control">
-							<a class="mui-control-item mui-active" href="#item1">正在进行</a>
-							<a class="mui-control-item" href="#item2">即将揭晓</a>
-							<a class="mui-control-item" href="#item3">往期夺宝</a>
+							<a id="a1" class="mui-control-item mui-active" href="#item1">正在进行</a>
+							<a id="a2" class="mui-control-item" href="#item2">即将揭晓</a>
+							<a id="a3" class="mui-control-item" href="#item3">往期夺宝</a>
 						</div>
 					</div>
-					<div id="item1" class="mui-control-content mui-active" style="padding: 0 15px; background-color: #FFF;">
+					<div id="item1" class="mui-control-content mui-active" style="padding: 0 15px; background-color: #FFF;display:block;">
              {wc:loop $shoplist_ing $list}
 								 {wc:php:start}
 									 $list['q_user'] = unserialize($list['q_user']);
@@ -166,7 +166,7 @@
             {wc:loop:end}
 					</div>
 
-					<div id="item2" class="mui-control-content mui-active" style="padding: 0 15px; background-color: #FFF;">
+					<div id="item2" class="mui-control-content mui-active" style="padding: 0 15px; background-color: #FFF;display:none;">
 						{wc:loop $shoplist_new $lnew}
 								{wc:php:start}
 									$lnew['q_user'] = unserialize($lnew['q_user']);
@@ -195,7 +195,7 @@
 								</div>
             {wc:loop:end}
 					</div>
-					<div id="item3" class="mui-control-content mui-active" style="padding: 0 15px; background-color: #FFF;">
+					<div id="item3" class="mui-control-content mui-active" style="padding: 0 15px; background-color: #FFF;display:none;">
 						{wc:loop $shoplist_lottery $lottery}
 								{wc:php:start}
 							  	$lottery['q_user'] = unserialize($lottery['q_user']);
@@ -209,7 +209,7 @@
 								<div class="mui-media-body" style="text-align: left; font-size: 12px; color: #999; ">期号：<span style="color: #999;">{wc:$lottery['shopqishu']}</span></div>
 								<div class="mui-media-body" style="text-align: left; font-size: 12px;">获得者：<span>{wc:$lottery['nickname']}</span></div>
 								<div class="mui-media-body" style="text-align: left; font-size: 12px;">幸运代码：<span style="color:#000000;">{wc:$lottery['shopcode']}</span>	</div>
-								<div class="mui-media-body" style="text-align: left; font-size: 12px;">揭晓时间：{wc:fun:date("Y-m-d H:i",$lottery['shopendtime'])}</div>
+								<div class="mui-media-body" style="text-align: left; font-size: 12px;">揭晓时间：{wc:fun:microt($lottery['shopendtime'],'r')}</div>
 							</div>
 
 						</div>
@@ -223,6 +223,7 @@
 		<script src="{G_TEMPLATES_JS}/mobile/mui.js"></script>
 		<script src="{G_TEMPLATES_JS}/mobile/mui.pullToRefresh.js"></script>
 		<script src="{G_TEMPLATES_JS}/mobile/mui.pullToRefresh.material.js"></script>
+		<script type="text/javascript" src="jquery.min.js"></script>
 		<script>
 
 
@@ -277,7 +278,24 @@
 						};
 					});
 				})(mui);
-
+       //正在进行显示问题解决
+				$('#a1').on('tap',function(){
+            // alert($('#item1').href.val());
+						$('#item2').css('display','none');
+						$('#item3').css('display','none');
+		        $('#item1').css('display','block');
+				});
+		    $('#a2').on('tap',function(){
+					  // alert('666');
+						$('#item1').css('display','none');
+						$('#item3').css('display','none');
+		        $('#item2').css('display','block');
+				});
+		    $('#a3').on('tap',function(){
+						$('#item2').css('display','none');
+						$('#item1').css('display','none');
+		        $('#item3').css('display','block');
+				});
 
 
 

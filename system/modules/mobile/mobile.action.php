@@ -245,12 +245,15 @@ class mobile extends base {
 		$key="商品详情";
 		$mysql_model=System::load_sys_class('model');
 		$itemid=safe_replace($this->segment(4));
-		$item=$mysql_model->GetOne("select * from `@#_shoplist` where `id`='".$itemid."' LIMIT 1");
-		if(!$item)_messagemobile("商品不存在！");
-		if($item['q_end_time']){
-			header("location: ".WEB_PATH."/mobile/mobile/dataserver/".$item['id']);
+		$shopqishu=safe_replace($this->segment(5));
+		$item=$this->db->GetOne("select a.*,b.title,b.title2  from `@#_shopqishu` a left join
+		`@#_shoplist` b on a.shopid=b.id where a.shopid ='$itemid' and a.shopqishu='$shopqishu' ");
+		// if(!$item)_messagemobile("商品不存在！");
+		if($item){
+			header("location: ".WEB_PATH."/mobile/mobile/dataserver/".$item['shopid']."/".$shopqishu);
 			exit;
 		}
+		$item=$mysql_model->GetOne("select * from `@#_shoplist` where `id`='".$itemid."' LIMIT 1");
 		$cords=$this->db->GetList("select * from `@#_member_go_record` where `shopid`='$item[id]'");
 		$sid=$item['sid'];
 		$sid_code=$mysql_model->GetOne("select * from `@#_shoplist` where `sid`='$sid' order by `id` DESC LIMIT 1,1");
@@ -328,7 +331,7 @@ class mobile extends base {
 			$shopqishu=intval($this->segment(5));
 			// var_dump($shopqishu);die;
 			// $shopqi=$this->db->GetOne("select * from `@#_shopqishu` where `shopid` ='$itemid' ");
-			$item=$this->db->GetOne("select a.*,b.title,b.title2  from `@#_shopqishu` a left join
+			$item=$this->db->GetOne("select a.*,b.title,b.title2,b.content  from `@#_shopqishu` a left join
 			`@#_shoplist` b on a.shopid=b.id where a.shopid ='$shopid' and a.shopqishu='$shopqishu' ");
       // $item =$item[];
 			// var_dump($item);die;

@@ -74,10 +74,15 @@
       <form  enctype="multipart/form-data"  action="{WEB_PATH}/mobile/home/postsingle" method="post">
 			<div id="scroll" class="mui-scroll-wrapper" style="padding-top: 50px; padding-bottom:70px;background-color: #FFF;">
 				<div class="mui-scroll">
+
 					<div class="sd_lilie" style="padding: 15px; padding-bottom: 0;">
 						<textarea  id="sd_text" name="content"  placeholder="这一刻的想法。。。" style="margin: 0; padding: 15px; height: 120px; border:1px solid #eee;"></textarea>
 					</div>
-
+					<div class="" id="messgediv" style="display:none;opacity: 0.4;margin-left:20%;margin-top:-5%; width:60%;height:10%;background-color:#000000;position:absolute;z-index:9555; ">
+						<span id="messgespan" style="display:block;text-align:center;margin-top:4%;color:#ffffff;margin-left:;margin-right:auto;">
+						</span>
+					</div>
+          <!-- &nbsp;&nbsp;&nbsp;<span style="color: #E73434;font-size:15px;" id="messge">备注:请输入晒单详细信息</span> -->
 					<div style="overflow: hidden; padding: 15px;">
 						<!-- <div class="list_imgBox" style="width: 18%; margin-right: 2%; height: 60px;"><img src="images/win_pic_03.png"></div>
 						<div class="list_imgBox" style="width: 18%; margin-right: 2%; height: 60px;"><img src="images/win_pic_03.png"></div>
@@ -99,13 +104,13 @@
 						<table >
              <tr>
 							 <td>
-								 <img style="float:left; width:75px;height:60px;  padding-left: 15px;" id="preview1" src="" alt="" />
+								 <img style="float:left; width:75px;height:60px;  padding-left: 15px;" id="preview1" src="{G_TEMPLATES_IMAGE}/mobile/uploadimg.png" alt="" />
 							 </td>
 							 <td>
-								 <img style="float:left; width:95px;height:60px;  padding-left: 35px;" id="preview2" src="" alt="" />
+								 <img style="float:left; width:95px;height:60px;  padding-left: 35px;" id="preview2" src="{G_TEMPLATES_IMAGE}/mobile/uploadimg.png" alt="" />
 							 </td>
 							 <td style="">
-								 <img style="float:left; width:95px;height:60px;  padding-left: 35px; " id="preview3" src="" alt="" />
+								 <img style="float:left; width:95px;height:60px;  padding-left: 35px; " id="preview3" src="{G_TEMPLATES_IMAGE}/mobile/uploadimg.png" alt="" />
 							 </td>
 						</tr>
 					</table>
@@ -116,10 +121,11 @@
             </a> -->
 					</div>
           <div class="sd_lilie" style="width:95%;margin:0 auto;">
-          <input id="sd_submit" name="submit" type="submit" class="mui-btn mui-btn-warning mui-btn-block"
+          <input id="sd_submit" name="submit" type="button" class="mui-btn mui-btn-warning mui-btn-block"
           style="padding: 15px 0; width: 100%; margin: 0 auto; margin-top: 15px; background-color: #FF9A15; border: none 0;" value="确认添加" />
           </div>
-					<!-- <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="padding: 10px 0; width: 90%; margin: 0 auto; margin-top: 15px; background-color: #FF9A15; border: none 0;">发送</button> -->
+					<span id="messge" style="color: #E73434;"></span>
+					<!-- <button id="test" type="button" class="" style="padding: 10px 0; width: 90%; margin: 0 auto; margin-top: 15px; background-color: #FF9A15; border: none 0;">发送</button> -->
 				</div>
 			</div>
     </form>
@@ -150,6 +156,42 @@
 
     document.getElementById('preview3').src = src;
 });
+$("input[type='button']").on('tap',function() {
+	var text = $('#sd_text').val();
+ 	var img = $('#sd_file1').val();
+			 if (!text) {
+					$('#messgediv').css('display','block');
+					$('#messgespan').text("请输入晒单详情内容");
+					setTimeout("hide()",2000);
+			 } else	if (!img) {
+					$('#messgediv').css('display','block');
+					$('#messgespan').text("请上传要晒单的图片");
+					setTimeout("hide()",1000);
+			} else {
+					$('#sd_submit')[0].type = 'submit';
+			}
+	});
+	function hide(){
+		$('#messgediv').css('display','none');
+		$('#messgespan').text("");
+	}
+  // $('#sd_text').change(function(){
+	// 	 var a = $('#sd_text').val();
+	// 	//  alert(a);
+	// 	 if (a) {
+	// 	 	  $('#messge').text("");
+	// 			$('#sd_file1').change(function(){
+	// 				$('#sd_submit')[0].type = 'submit';
+	// 			});
+	// 	 } else {
+	// 	 	  $('#messge').text("备注:请输入晒单详细信息");
+	// 			$('#sd_submit')[0].type = 'button';
+	// 	 }
+  //   //  var a = $('#sd_submit')[0].type;
+	// 	//  alert(a);
+	// });
+// $(document).on('click','selector',function(){
+// });
     // 上传文件
     // $(function(){
     //     $('#sd_file').uploadify({

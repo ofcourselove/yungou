@@ -109,7 +109,7 @@
 										<div class="details_contentImg"><img src="<?php echo G_UPLOAD_PATH; ?>/photo/member.jpg"></div>
 										<div class="details_contentLeft">
 											<p><?php echo userid($c['uid'],'username'); ?><span></span></p>
-											<h5>购买了8份</h5>
+											<h5>购买了<?php echo $c['gonumber']; ?>份</h5>
 										</div>
 										</div>
 										<div class="details_contentRight">2016-06-12 13:06:35</div>
@@ -131,9 +131,9 @@
 	  	mui('.mui-scroll-wrapper').scroll();
 		  $("#button").click(function(){
          var num = $("#test").val();
-				 var shop_id = <?php echo item['id']; ?>;
-				//  alert(num);
-				 url="<?php echo WEB_PATH; ?>/mobile/cart/wxpay/"+num+"/"+shop_id;
+				 var shopid = <?php echo $item['id']; ?>;
+				//  alert(shopid);
+				 url="<?php echo WEB_PATH; ?>/mobile/cart/wxpay/"+num+"/"+shopid;
 				//  url="<?php echo WEB_PATH; ?>/mobile/cart/mypay";
 				  window.location.href=url;
 
